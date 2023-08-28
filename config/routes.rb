@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
-
+  resources :challenges, only: :index
   get '/dashboard', to: 'users#dashboard'
 end
