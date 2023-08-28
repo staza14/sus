@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_28_152555) do
+
+ActiveRecord::Schema[7.0].define(version: 2023_08_28_162310) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -35,6 +37,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_152555) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "entries", force: :cascade do |t|
+    t.float "food_score"
+    t.float "travel_score"
+    t.float "home_score"
+    t.float "day_score"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_entries_on_user_id"
+  end
+
+  create_table "friendships", force: :cascade do |t|
+    t.boolean "confirmed"
+    t.bigint "asker_id", null: false
+    t.bigint "receiver_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["asker_id"], name: "index_friendships_on_asker_id"
+    t.index ["receiver_id"], name: "index_friendships_on_receiver_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -54,4 +77,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_152555) do
 
   add_foreign_key "active_challenges", "challenges"
   add_foreign_key "active_challenges", "users"
+  add_foreign_key "entries", "users"
+  add_foreign_key "friendships", "users", column: "asker_id"
+  add_foreign_key "friendships", "users", column: "receiver_id"
 end
