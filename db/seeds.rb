@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts "cleaning database"
+Challenge.destroy_all
+
+puts "creating challenges"
+Challenge.create(description: "a very fun and exciting challenge to join", duration: 5, name: "beat the meat")

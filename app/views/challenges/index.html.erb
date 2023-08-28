@@ -1,1 +1,13 @@
-<h1>hi from all challenges</h1>
+<div class ="container">
+  <h1>Challenges</h1>
+  <div class="row justify-content-center">
+    <% @challenges.each do |challenge| %>
+      <div class="challenge-card col-4">
+        <h3> <%=challenge.name %></h3>
+        <h5><%= challenge.description %></h5>
+        <h5><%= challenge.duration %> days</h5>
+        <%= button_to "join challenge", challenge_active_challenges_path(challenge), class:"btn btn-primary" %>
+      </div>
+      <% end %>
+  </div>
+</div>
