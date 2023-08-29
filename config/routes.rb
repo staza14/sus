@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#dashboard'
 
   resources :entries, only: :create
+
+  resources :posts, only: %i[index create]
 end
