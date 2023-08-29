@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     resources :active_challenges, only: :create
 
   resources :entries, only: :create
+  end
 end
