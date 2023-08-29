@@ -14,3 +14,9 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+@font-face {
+  font-family: "Sunset Serial Heavy";
+src:
+local("sunset-serial-heavy"),
+url("/assets/sunset-serial-heavy.woff") format("woff");
+}

@@ -9,4 +9,4 @@ puts "cleaning database"
 Challenge.destroy_all
 
 puts "creating challenges"
-Challenge.create(description: "a very fun and exciting challenge to join", duration: 5, name: "beat the meat")
+Challenge.create(summary: "a very fun and exciting challenge to join", duration: 5, name: "beat the meat", description: "a big long description about the challenge and why you should do it.")

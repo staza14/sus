@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :email, presence: true
   has_many :active_challenges
+  has_many :posts, dependent: :destroy
 end
