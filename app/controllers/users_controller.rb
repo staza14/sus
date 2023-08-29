@@ -6,5 +6,6 @@ class UsersController < ApplicationController
   end
 
   def dashboard
+    @entry = Entry.new
   end
 end
