@@ -12,6 +12,7 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true
+  validates :avatar, presence: true
 
   include PgSearch::Model
   pg_search_scope :search_by_first_name_and_last_name,
@@ -19,5 +20,9 @@ class User < ApplicationRecord
   using: {
     tsearch: { prefix: true }
   }
+
+  has_many :entries, dependent: :destroy
+  has_many :active_challenges, dependent: :destroy
+
   has_many :posts, dependent: :destroy
 end
