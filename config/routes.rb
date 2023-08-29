@@ -5,8 +5,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :challenges, only: [:index] do
-    resources :active_challenges, only: :create
-  end
+
+  get '/feed', to: 'users#feed'
   get '/dashboard', to: 'users#dashboard'
+
+  resources :challenges, only: :index do
+    resources :active_challenges, only: :create
+
+  resources :entries, only: :create
 end
