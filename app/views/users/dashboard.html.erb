@@ -1,3 +1,4 @@
+
 <div class ="container">
 
   <h1>Hi <%= current_user.first_name %></h1>
@@ -56,4 +57,58 @@
   </div>
 
 </div>
-<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add entries
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add your entries</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @entry do |f| %>
+          <%= f.input :food_score, label: "How many of your meals included meet today?" %>
+          <%= f.input :food_score, label: "How many of those were beef?" %>
+          <%= f.input :travel_score, as: :check_boxes, collection: ["Cycle", "I walked", "Didn't travelled"],
+                        label: "Today, I travelled by",
+                        include_hidden: false,
+                        required: true,
+                        input_html: { class: "tag-selector" },
+                        item_wrapper_class: 'tag-item'
+                        %>
+          <%= f.input :Car_Kms, as: :range, prompt: "my data", collection: 0..50,
+                      label: "If you have used your car today, for how many kilometers?",
+                      input_html: { class: "form-range", value: 0, min:"0", max:"50", step:"5", oninput:"updateTextInput1(this.value)" }
+                      %>
+          <input type="text" id="textInput1" value="" style= "border:none; background-color: #F4F4F4;">
+
+
+          <%= f.input :Public_Transports_Kms, as: :range, prompt: "my data", collection: 0..50,
+                      label: "If you have used public transports, for how many kilometers?",
+                      input_html: { class: "form-range", value: 0, min:"0", max:"50", step:"5", oninput:"updateTextInput(this.value)"}
+
+                        %>
+
+          <input type="text" id="textInput" value="" style= "border:none; background-color: #F4F4F4;">
+
+        <div class="modal-footer">
+        <%= f.submit %>
+        <% end %>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function updateTextInput(val) {
+          document.getElementById('textInput').value=val;
+        }
+function updateTextInput1(val) {
+          document.getElementById('textInput1').value=val;
+        }
+</script>
