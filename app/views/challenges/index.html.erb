@@ -1,13 +1,39 @@
 <div class ="container">
-  <h1>Challenges</h1>
+
+  <h1 class="py-5">Challenges</h1>
+
+
   <div class="row justify-content-center">
     <% @challenges.each do |challenge| %>
-      <div class="challenge-card col-4">
-        <h3> <%=challenge.name %></h3>
-        <h5><%= challenge.description %></h5>
-        <h5><%= challenge.duration %> days</h5>
-        <%= button_to "join challenge", challenge_active_challenges_path(challenge), class:"btn btn-primary" %>
+       <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="challenge-card justify-content-center col-4 p-3">
+          <h3> <%=challenge.name %></h3>
+          <h5><%= challenge.summary %></h5>
+          <h5><%= challenge.duration %> days</h5>
+          <%= button_to "join challenge", challenge_active_challenges_path(challenge), class:"call-to-action" %>
+        </div>
+        </button>
       </div>
-      <% end %>
+      </a>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%= challenge.name %></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <%= challenge.description %>
+      </div>
+      <div class="modal-footer">
+        <%= button_to "join challenge", challenge_active_challenges_path(challenge), class:"call-to-action" %>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
+</div>
+    <% end %>
+  </div>
+
 </div>
