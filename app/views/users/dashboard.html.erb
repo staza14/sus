@@ -25,14 +25,18 @@
                         %>
           <%= f.input :Car_Kms, as: :range, prompt: "my data", collection: 0..50,
                       label: "If you have used your car today, for how many kilometers?",
-                      hint: "O to 50",
-                      input_html: { class: "form-range", value: 0 }
+                      input_html: { class: "form-range", value: 0, min:"0", max:"50", step:"5", oninput:"updateTextInput1(this.value)" }
                       %>
+          <input type="text" id="textInput1" value="" style= "border:none; background-color: #F4F4F4;">
+
+
           <%= f.input :Public_Transports_Kms, as: :range, prompt: "my data", collection: 0..50,
                       label: "If you have used public transports, for how many kilometers?",
-                      hint: "O to 50",
-                      input_html: { class: "form-range", value: 0, step: 1  }
+                      input_html: { class: "form-range", value: 0, min:"0", max:"50", step:"5", oninput:"updateTextInput(this.value)"}
+
                         %>
+
+          <input type="text" id="textInput" value="" style= "border:none; background-color: #F4F4F4;">
 
         <div class="modal-footer">
         <%= f.submit %>
@@ -42,3 +46,12 @@
     </div>
   </div>
 </div>
+
+<script>
+function updateTextInput(val) {
+          document.getElementById('textInput').value=val;
+        }
+function updateTextInput1(val) {
+          document.getElementById('textInput1').value=val;
+        }
+</script>
