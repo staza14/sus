@@ -13,4 +13,5 @@ class User < ApplicationRecord
   using: {
     tsearch: { prefix: true }
   }
+  has_many :active_challenges
 end

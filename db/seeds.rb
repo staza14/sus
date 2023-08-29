@@ -4,6 +4,7 @@
 # Examples:
 #
 
+
 puts "cleaning database"
 # User.destroy_all
 
