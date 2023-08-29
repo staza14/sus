@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
 
   def feed
-    @entry = Entry.new
   end
 
   def dashboard
+    @entry = Entry.new
   end
 end

@@ -1,1 +1,44 @@
 <h1>Hello from dashboard</h1>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add entries
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add your entries</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @entry do |f| %>
+          <%= f.input :food_score, label: "How many of your meals included meet today?" %>
+          <%= f.input :food_score, label: "How many of those were beef?" %>
+          <%= f.input :travel_score, as: :check_boxes, collection: ["Cycle", "I walked", "Didn't travelled"],
+                        label: "Today, I travelled by",
+                        include_hidden: false,
+                        required: true,
+                        input_html: { class: "tag-selector" },
+                        item_wrapper_class: 'tag-item'
+                        %>
+          <%= f.input :Car_Kms, as: :range, prompt: "my data", collection: 0..50,
+                      label: "If you have used your car today, for how many kilometers?",
+                      hint: "O to 50",
+                      input_html: { class: "form-range", value: 0 }
+                      %>
+          <%= f.input :Public_Transports_Kms, as: :range, prompt: "my data", collection: 0..50,
+                      label: "If you have used public transports, for how many kilometers?",
+                      hint: "O to 50",
+                      input_html: { class: "form-range", value: 0, step: 1  }
+                        %>
+
+        <div class="modal-footer">
+        <%= f.submit %>
+        <% end %>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
