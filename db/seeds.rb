@@ -246,5 +246,5 @@ puts "creating users..."
     baseline_stats: 66,
     avatar: "avatar20.png"
 )
-
   user20.save
+

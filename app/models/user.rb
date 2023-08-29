@@ -14,4 +14,5 @@ class User < ApplicationRecord
     tsearch: { prefix: true }
   }
   has_many :active_challenges
+  has_many :posts, dependent: :destroy
 end

@@ -1,14 +1,17 @@
 class UsersController < ApplicationController
   def feed
-  @entry = Entry.new
  if params[:query].present?
   @users = User.search_by_first_name_and_last_name(params[:query])
 else
   @users = User.all
 end
+    @entry = Entry.new
+    @post = Post.new
+
   end
 
   def dashboard
+    @entry = Entry.new
   end
 
   private
@@ -16,8 +19,4 @@ end
     params.require(:user).permit(:first_name, :last_name)
   end
 end
-# if params[:query].present?
-#   @users = User.search_by_first_name_and_last_name(params[:query])
-# else
-#   @users = User.all
-# end
+
