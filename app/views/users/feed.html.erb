@@ -1,4 +1,36 @@
-<h1> Your feed</h1>
+
+<h1> hello from feed </h1>
+<div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: feed_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search user"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div id="user">
+        <% if @users.any? %>
+          <% @users.each do |user| %>
+            <h4><%= user.first_name %></h4>
+            <p><%= user.last_name %></p>
+            <%= image_tag user.avatar, class: 'avatar' %>
+          <% end %>
+        <% else %>
+          <em>Sorry, no user found.</em>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
