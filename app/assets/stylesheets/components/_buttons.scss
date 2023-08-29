@@ -1,0 +1,17 @@
+.call-to-action{
+  border: solid;
+  border-radius: 6px;
+  transition: .2s ease-in-out;
+}
+.call-to-action:hover{
+background-color: darkgrey;
+}
+
+.add-button{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

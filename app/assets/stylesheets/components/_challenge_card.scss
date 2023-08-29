@@ -6,3 +6,25 @@
   transform:scale(1.05);
   }
 }
+
+.dashboard-challenges{
+  border: solid;
+  position: relative;
+}
+
+.circle{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  display: flex;
+}
+
+.green {
+  background-color: green;
+}
+
+.grey {
+  background-color: grey;
+
+}

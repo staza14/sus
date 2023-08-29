@@ -1,1 +1,59 @@
-<h1>Hello from dashboard</h1>
+<div class ="container">
+
+  <h1>Hi <%= current_user.first_name %></h1>
+
+  <div class="my-challenges">
+
+    <div class="active-challenges">
+    <h3> Your active challenges</h3>
+     <% @active_challenges.each do |challenge| %>
+      <div class="dashboard-challenges justify-content-center col-4 p-3 m-3">
+        <button type="button" class="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.challenge.id %>">
+          <i class="fa-solid fa-plus fa-2xl"></i>
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal<%= challenge.challenge.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><%=challenge.challenge.name  %></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h4><%= challenge.challenge.prompt %></h4>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+          <h3> <%=challenge.challenge.name %></h3>
+          <h5><%= challenge.challenge.summary %></h5>
+          <div class="wrapper d-flex">
+          <% challenge.active_challenge_days.each do |day| %>
+          <div class="circle <%= day.status ? "green" : "grey" %>">
+            <h5 class="p-2"><%= day.day %></h5>
+          </div>
+          <% end %>
+          </div>
+        </div>
+      <%end%>
+    </div>
+
+    <div class="completed-challenges">
+    <h3> Your completed challenges</h3>
+      <% @completed_challenges.each do |challenge| %>
+        <div class="dashboard-challenges justify-content-center col-4 p-3 m-3">
+            <h3> <%=challenge.challenge.name %></h3>
+            <h5><%= challenge.challenge.summary %></h5>
+            <h5><%= challenge.challenge.duration %> days</h5>
+        </div>
+      <%end %>
+    </div>
+
+  </div>
+
+</div>
+<!-- Button trigger modal -->

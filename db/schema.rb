@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_29_102331) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_29_142610) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "active_challenge_days", force: :cascade do |t|
+    t.boolean "status", default: false
+    t.integer "day"
+    t.bigint "active_challenge_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["active_challenge_id"], name: "index_active_challenge_days_on_active_challenge_id"
+  end
 
   create_table "active_challenges", force: :cascade do |t|
     t.boolean "completed", default: false
@@ -34,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_102331) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "summary"
+    t.string "prompt"
   end
 
   create_table "entries", force: :cascade do |t|
@@ -48,7 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_102331) do
   end
 
   create_table "friendships", force: :cascade do |t|
-    t.boolean "confirmed"
+    t.boolean "confirmed", default: false
     t.bigint "asker_id", null: false
     t.bigint "receiver_id", null: false
     t.datetime "created_at", null: false
@@ -74,6 +84,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_102331) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "active_challenge_days", "active_challenges"
   add_foreign_key "active_challenges", "challenges"
   add_foreign_key "active_challenges", "users"
   add_foreign_key "entries", "users"
