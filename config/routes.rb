@@ -10,10 +10,9 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#dashboard'
 
   resources :challenges, only: :index do
-    resources :active_challenges, only: :create
-
+  resources :active_challenges, only: :create
+  end
   resources :entries, only: :create
 
   resources :posts, only: %i[index create]
-  end
 end

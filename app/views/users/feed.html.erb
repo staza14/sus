@@ -1,7 +1,7 @@
 
 <h1> hello from feed </h1>
-<div class="row justify-content-center">
-  <div class="col-sm-8 my-3">
+<div class="row justify-content-center" data-controller="search-users>
+  <div class=col-sm-8 my-3" data-controller="search-users">
     <%= form_with url: feed_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
@@ -13,23 +13,29 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-sm-8">
-      <div id="user">
-        <% if @users.any? %>
-          <% @users.each do |user| %>
+
+<div class="row justify-content-center">
+  <div class="col-sm-8">
+    <div id="user">
+      <% if @users.any? %>
+        <% @users.each do |user| %>
+          <div class="user-box">
             <h4><%= user.first_name %></h4>
             <p><%= user.last_name %></p>
             <%= image_tag user.avatar, class: 'avatar' %>
-          <% end %>
-        <% else %>
-          <em>Sorry, no user found.</em>
+          <button type="button" class="btn btn-primary">Add friend</button>
+          </div>
         <% end %>
-      </div>
+      <% else %>
+        <div class="col-sm-8 text-center">
+          <em>Sorry, no user found.</em>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
+
+
 
 
 
@@ -50,4 +56,3 @@
           <%= f.input :image %>
           <%= f.submit "Submit post", class: "btn btn-primary" %>
         <% end %>
-       
