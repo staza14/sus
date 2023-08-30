@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   
   resources :active_challenges, only: [] do
     resources :active_challenge_days, only: [:create, :update]
+
   end
   resources :entries, only: :create
 

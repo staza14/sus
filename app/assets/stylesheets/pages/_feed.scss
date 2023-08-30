@@ -24,3 +24,25 @@
   background-color: #7E73FF;
   color: white;
 }
+
+$primary-color: #007bff;
+
+
+
+  .user-box {
+    border: 6px solid #000000;
+    outline: 2px solid blueviolet;
+    padding: 10px;
+    background-color: lightgreen;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .avatar {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .text-center {
+    text-align: center;
+  }
