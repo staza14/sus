@@ -1,6 +1,7 @@
 class ChallengesController < ApplicationController
   def index
     @challenges = Challenge.all
+    @feature = Challenge.all.sample
   end
 
   def show
