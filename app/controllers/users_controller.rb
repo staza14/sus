@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
   def feed
+    if params[:query].present?
+      @user = User.find_by(email:params[:query])
+    end
 
-  if params[:query].present?
-    @users = User.search_by_first_name_and_last_name(params[:query])
-  else
-    @users = User.all
-  end
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: 'user_card', :formats=>[:text, :html], locals: { user: @user } }
+    end
 
     @entry = Entry.new
     @post = Post.new

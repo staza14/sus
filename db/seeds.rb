@@ -254,3 +254,8 @@ puts "creating challenges"
 Challenge.create(summary: "a very fun and exciting challenge to join", duration: 5, name: "beat the meat", description: "a big long description about the challenge and why you should do it.", prompt:"did you today?")
 Challenge.create(summary: "a challenging challenge", duration: 5, name: "challenge 2", description: "a big long description about the challenge and why you should do it.", prompt:"did you today?")
 Challenge.create(summary: "a very fun and exciting challenge to join", duration: 5, name: "challenge 3", description: "a big long description about the challenge and why you should do it.", prompt:"did you today?")
+
+
+puts "creating entries"
+
+Entry.create(food_score: 1, travel_score: 0, home_score: 0.4, created_at: "Mon, 28 Aug 2023 09:31:04.000000000 UTC +00:00", user: User.find(62))

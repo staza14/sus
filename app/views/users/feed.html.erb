@@ -1,85 +1,52 @@
 
 <h1> hello from feed </h1>
-<div class="row justify-content-center" data-controller="search-users>
-  <div class=col-sm-8 my-3" data-controller="search-users">
-    <%= form_with url: feed_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Search user"
-        %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
-
-
-<div class="row justify-content-center">
-  <div class="col-sm-8">
-    <div id="user">
-      <% if @users.any? %>
-        <% @users.each do |user| %>
-          <div class="user-box">
-            <h4><%= user.first_name %></h4>
-            <p><%= user.last_name %></p>
-            <%= image_tag user.avatar, class: 'avatar' %>
-          <button type="button" class="btn btn-primary">Add friend</button>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-8 text-center">
-          <em>Sorry, no user found.</em>
+<div data-controller="user-card">
+  <div class="row justify-content-center" >
+    <div class=col-sm-8 my-3">
+      <%= form_with url: feed_path, method: :get, class: "d-flex", html: {data: {action: "submit->user-card#revealContent"}} do |f| %>
+        <%= f.text_field :query,
+              value: params[:query],
+              class: "form-control",
+              placeholder: "Search a user by his email ",
+              data: { user_card_target: "input" }
+          %>
+          <div data-user-card-target="button">
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
         </div>
       <% end %>
     </div>
   </div>
-</div>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Add Post
-</button>
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Post</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <%= simple_form_for @post do |f| %>
-          <%= f.input :content %>
-          <%= f.input :image %>
-          <%= f.submit "Submit post", class: "btn btn-primary" %>
-        <% end %>
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div id="user" class="" data-user-card-target="cards">
+
+
       </div>
     </div>
   </div>
-</div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Add entries
-</button>
+  <div class="container">
+  <button type="button" class="call-to-action" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Add Post
+  </button>
+  </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add your entries</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form class="space-y-4">
-       <%= simple_form_for @entry do |f| %>
-          <%= f.input :food_score %>
-          <%= f.input :travel_score %>
-          <%= f.input :home_score %>
-          <%= f.input :day_score %>
-          <%= f.submit %>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for @post do |f| %>
+            <%= f.input :content %>
+            <%= f.input :image %>
+            <%= f.submit "Submit post", class: "btn btn-primary" %>
           <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
