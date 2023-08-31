@@ -1,0 +1,15 @@
+
+
+<% if user %>
+  <div class="user-box">
+    <h4><%= user.first_name %></h4>
+    <p><%= user.last_name %></p>
+    <%= image_tag user.avatar, class: 'avatar' %>
+    <button type="button" class="btn btn-primary">Add friend</button>
+
+    <% else %>
+        <div class="col-sm-8 text-center">
+          <em>Sorry, no user found.</em>
+        </div>
+ </div>
+<% end %>
