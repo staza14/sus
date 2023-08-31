@@ -25,6 +25,8 @@ class UsersController < ApplicationController
     @entry_user.each { |entry| @travel_data.store(entry.created_at.strftime("%Y%m%d"), entry.travel_score) }
     @home_data = {}
     @entry_user.each { |entry| @home_data.store(entry.created_at.strftime("%Y%m%d"), entry.home_score) }
+    @day_data = {}
+    @entry_user.each { |entry| @day_data.store(entry.created_at.strftime("%Y%m%d"), entry.day_score) }
   end
 
   private
