@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+.home-page{
+background-image: url("sus-background.png");
+background-size: cover;
+height: 964px;
+color: #e2acbb;
+position: relative;
+}
+
+.period{
+  font-size:60px;
+  background-color: transparent;
+  height: fit-content;
+  position: absolute;
+  right: 10px;
+  bottom: 460px;
+}
+
+#demo{
+  color: #e2acbb;
+  font-size: 30px;
+  position: absolute;
+  bottom: 300px;
+  left: 30px;
+}

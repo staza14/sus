@@ -17,7 +17,7 @@
 }
 .user-card{
   width:300px;
-  height: 350px;
+  height: fit-content;
   background-color: grey;
   display: flex;
   flex-direction: column;
@@ -44,8 +44,11 @@
   background-color: white;
   margin: 5px;
 }
-.info{
+
+.sus-score-chart{
   background-color: white;
   border-radius: 5px;
-  height:100px;
+  margin: 5px;
+  width: 280px;
+  height: 280px;
 }
