@@ -33,9 +33,9 @@
         <h1>Your progress</h1>
         <div class="container">
           <%= line_chart [
-              {name: "Food Score", data: @food_data},
-              {name: "Travel Score", data: @travel_data},
-              {name: "Home Score", data: @home_data}
+              {name: "Food Score", data: @food_data, color: "#ED936D"},
+              {name: "Travel Score", data: @travel_data, color: "#2A6465"},
+              {name: "Home Score", data: @home_data, color: "#97C5DE"}
             ] %>
         </div>
 
@@ -216,12 +216,3 @@ function updateTextInput7(val) {
           document.getElementById('textInput7').value=val;
         }
 </script>
-
-<div class="container">
-<%= line_chart [
-  {name: "Food Score", data: @food_data, color: "#ED936D"},
-  {name: "Travel Score", data: @travel_data, color: "#2A6465"},
-  {name: "Home Score", data: @home_data, color: "#97C5DE"}
-] %>
-</div>
-
