@@ -8,6 +8,45 @@
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
+
+  <div class="form-inputs">
+    <%= f.input :first_name,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }%>
+    <%= f.input :last_name,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }%>
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }%>
+    <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" } %>
+    <%= f.input :password_confirmation,
+                required: true,
+                input_html: { autocomplete: "new-password" } %>
+    </div>
+
+    </div>
+      <%= f.input :car_hours, label: "How many hours do you travel by car weekly?", input_html: {value: 0} %>
+      <%= f.input :bus_hours, label: "How many hours do you travel by bus weekly?", input_html: {value: 0} %>
+      <%= f.input :train_hours, label: "How many hours do you travel by train weekly?", input_html: {value: 0} %>
+      <%= f.input :cycle_hours, label: "How many hours do you travel by cycle weekly?", input_html: {value: 0} %>
+      <%= f.input :foot_hours, label: "How many hours do you walk weekly?", input_html: {value: 0} %>
+      <%= f.input :flight_long_hours, label: "How many times a year do you fly?", input_html: {value: 0} %>
+      <%= f.input :flight_short_hours, label: "How many times a year do you fly?", input_html: {value: 0} %>
+      <input type="text" id="textInput1" value="" style= "border:none; background-color: #F4F4F4;">
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up" %>
+  </div>
+<% end %>
+
       <div class="form-inputs">
         <%= f.input :first_name,
                       required: true,
@@ -29,6 +68,7 @@
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
       </div>
+
 
       <div class="form-actions">
         <%= f.button :submit, "Sign up" %>
