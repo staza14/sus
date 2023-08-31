@@ -1,6 +1,44 @@
-<h1> Your feed</h1>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Post</button>
+<h1> hello from feed </h1>
+<div class="row justify-content-center" data-controller="search-users>
+  <div class=col-sm-8 my-3" data-controller="search-users">
+    <%= form_with url: feed_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search user"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="row justify-content-center">
+  <div class="col-sm-8">
+    <div id="user">
+      <% if @users.any? %>
+        <% @users.each do |user| %>
+          <div class="user-box">
+            <h4><%= user.first_name %></h4>
+            <p><%= user.last_name %></p>
+            <%= image_tag user.avatar, class: 'avatar' %>
+          <button type="button" class="btn btn-primary">Add friend</button>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="col-sm-8 text-center">
+          <em>Sorry, no user found.</em>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Add Post
+</button>
+
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
