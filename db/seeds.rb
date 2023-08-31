@@ -13,7 +13,7 @@ puts "creating users..."
   user1 = User.create!(
     first_name: "Jane",
     last_name: "Smith",
-    email: "jane.smith@hotmail.com",
+    email: "test@hotmail.com",
     password: "123456",
     overall_score: 12,
     baseline_stats: 44,
