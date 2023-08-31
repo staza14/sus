@@ -1,52 +1,28 @@
 
 <h1> hello from feed </h1>
-<div class="row justify-content-center" data-controller="search-users>
-  <div class=col-sm-8 my-3" data-controller="search-users">
-    <%= form_with url: feed_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Search user"
-        %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
-
-
-<div class="row justify-content-center">
-  <div class="col-sm-8">
-    <div id="user">
-      <% if @users.any? %>
-        <% @users.each do |user| %>
-          <div class="user-box">
-            <h4><%= user.first_name %></h4>
-            <p><%= user.last_name %></p>
-            <%= image_tag user.avatar, class: 'avatar' %>
-          <button type="button" class="btn btn-primary">Add friend</button>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="col-sm-8 text-center">
-          <em>Sorry, no user found.</em>
+<div data-controller="user-card">
+  <div class="row justify-content-center" >
+    <div class=col-sm-8 my-3">
+      <%= form_with url: feed_path, method: :get, class: "d-flex", html: {data: {action: "submit->user-card#revealContent"}} do |f| %>
+        <%= f.text_field :query,
+              value: params[:query],
+              class: "form-control",
+              placeholder: "Search a user by his email ",
+              data: { user_card_target: "input" }
+          %>
+          <div data-user-card-target="button">
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
         </div>
       <% end %>
     </div>
   </div>
-</div>
 
 
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div id="user" class="" data-user-card-target="cards">
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Add Post
-</button>
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Post</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <%= simple_form_for @post do |f| %>
@@ -54,44 +30,30 @@
           <%= f.input :image %>
           <%= f.submit "Submit post", class: "btn btn-primary" %>
         <% end %>
+                            
+    </div>
+  </div>
 
+  <div class="container">
+  <button type="button" class="call-to-action" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Add Post
+  </button>
+  </div>
 
-
-
-
-
-
-
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Sign up Big form</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-      <%= simple_form_for @user do |f| %>
-        <%= f.input :car_hours, label: "How many hours do you travel by car weekly?", input_html: {value: 0} %>
-        <%= f.input :bus_hours, label: "How many hours do you travel by bus weekly?", input_html: {value: 0} %>
-        <%= f.input :train_hours, label: "How many hours do you travel by train weekly?", input_html: {value: 0} %>
-        <%= f.input :cycle_hours, label: "How many hours do you travel by cycle weekly?", input_html: {value: 0} %>
-        <%= f.input :foot_hours, label: "How many hours do you walk weekly?", input_html: {value: 0} %>
-        <%= f.input :flight_long_hours, label: "How many times a year do you fly?", input_html: {value: 0} %>
-        <%= f.input :flight_short_hours, label: "How many times a year do you fly?", input_html: {value: 0} %>
-        <%= f.input :beef, as: :range, prompt: "my data", collection: 0..3,
-                    label: "How many of your meals contained beef weekly?",
-                    input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput1(this.value)" }
-                    %>
-        <input type="text" id="textInput1" value="" style= "border:none; background-color: #F4F4F4;">
-
-        <div class="modal-footer">
-        <%= f.submit %>
-        <% end %>
-      </div>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for @post do |f| %>
+            <%= f.input :content %>
+            <%= f.input :image %>
+            <%= f.submit "Submit post", class: "btn btn-primary" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>

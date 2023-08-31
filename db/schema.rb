@@ -61,7 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_142610) do
   end
 
   create_table "friendships", force: :cascade do |t|
-    t.boolean "confirmed"
+    t.boolean "confirmed", default: false
     t.bigint "asker_id", null: false
     t.bigint "receiver_id", null: false
     t.datetime "created_at", null: false

@@ -1,0 +1,54 @@
+.my-avatar{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  position: absolute;
+  top: -60px;
+  background-color: white;
+  border: solid;
+
+  object-position: center;
+  object-fit: cover;
+}
+.avatar-image{
+  height: 100%;
+  width: 100%;
+  margin:10%;
+}
+.user-card{
+  width:300px;
+  height: fit-content;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 70px;
+}
+
+.daily-facts{
+  width:100%;
+  height:400px;
+  background-color: grey;
+}
+
+.sticky-side{
+  position: sticky;
+  top:60px;
+  align-self: flex-start;
+}
+.stats{
+  height:30px;
+  width:30px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 5px;
+}
+
+.sus-score-chart{
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px;
+  width: 280px;
+  height: 280px;
+}
