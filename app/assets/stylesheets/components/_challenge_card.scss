@@ -10,6 +10,8 @@
 .dashboard-challenges{
   border: solid;
   position: relative;
+  width: 100%;
+
 }
 
 .circle{
@@ -27,4 +29,8 @@
 .grey {
   background-color: grey;
 
+}
+
+.my-challenges{
+  flex-grow: 2;
 }

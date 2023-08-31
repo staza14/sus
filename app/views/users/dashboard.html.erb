@@ -1,23 +1,47 @@
 
-<h1>Hello from dashboard</h1>
 <!-- Button trigger modal -->
-<button type="button" class="call-to-action" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Add entries
-</button>
-
-
 <div class ="container">
 
-  <h1>Hi <%= current_user.first_name %></h1>
 
-  <div class="my-challenges">
+<div class="d-flex mt-5" >
+  <div class="sticky-side">
+    <div class="user-card mt-5 rounded-5">
+      <div>
+        <% if current_user.avatar %>
+          <%=  image_tag current_user.avatar, class:"my-avatar"%>
+        <% end %>
+      </div>
+      <div>
+        <div class="d-flex justify-content-center">
+          <h1>Hi <%= current_user.first_name %></h1>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="stats"></div>
+          <div class="stats"></div>
+          <div class="stats"></div>
+        </div>
+        <div class="info m-3">
+         <p>some more info</p>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="call-to-action mt-5 p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">how are you doing today?</button>
+    <div class="daily-facts rounded-5 mt-5"></div>
+  </div>
 
-    <div class="active-challenges">
-    <h3> Your active challenges</h3>
-     <% @active_challenges.each do |challenge| %>
+  <div class=" conatiner my-challenges m-4">
+  <div>
+      <h1>Your garden</h1>
+      <div class="placeholder">
+      </div>
+    </div>
+
+    <div class="active-challenges mt-4">
+      <h3> Your active challenges</h3>
+      <% @active_challenges.each do |challenge| %>
       <div class="dashboard-challenges justify-content-center col-4 p-3 m-3">
         <button type="button" class="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.challenge.id %>">
-          <i class="fa-solid fa-plus fa-2xl"></i>
+        <i class="fa-solid fa-pen fa-xl"></i>
         </button>
 
         <!-- Modal -->
@@ -30,13 +54,19 @@
               </div>
               <div class="modal-body">
                 <h4><%= challenge.challenge.prompt %></h4>
+                <div  class="wrapper d-flex">
+                  <% challenge.active_challenge_days.each do |day| %>
+                    <%= simple_form_for [challenge, day], html: {data: {controller: "mark-as-complete", action: "submit->mark-as-complete#update"}} do |f| %>
+                      <%= f.input :status , as: :boolean , input_html: {checked: true}, wrapper_html: {class: "d-none"} %>
+                      <%= f.submit day.day, data: {mark_as_complete_target: "submit"}, class:"p-2 mx-2" %>
+                    <% end  %>
+                  <% end %>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Submit</button>
               </div>
             </div>
           </div>
         </div>
+
           <h3> <%=challenge.challenge.name %></h3>
           <h5><%= challenge.challenge.summary %></h5>
           <div class="wrapper d-flex">
@@ -50,8 +80,8 @@
       <%end%>
     </div>
 
-    <div class="completed-challenges">
-    <h3> Your completed challenges</h3>
+    <div class="completed-challenges mt-4">
+      <h3> Your completed challenges</h3>
       <% @completed_challenges.each do |challenge| %>
         <div class="dashboard-challenges justify-content-center col-4 p-3 m-3">
             <h3> <%=challenge.challenge.name %></h3>
@@ -65,12 +95,14 @@
 
 </div>
 
+
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add your entries</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Daily Log</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
