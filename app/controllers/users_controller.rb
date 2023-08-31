@@ -16,6 +16,13 @@ class UsersController < ApplicationController
     @active_challenges = @challenges.where(completed: false)
     @completed_challenges = @challenges.where(completed: true)
     @entry = Entry.new
+    @entry_user = current_user.entries
+    @food_data = {}
+    @entry_user.each { |entry| @food_data.store(entry.created_at.strftime("%Y%m%d"), entry.food_score) }
+    @travel_data = {}
+    @entry_user.each { |entry| @travel_data.store(entry.created_at.strftime("%Y%m%d"), entry.travel_score) }
+    @home_data = {}
+    @entry_user.each { |entry| @home_data.store(entry.created_at.strftime("%Y%m%d"), entry.home_score) }
   end
 
   private

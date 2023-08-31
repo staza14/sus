@@ -35,8 +35,8 @@ class Entry < ApplicationRecord
       bus_hours_weight = TRANSPORT_WEIGHTS[:bus_hours] * self.bus_hours.to_i
       train_hours_weight = TRANSPORT_WEIGHTS[:train_hours] * self.train_hours.to_i
       cycle_hours_weight = TRANSPORT_WEIGHTS[:cycle_hours] * self.cycle_hours.to_i
-      food_hours_weight = TRANSPORT_WEIGHTS[:foot_hours] * self.foot_hours.to_i
-      travel_score = car_hours_weight + bus_hours_weight + train_hours_weight + cycle_hours_weight + food_hours_weight
+      foot_hours_weight = TRANSPORT_WEIGHTS[:foot_hours] * self.foot_hours.to_i
+      travel_score = car_hours_weight + bus_hours_weight + train_hours_weight + cycle_hours_weight + foot_hours_weight
   end
 
   def calculate_food_score
@@ -51,9 +51,9 @@ class Entry < ApplicationRecord
   end
 
   def calculate_home_score
-    bath_weight = HOME_WEIGHTS[:bath] * (self.bath != nil && self.bath.downcase == "yes" ? 1 : 100)
-    long_shower_weight = HOME_WEIGHTS[:long_shower] * (self.long_shower != nil && self.long_shower.downcase == "yes" ? 1 : 100)
-    short_shower_weight = HOME_WEIGHTS[:short_shower] * (self.short_shower != nil && self.short_shower.downcase == "yes" ? 1 : 100)
+    bath_weight = HOME_WEIGHTS[:bath] * (self.bath != nil && self.bath.downcase == "yes" ? 0 : 1)
+    long_shower_weight = HOME_WEIGHTS[:long_shower] * (self.long_shower != nil && self.long_shower.downcase == "yes" ? 0 : 1)
+    short_shower_weight = HOME_WEIGHTS[:short_shower] * (self.short_shower != nil && self.short_shower.downcase == "yes" ? 0 : 1)
     home_score = bath_weight + long_shower_weight + short_shower_weight
   end
 end
