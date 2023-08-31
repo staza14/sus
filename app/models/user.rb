@@ -84,6 +84,7 @@ class User < ApplicationRecord
     foot_hours_weight = TRANSPORT_WEIGHTS[:foot_hours] * self.foot_hours.to_i
     flight_long_hours_weight = TRANSPORT_WEIGHTS[:flight_long_hours] * self.flight_long_hours.to_i
     flight_short_hours_weight = TRANSPORT_WEIGHTS[:flight_short_hours] * self.flight_short_hours.to_i
+
     travel_score = car_hours_weight + bus_hours_weight + train_hours_weight + cycle_hours_weight + foot_hours_weight + flight_long_hours_weight + flight_short_hours_weight
   end
 
@@ -101,6 +102,7 @@ class User < ApplicationRecord
     bath_weight = HOME_WEIGHTS[:bath] * (self.bath != nil && self.bath.downcase == "yes" ? 1 : 100)
     long_shower_weight = HOME_WEIGHTS[:long_shower] * (self.long_shower != nil && self.long_shower.downcase == "yes" ? 1 : 100)
     short_shower_weight = HOME_WEIGHTS[:short_shower] * (self.short_shower != nil && self.short_shower.downcase == "yes" ? 1 : 100)
+
     home_score = bath_weight + long_shower_weight + short_shower_weight + lights_yes_weight + lights_no_weight + clothing_zero_weight +  clothing_sixty_weight + clothing_hundred_weight +
     clothing_hundreadeighty_weight + temp_fourteen_weight + temp_seventeen_weight + temp_twentyone_weight + temp_abovetwentyone_weight
   end
@@ -119,6 +121,7 @@ class User < ApplicationRecord
     food_locally_weight = FOOD_WEIGHTS[:food_locally] * self.food_locally.to_i
     food_own_weight = FOOD_WEIGHTS[:food_own] * self.food_own.to_i
     food_dunno_weight = FOOD_WEIGHTS[:food_dunno] * self.food_dunno.to_i
+
     food_score = meat_everyday_weight + meat_rarely_weight + no_beef_weight +  vegetarian_weight + vegan_weight +
     throw_none_weight +  throw_ten_weight + throw_thirty_weight + throw_abovethirty_weight + food_supermarket_weight + food_locally_weight +
     food_own_weight + food_dunno_weight

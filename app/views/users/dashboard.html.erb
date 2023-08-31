@@ -118,6 +118,7 @@
           <%= f.input :train_hours, label: "How many hours did you travel by train today?", input_html: {value: 0} %>
           <%= f.input :cycle_hours, label: "How many hours did you travel by cycle today?", input_html: {value: 0} %>
           <%= f.input :foot_hours, label: "How many hours did you walk today?", input_html: {value: 0} %>
+
           <%= f.input :beef, as: :range, prompt: "my data", collection: 0..3,
                       label: "How many of your meals contained beef today?",
                       input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput1(this.value)" }
