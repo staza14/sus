@@ -1,19 +1,6 @@
 <h1> Your feed</h1>
 
-
-<button data-action="click->toggle#fire" class="booking-button p-3 m-5">Add Entry</button>
-<%= simple_form_for @entry do |f| %>
-<%= f.input :food_score %>
-<%= f.input :travel_score %>
-<%= f.input :home_score %>
-<%= f.input :day_score %>
-<%= f.submit %>
-<% end %>
-
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Add Post
-</button>
-
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Post</button>
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -27,7 +14,11 @@
           <%= f.input :image %>
           <%= f.submit "Submit post", class: "btn btn-primary" %>
         <% end %>
-        
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Add entries
