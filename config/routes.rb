@@ -13,11 +13,13 @@ Rails.application.routes.draw do
     resources :active_challenges, only: :create
   end
 
+
   resources :user, only: :dashboard do
     resources :friendships, only: :create
   end
 
   resources :active_challenges, only: [] do
+
     resources :active_challenge_days, only: [:create, :update]
 
   end

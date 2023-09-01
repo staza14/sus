@@ -1,4 +1,4 @@
-<%# NOTE: I wasn't sure how much space we'd have for the post on the dashboard
+<%# NOTE: I wasn't sure how much space we'd have for the post for the feed
           so i have given it width:100% with a max-width of 570px.
           When moving the to our write page, ignore the 'container' div
           and make a new container div for all posts on the right page %>
@@ -7,7 +7,7 @@
     <div class="post-container">
       <div class="post-header">
         <div class='name-avatar'>
-          <div class="feed-avatar"><%= post.user.avatar %></div>
+          <div class="feed-avatar"><%= image_tag post.user.avatar %></div>
           <div class='post-name'><%= post.user.first_name + ' ' +  post.user.last_name %></div>
         </div>
       </div>
