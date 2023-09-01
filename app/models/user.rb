@@ -126,4 +126,11 @@ class User < ApplicationRecord
     throw_none_weight +  throw_ten_weight + throw_thirty_weight + throw_abovethirty_weight + food_supermarket_weight + food_locally_weight +
     food_own_weight + food_dunno_weight
   end
+
+  def friends
+    receivers = self.friendships_as_asker.map(&:receiver)
+    askers = self.friendships_as_receiver.map(&:asker)
+
+    (receivers + askers).uniq
+  end
 end
