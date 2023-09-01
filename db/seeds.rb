@@ -216,7 +216,7 @@ puts "creating users..."
 puts "Users Created"
 puts "creating challenges"
   # Food
-  Challenge.create(
+  meatless_mondays = Challenge.create(
     name: "Meatless Mondays",
     description: "Take all meat out of your diet every monday for a month. Meatless Mondays is a global movement encouraging people to skip meat every Monday. It promotes health, reduces environmental impact, and supports animal welfare. Participants usually enjoy a broader range of plant-based meals and awareness about sustainable living and dietary choices over the course of a month.",
     summary: "No meat every Monday for 4 weeks",
@@ -224,9 +224,9 @@ puts "creating challenges"
     duration: 4,
     challenge_score: 2,
     # badge: ,
-    prompt:"Did you eat meat today?"
+    prompt: "Did you eat meat today?"
   )
-  Challenge.create(
+  moove_the_beef = Challenge.create(
     name: "Moove that beef out your diet",
     description: "Beef production has a substantial environmental footprint. It's a leading driver of deforestation in regions like the Amazon, releases significant greenhouse gases through cattle farming, and requires vast amounts of water and land. The cumulative impact makes beef a major contributor to climate change, biodiversity loss, and resource depletion. As well as its environmental impact, regularly eating beef increases cholestorol",
     summary: "Don't eat any Beef for a week",
@@ -234,7 +234,7 @@ puts "creating challenges"
     duration: 7,
     challenge_score: 2,
     # badge: ,
-    prompt:"did you have beef today?"
+    prompt: "did you have beef today?"
   )
   Challenge.create(
     name: "Let the veg take over",
@@ -244,7 +244,7 @@ puts "creating challenges"
     duration: 7,
     challenge_score: 3,
     # badge: ,
-    prompt:"Do you think you had healthy plate proportions today?"
+    prompt: "Do you think you had healthy plate proportions today?"
   )
   # Transport
   Challenge.create(
@@ -255,17 +255,17 @@ puts "creating challenges"
     duration: 4,
     challenge_score: 5,
     # badge: ,
-    prompt:"did you today?"
+    prompt: "did you today?"
   )
   Challenge.create(
-    name: "Get those legs moving",
+    name: "Get those legs moving More",
     description: "If you have a trip under 5km that doesn't require you to drive(i.e. food shop), walk or cycle",
     summary: "Walk or cycle every trip under 5km for a month",
     category: "Transport",
     duration: 4,
     challenge_score: 6,
     # badge: ,
-    prompt:"If you took a trip under 5km, did you walk or cycle?"
+    prompt: "If you took a trip under 5km, did you walk or cycle?"
   )
   # Home
   Challenge.create(
@@ -276,9 +276,9 @@ puts "creating challenges"
     duration: 7,
     challenge_score: 1,
     # badge: ,
-    prompt:"Did you turn off lights that weren't being used(that you know of)?"
+    prompt: "Did you turn off lights that weren't being used(that you know of)?"
   )
-  Challenge.create(
+  second_hand_sourcing = Challenge.create(
     name: "Second-hand Sourcing",
     description: "For the next month, if you buy any clothes, they should be from a second-hand source. It is as easy as it has ever been to find well kept, fashionable second hand clothing. Look on second hand community apps, thrift stores, charity shops or maybe ask your parents or grandparents if they have anything in their wardrobes. You never know what you might find",
     summary: "Turn off all lights not being actively used",
@@ -286,7 +286,7 @@ puts "creating challenges"
     duration: 7,
     challenge_score: 1,
     # badge: ,
-    prompt:"Are you sticking to the challenge?"
+    prompt: "Are you sticking to the challenge?"
   )
   # Combination
   marvelous_mitochondria = Challenge.create(
@@ -297,12 +297,12 @@ puts "creating challenges"
     duration: 14,
     challenge_score: 7,
     # badge: ,
-    prompt:"Did you try at least one healthy habit?"
+    prompt: "Did you try at least one healthy habit?"
   )
 puts "Challenges Created"
 puts "creating posts"
   Post.create!(
-    content: "Just started composting in my backyard! It's a small step, but every bit counts when it comes to reducing food waste. 🌱🍂 #Composting #ReduceWaste #EcoFriendly",
+    content: "I heard #sus is replacing twitter #imOnBoard #ElonMuskDrools #SusRules #converted",
     user_id: user1.id,
     created_at: "Wed, 23 Aug 2023 09:20:04.000000000 UTC +00:00"
   )
@@ -465,7 +465,7 @@ puts "creating posts"
     created_at: "Wed, 23 Aug 2023 09:20:04.000000000 UTC +00:00"
   )
   Post.create!(
-    content: "I heard #sus is replacing twitter #imOnBoard #ElonMuskDrools #SusRules #converted",
+    content: "Just started composting in my backyard! It's a small step, but every bit counts when it comes to reducing food waste. 🌱🍂 #Composting #ReduceWaste #EcoFriendly",
     user_id: user10.id,
     created_at: "Fri, 01 Sep 2023 12:17:04.000000000 UTC +00:00"
   )
@@ -546,12 +546,12 @@ puts "Creating Friendships"
   Friendship.create!(
     confirmed: true,
     asker_id: user1.id,
-    receiver_id: user10.id
+    receiver_id: user9.id
   )
   Friendship.create!(
     confirmed: true,
     asker_id: user1.id,
-    receiver_id: user9.id
+    receiver_id: user10.id
   )
   Friendship.create!(
     confirmed: true,
@@ -714,6 +714,66 @@ puts "Creating Active Challenges"
     completed: false,
     user_id: user1.id,
     challenge_id: marvelous_mitochondria.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user2.id,
+    challenge_id: marvelous_mitochondria.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user9.id,
+    challenge_id: marvelous_mitochondria.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user5.id,
+    challenge_id: marvelous_mitochondria.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user1.id,
+    challenge_id: meatless_mondays.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user3.id,
+    challenge_id: meatless_mondays.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user7.id,
+    challenge_id: meatless_mondays.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user8.id,
+    challenge_id: meatless_mondays.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user10.id,
+    challenge_id: meatless_mondays.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user8.id,
+    challenge_id: moove_the_beef.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user1.id,
+    challenge_id: second_hand_sourcing.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user9.id,
+    challenge_id: second_hand_sourcing.id
+  )
+  ActiveChallenge.create(
+    completed: false,
+    user_id: user6.id,
+    challenge_id: second_hand_sourcing.id
   )
 puts "Active Challenges Created"
 puts "Finished Seeding"
