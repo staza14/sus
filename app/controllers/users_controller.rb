@@ -34,6 +34,7 @@ class UsersController < ApplicationController
     @entry_user.each { |entry| @home_data.store(entry.created_at.strftime("%Y%m%d"), entry.home_score) }
     @day_data = {}
     @entry_user.each { |entry| @day_data.store(entry.created_at.strftime("%Y%m%d"), entry.day_score) }
+    @leaders = current_user.friends.sort_by(&:overall_score)
   end
 
   private

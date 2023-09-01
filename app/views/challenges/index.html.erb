@@ -23,6 +23,11 @@
           <h3> <%=challenge.name %></h3>
           <h5><%= challenge.summary %></h5>
           <h5><%= challenge.duration %> days</h5>
+          <div class="d-flex">
+            <% current_user.friends.each do |friend| %>
+            <%=  image_tag friend.avatar, class:"friend-avatar"%>
+            <% end %>
+          </div>
         </a>
         </div>
           <%= button_to "join challenge", challenge_active_challenges_path(challenge), class:"call-to-action" %>
