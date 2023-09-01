@@ -5,8 +5,7 @@ class UsersController < ApplicationController
     @my_posts = current_user.posts
     @friends = current_user.friends
     @friends_posts = current_user.friends.map(&:posts).flatten
-
-
+    @all = (@my_posts + @friends_posts).sort_by { |a| a.created_at }
     if params[:query].present?
       @user = User.find_by(email:params[:query])
     end
