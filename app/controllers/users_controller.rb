@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   def feed
-    @posts = Post.where(user_id: current_user.id)
+    @my_posts = current_user.posts
+    @friends_posts = current_user.friends.map(&:posts).flatten
+
+
     if params[:query].present?
       @user = User.find_by(email:params[:query])
     end
@@ -14,6 +17,7 @@ class UsersController < ApplicationController
 
     @entry = Entry.new
     @post = Post.new
+
   end
 
   def dashboard
