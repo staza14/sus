@@ -7,7 +7,11 @@ class EntriesController < ApplicationController
     @entry.food_score = @entry.calculate_food_score
 
     @entry.home_score = @entry.calculate_home_score
+    @entry.day_score = @entry.calculate_total_score
     @entry.user = current_user
+    @user = User.find(@entry.user.id)
+    @user.overall_score = @entry.user.overall_score + @entry.day_score
+    @user.save
     if @entry.save
       redirect_to dashboard_path
     else

@@ -13,7 +13,7 @@ puts "creating users..."
   user1 = User.create!(
     first_name: "Jane",
     last_name: "Smith",
-    email: "jane.smith@hotmail.com",
+    email: "test@hotmail.com",
     password: "123456",
     overall_score: 12,
     baseline_stats: 44,
@@ -506,4 +506,7 @@ Friendship.create!(
   asker_id: 1,
   receiver_id: 6)
 # Janes Friends by id: 2,3,4,5,6,9,10
+puts "creating entries"
+
+Entry.create(food_score: 1, travel_score: 0, home_score: 0.4, created_at: "Mon, 28 Aug 2023 09:31:04.000000000 UTC +00:00", user: User.find(62))
 puts "Finished Seeding"
