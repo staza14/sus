@@ -1,8 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
 puts "cleaning database"
   Entry.destroy_all
   Post.destroy_all
@@ -10,6 +5,8 @@ puts "cleaning database"
   Challenge.destroy_all
   Friendship.destroy_all
   User.destroy_all
+
+
 puts "Finished Cleaning"
 puts "creating users..."
   user1 = User.create!(
