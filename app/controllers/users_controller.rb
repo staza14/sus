@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   def feed
+    @user = current_user
+
     @my_posts = current_user.posts
+    @friends = current_user.friends
     @friends_posts = current_user.friends.map(&:posts).flatten
 
 

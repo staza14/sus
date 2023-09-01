@@ -60,6 +60,7 @@
       <div class="post-header">
         <div class='name-avatar'>
           <div class='post-name'>
+         Created by: <%= @user.first_name %> <%= @user.last_name %>
           </div>
         </div>
       </div>
@@ -74,19 +75,24 @@
 </div>
 
 <div class="container">
+  <% @friends.each do |friend| %>
+    <% if friend.posts %>
+    <% friend.posts.each do |post| %>
     <div class="post-container">
       <div class="post-header">
         <div class='name-avatar'>
           <div class='post-name'>
+            Created by: <%= friend.first_name %> <%= friend.last_name %>
           </div>
         </div>
       </div>
       <div class='content-div'>
         <div class='post-content'>
-          <% @friends_posts.each do |post| %>
           <%= post.content %>
-          <% end %>
         </div>
       </div>
     </div>
+    <% end %>
+    <% end %>
+  <% end %>
 </div>
