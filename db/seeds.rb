@@ -17,7 +17,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 44,
-    avatar: "avatar5.png"
+    avatar: "avatar1.png"
   )
   user1.save
 
@@ -40,7 +40,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 99,
-    avatar: "avatar6.png"
+    avatar: "avatar3.png"
 )
   user3.save
 
@@ -112,7 +112,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 56,
     baseline_stats: 65,
-    avatar: "avatar9.png"
+    avatar: "avatar1.png"
 )
 
   user9.save
@@ -124,7 +124,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 22,
-    avatar: "avatar10.png"
+    avatar: "avatar2.png"
 )
 
   user10.save
@@ -137,7 +137,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 22,
-    avatar: "avatar11.png"
+    avatar: "avatar3.png"
 )
 
   user11.save
@@ -149,7 +149,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 12,
-    avatar: "avatar12.png"
+    avatar: "avatar4.png"
 )
 
   user12.save
@@ -161,7 +161,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 22,
-    avatar: "avatar13.png"
+    avatar: "avatar5.png"
 )
 
   user13.save
@@ -173,7 +173,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 22,
-    avatar: "avatar14.png"
+    avatar: "avatar6.png"
 )
 
   user14.save
@@ -185,7 +185,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 22,
-    avatar: "avatar15.png"
+    avatar: "avatar7.png"
 )
 
   user15.save
@@ -197,7 +197,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 22,
-    avatar: "avatar16.png"
+    avatar: "avatar8.png"
 )
 
   user16.save
@@ -209,7 +209,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 75,
-    avatar: "avatar17.png"
+    avatar: "avatar1.png"
 )
 
   user17.save
@@ -221,7 +221,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 35,
-    avatar: "avatar18.png"
+    avatar: "avatar2.png"
 )
 
   user18.save
@@ -233,7 +233,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 66,
-    avatar: "avatar19.png"
+    avatar: "avatar10.png"
 )
 
   user19.save
@@ -245,7 +245,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 66,
-    avatar: "avatar20.png"
+    avatar: "avatar9.png"
 )
   user20.save
 
