@@ -1,5 +1,4 @@
 
-<h1> hello from feed </h1>
 <div data-controller="user-card">
   <div class="row justify-content-center" >
     <div class=col-sm-8 my-3">
@@ -7,7 +6,7 @@
         <%= f.text_field :query,
               value: params[:query],
               class: "form-control",
-              placeholder: "Search a user by his email ",
+              placeholder: "Search for friends by email ",
               data: { user_card_target: "input" }
           %>
           <div data-user-card-target="button">
