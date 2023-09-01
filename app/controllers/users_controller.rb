@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def feed
+    @posts = Post.where(user_id: current_user.id)
     if params[:query].present?
       @user = User.find_by(email:params[:query])
     end
@@ -8,6 +9,8 @@ class UsersController < ApplicationController
       format.html # Follow regular flow of Rails
       format.text { render partial: 'user_card', :formats=>[:text, :html], locals: { user: @user } }
     end
+
+
 
     @entry = Entry.new
     @post = Post.new
