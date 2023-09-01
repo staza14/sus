@@ -11,7 +11,7 @@ class ActiveChallengesController < ApplicationController
     end
 
     if @active_challenge.save
-      redirect_to dashboard_path
+      redirect_to challenges_path
       flash[:notice] = "You've joined the challenge, well done."
     else
       render "challenges/index", status: :unprocessable_entity

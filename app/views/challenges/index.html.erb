@@ -5,19 +5,16 @@
 
     <div>
       <h2> Today's feature challenge</h2>
-      <div class="placeholder">
-      <h4><%= @feature.name%></h4>
-      </div>
-    </div>
-
-    <div>
-      <h1>Your garden</h1>
-      <div class="placeholder">
+      <div class="challenge-card p-3 my-3">
+        <h3> <%= @feature.name %></h3>
+        <h5><%= @feature.description %></h5>
+        <h5><%= @feature.duration %> days</h5>
+      <%= button_to "join challenge", challenge_active_challenges_path(@feature), class:"call-to-action" %>
       </div>
     </div>
 
   </div>
-
+    <h2> Explore all challenges:</h2>
   <div class="row justify-content-center">
     <% @challenges.each do |challenge| %>
       <div class="challenge-card justify-content-center col-4 p-3 m-3">

@@ -6,7 +6,8 @@ class User < ApplicationRecord
   # validates :first_name, presence: true
   # validates :last_name, presence: true
   # validates :email, presence: true
-  has_many :active_challenges
+  has_many :active_challenges, dependent: :destroy
+  has_many :challenges, through: :active_challenges
   has_many :friendships_as_asker, class_name: "Friendship", foreign_key: :asker_id
   has_many :friendships_as_receiver, class_name: "Friendship", foreign_key: :receiver_id
   validates :first_name, presence: true
@@ -22,7 +23,6 @@ class User < ApplicationRecord
   }
 
   has_many :entries, dependent: :destroy
-  has_many :active_challenges, dependent: :destroy
 
   has_many :posts, dependent: :destroy
 
@@ -125,5 +125,12 @@ class User < ApplicationRecord
     food_score = meat_everyday_weight + meat_rarely_weight + no_beef_weight +  vegetarian_weight + vegan_weight +
     throw_none_weight +  throw_ten_weight + throw_thirty_weight + throw_abovethirty_weight + food_supermarket_weight + food_locally_weight +
     food_own_weight + food_dunno_weight
+  end
+
+  def friends
+    receivers = self.friendships_as_asker.map(&:receiver)
+    askers = self.friendships_as_receiver.map(&:asker)
+
+    (receivers + askers).uniq
   end
 end

@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   def feed
+    @my_posts = current_user.posts
+    @friends_posts = current_user.friends.map(&:posts).flatten
+
+
     if params[:query].present?
       @user = User.find_by(email:params[:query])
     end
@@ -9,8 +13,11 @@ class UsersController < ApplicationController
       format.text { render partial: 'user_card', :formats=>[:text, :html], locals: { user: @user } }
     end
 
+
+
     @entry = Entry.new
     @post = Post.new
+
   end
 
   def dashboard

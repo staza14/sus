@@ -1,13 +1,15 @@
 
-<h1> Feed </h1>
+
 <div data-controller="user-card">
   <div class="row justify-content-center" >
     <div class="col-sm-8 my-3">
+
       <%= form_with url: feed_path, method: :get, class: "d-flex", html: {data: {action: "submit->user-card#revealContent"}} do |f| %>
         <%= f.text_field :query,
               value: params[:query],
               class: "form-control",
-              placeholder: "Search a user by their email",
+
+              placeholder: "Search for friends by email ",
               data: { user_card_target: "input" }
           %>
           <div data-user-card-target="button">
@@ -24,14 +26,6 @@
 
 
       </div>
-      <div class="modal-body">
-        <%= simple_form_for @post do |f| %>
-          <%= f.input :content %>
-          <%= f.input :image %>
-          <%= f.submit "Submit post", class: "btn btn-primary" %>
-        <% end %>
-
-    </div>
   </div>
 
   <div class="container">
@@ -57,3 +51,39 @@
       </div>
     </div>
   </div>
+
+<div class="container">
+    <div class="post-container">
+      <div class="post-header">
+        <div class='name-avatar'>
+          <div class='post-name'>
+          </div>
+        </div>
+      </div>
+      <div class='content-div'>
+        <div class='post-content'>
+          <% @my_posts.each do |post| %>
+          <%= post.content %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="post-container">
+      <div class="post-header">
+        <div class='name-avatar'>
+          <div class='post-name'>
+          </div>
+        </div>
+      </div>
+      <div class='content-div'>
+        <div class='post-content'>
+          <% @friends_posts.each do |post| %>
+          <%= post.content %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
