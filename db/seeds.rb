@@ -22,8 +22,6 @@ puts "creating users..."
     avatar: "avatar1.png"
   )
   user1.save
-
-
   user2 = User.create!(
     first_name: "Samuel",
     last_name: "Donker",
@@ -32,7 +30,7 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 22,
     avatar: "avatar2.png"
-    )
+  )
   user2.save
   user3 = User.create!(
     first_name: "Samadi",
@@ -42,9 +40,8 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 99,
     avatar: "avatar3.png"
-    )
+  )
   user3.save
-
   user4 = User.create!(
     first_name: "Silas",
     last_name: "Woldu",
@@ -53,10 +50,8 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 22,
     avatar: "avatar4.png"
-    )
-
+  )
   user4.save
-
   user5 = User.create!(
     first_name: "Isaiah",
     last_name: "Deane",
@@ -65,10 +60,8 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 99,
     avatar: "avatar5.png"
-    )
-
+  )
   user5.save
-
   user6 = User.create!(
     first_name: "Jade",
     last_name: "Xuan",
@@ -77,10 +70,8 @@ puts "creating users..."
     overall_score: 26,
     baseline_stats: 55,
     avatar: "avatar6.png"
-    )
-
+  )
   user6.save
-
   user7 = User.create!(
     first_name: "Roberta",
     last_name: "Ferrari",
@@ -89,10 +80,8 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 86,
     avatar: "avatar7.png"
-    )
-
+  )
   user7.save
-
   user8 = User.create!(
     first_name: "Wang",
     last_name: "Yi",
@@ -101,8 +90,7 @@ puts "creating users..."
     overall_score: 22,
     baseline_stats: 98,
     avatar: "avatar8.png"
-    )
-
+  )
   user8.save
 
   user9 = User.create!(
@@ -113,11 +101,9 @@ puts "creating users..."
     overall_score: 56,
     baseline_stats: 65,
     avatar: "avatar1.png"
-    )
-
+  )
   user9.save
-
-  user10= User.create!(
+  user10 = User.create!(
     first_name: "Olivia",
     last_name: "Taylor",
     email: "Olivia.Taylor@gmail.com",
@@ -125,12 +111,9 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 22,
     avatar: "avatar2.png"
-    )
-
+  )
   user10.save
-
-
-  user11= User.create!(
+  user11 = User.create!(
     first_name: "Kevin",
     last_name: "Thomas",
     email: "Kevin.Thomas@gmail.com",
@@ -138,11 +121,9 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 22,
     avatar: "avatar3.png"
-    )
-
+  )
   user11.save
-
-  user12= User.create!(
+  user12 = User.create!(
     first_name: "Stella",
     last_name: "Cruz",
     email: "stella.cruz@gmail.com",
@@ -150,11 +131,9 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 12,
     avatar: "avatar4.png"
-    )
-
+  )
   user12.save
-
-  user13= User.create!(
+  user13 = User.create!(
     first_name: "Louise",
     last_name: "Jackson",
     email: "louise.jackson@gmail.com",
@@ -162,11 +141,9 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 22,
     avatar: "avatar5.png"
-    )
-
+  )
   user13.save
-
-  user14= User.create!(
+  user14 = User.create!(
     first_name: "Deji",
     last_name: "Omari",
     email: "deji.omari@gmail.com",
@@ -174,10 +151,8 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 22,
     avatar: "avatar6.png"
-    )
-
+  )
   user14.save
-
   user15= User.create!(
     first_name: "Thadsana",
     last_name: "Young",
@@ -186,10 +161,8 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 22,
     avatar: "avatar7.png"
-    )
-
+  )
   user15.save
-
   user16= User.create!(
     first_name: "Vanessa",
     last_name: "Rosario",
@@ -198,10 +171,8 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 22,
     avatar: "avatar8.png"
-    )
-
+  )
   user16.save
-
   user17= User.create!(
     first_name: "Eloise",
     last_name: "Bastien",
@@ -210,10 +181,8 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 75,
     avatar: "avatar1.png"
-    )
-
+  )
   user17.save
-
   user18= User.create!(
     first_name: "Jose",
     last_name: "rodriguez",
@@ -222,10 +191,8 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 35,
     avatar: "avatar2.png"
-    )
-
+  )
   user18.save
-
   user19= User.create!(
     first_name: "Mila",
     last_name: "Ivanov",
@@ -234,10 +201,8 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 66,
     avatar: "avatar10.png"
-    )
-
+  )
   user19.save
-
   user20= User.create!(
     first_name: "Prash",
     last_name: "Perera",
@@ -246,9 +211,8 @@ puts "creating users..."
     overall_score: 12,
     baseline_stats: 66,
     avatar: "avatar9.png"
-    )
+  )
   user20.save
-
 puts "Users Created"
 puts "creating challenges"
   # Food
@@ -260,7 +224,8 @@ puts "creating challenges"
     duration: 4,
     challenge_score: 2,
     # badge: ,
-    prompt:"Did you eat meat today?")
+    prompt:"Did you eat meat today?"
+  )
   Challenge.create(
     name: "Moove that beef out your diet",
     description: "Beef production has a substantial environmental footprint. It's a leading driver of deforestation in regions like the Amazon, releases significant greenhouse gases through cattle farming, and requires vast amounts of water and land. The cumulative impact makes beef a major contributor to climate change, biodiversity loss, and resource depletion. As well as its environmental impact, regularly eating beef increases cholestorol",
@@ -269,7 +234,8 @@ puts "creating challenges"
     duration: 7,
     challenge_score: 2,
     # badge: ,
-    prompt:"did you have beef today?")
+    prompt:"did you have beef today?"
+  )
   Challenge.create(
     name: "Let the veg take over",
     description: "Is meat usually the biggest portion on your plate. If it is then this challenge is for you! In general, we want half our plate to be vegetables, preferably low-calorie, starchy vegetables with a quarter of the plate filled by fiber-rich carbohydrates and/or healthy fats and then the rest of your plate will be protein-rich foods(this is where your meat will be). Benefits of a balanced plate can include: healthy weight management, less body fat, easier muscle building, leaner physique, weight gain prevention",
@@ -278,7 +244,8 @@ puts "creating challenges"
     duration: 7,
     challenge_score: 3,
     # badge: ,
-    prompt:"Do you think you had healthy plate proportions today?")
+    prompt:"Do you think you had healthy plate proportions today?"
+  )
   # Transport
   Challenge.create(
     name: "Get those legs moving",
@@ -288,7 +255,8 @@ puts "creating challenges"
     duration: 4,
     challenge_score: 5,
     # badge: ,
-    prompt:"did you today?")
+    prompt:"did you today?"
+  )
   Challenge.create(
     name: "Get those legs moving",
     description: "If you have a trip under 5km that doesn't require you to drive(i.e. food shop), walk or cycle",
@@ -297,7 +265,8 @@ puts "creating challenges"
     duration: 4,
     challenge_score: 6,
     # badge: ,
-    prompt:"If you took a trip under 5km, did you walk or cycle?")
+    prompt:"If you took a trip under 5km, did you walk or cycle?"
+  )
   # Home
   Challenge.create(
     name: "Lights Out",
@@ -307,7 +276,8 @@ puts "creating challenges"
     duration: 7,
     challenge_score: 1,
     # badge: ,
-    prompt:"Did you turn off lights that weren't being used(that you know of)?")
+    prompt:"Did you turn off lights that weren't being used(that you know of)?"
+  )
   Challenge.create(
     name: "Second-hand Sourcing",
     description: "For the next month, if you buy any clothes, they should be from a second-hand source. It is as easy as it has ever been to find well kept, fashionable second hand clothing. Look on second hand community apps, thrift stores, charity shops or maybe ask your parents or grandparents if they have anything in their wardrobes. You never know what you might find",
@@ -316,7 +286,8 @@ puts "creating challenges"
     duration: 7,
     challenge_score: 1,
     # badge: ,
-    prompt:"Are you sticking to the challenge?")
+    prompt:"Are you sticking to the challenge?"
+  )
   # Combination
   marvelous_mitochondria = Challenge.create(
     name: "Marvelous Mitochondria",
@@ -326,11 +297,10 @@ puts "creating challenges"
     duration: 14,
     challenge_score: 7,
     # badge: ,
-    prompt:"Did you try at least one healthy habit?")
-  # Challenge Ends
+    prompt:"Did you try at least one healthy habit?"
+  )
 puts "Challenges Created"
 puts "creating posts"
-  # Posts
   Post.create!(
     content: "Just started composting in my backyard! It's a small step, but every bit counts when it comes to reducing food waste. 🌱🍂 #Composting #ReduceWaste #EcoFriendly",
     user_id: user1.id,
@@ -573,39 +543,44 @@ puts "creating posts"
   )
 puts "Posts Created"
 puts "Creating Friendships"
-  # Friendships
   Friendship.create!(
     confirmed: true,
     asker_id: user1.id,
-    receiver_id: user10.id)
+    receiver_id: user10.id
+  )
   Friendship.create!(
     confirmed: true,
     asker_id: user1.id,
-    receiver_id: user9.id)
+    receiver_id: user9.id
+  )
   Friendship.create!(
     confirmed: true,
     asker_id: user1.id,
-    receiver_id: user2.id)
+    receiver_id: user2.id
+  )
   Friendship.create!(
     confirmed: true,
     asker_id: user1.id,
-    receiver_id: user3.id)
+    receiver_id: user3.id
+  )
   Friendship.create!(
     confirmed: true,
     asker_id: user1.id,
-    receiver_id: user4.id)
+    receiver_id: user4.id
+  )
   Friendship.create!(
     confirmed: true,
     asker_id: user1.id,
-    receiver_id: user5.id)
+    receiver_id: user5.id
+  )
   Friendship.create!(
     confirmed: true,
     asker_id: user1.id,
-    receiver_id: user6.id)
-  # Janes Friends by id: 2,3,4,5,6,9,10
+    receiver_id: user6.id
+  )
+  # Janes Friends by user variable: 2,3,4,5,6,9,10
 puts "Friendships Created"
 puts "creating entries"
-  # user_id: user10
   Entry.create!(
     food_score: 0.5,
     travel_score: 0.4,
@@ -742,33 +717,3 @@ puts "Creating Active Challenges"
   )
 puts "Active Challenges Created"
 puts "Finished Seeding"
-  # Friendships
-  Friendship.create!(
-    confirmed: true,
-    asker_id: user1.id,
-    receiver_id: user10.id)
-  Friendship.create!(
-    confirmed: true,
-    asker_id: user1.id,
-    receiver_id: user9.id)
-  Friendship.create!(
-    confirmed: true,
-    asker_id: user1.id,
-    receiver_id: user2.id)
-  Friendship.create!(
-    confirmed: true,
-    asker_id: user1.id,
-    receiver_id: user3.id)
-  Friendship.create!(
-    confirmed: true,
-    asker_id: user1.id,
-    receiver_id: user4.id)
-  Friendship.create!(
-    confirmed: true,
-    asker_id: user1.id,
-    receiver_id: user5.id)
-  Friendship.create!(
-    confirmed: true,
-    asker_id: user1.id,
-    receiver_id: user6.id)
-  # Janes Friends by id: 2,3,4,5,6,9,10
