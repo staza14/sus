@@ -6,6 +6,8 @@
 
 
 puts "cleaning database"
+Post.destroy_all
+Friendship.destroy_all
 User.destroy_all
 Challenge.destroy_all
 
@@ -507,6 +509,3 @@ Friendship.create!(
   receiver_id: 6)
 # Janes Friends by id: 2,3,4,5,6,9,10
 puts "creating entries"
-
-Entry.create(food_score: 1, travel_score: 0, home_score: 0.4, created_at: "Mon, 28 Aug 2023 09:31:04.000000000 UTC +00:00", user: User.find(62))
-puts "Finished Seeding"
