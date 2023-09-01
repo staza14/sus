@@ -1,6 +1,6 @@
 class ChallengesController < ApplicationController
   def index
-    @challenges = Challenge.all
+    @challenges = Challenge.where.not(id: current_user.challenges.map(&:id))
     @feature = Challenge.all.sample
   end
 

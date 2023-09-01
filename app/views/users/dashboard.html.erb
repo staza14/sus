@@ -64,10 +64,12 @@
                     <% challenge.active_challenge_days.each do |day| %>
                       <%= simple_form_for [challenge, day], html: {data: {controller: "mark-as-complete", action: "submit->mark-as-complete#update"}} do |f| %>
                         <%= f.input :status , as: :boolean , input_html: {checked: true}, wrapper_html: {class: "d-none"} %>
-                        <%= f.submit day.day, data: {mark_as_complete_target: "submit"}, class:"p-2 mx-2" %>
+                        <%= f.submit day.day, data: {mark_as_complete_target: "submit"}, class:"p-2 mx-2 rounded-4" %>
                       <% end  %>
                     <% end %>
+
                 </div>
+                      <%= button_to "save", challenges_path, class:"call-to-action mt-3" %>
                 </div>
               </div>
             </div>
