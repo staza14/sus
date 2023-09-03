@@ -46,3 +46,6 @@
   width: 20px;
   border-radius: 50%;
 }
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
+}
