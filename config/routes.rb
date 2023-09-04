@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
 
   resources :user, only: :dashboard do
-    resources :friendship, only: :create
+    resources :friendships, only: :create
   end
 
   resources :active_challenges, only: [] do
@@ -24,6 +24,6 @@ Rails.application.routes.draw do
   end
   resources :entries, only: :create
 
-  resources :posts, only: %i[index create]
 
+  resources :posts, only: %i[index create update destroy]
 end

@@ -1,6 +1,9 @@
+
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts.user = Post.where(user_id: current_user.id)
+
+
   end
 
   def create
@@ -12,6 +15,7 @@ class PostsController < ApplicationController
       render "users/feed", status: :unprocessable_entity
     end
   end
+
 
   private
 

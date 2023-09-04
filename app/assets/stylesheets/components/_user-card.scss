@@ -38,11 +38,14 @@
   align-self: flex-start;
 }
 .stats{
-  height:30px;
-  width:30px;
+  height:80px;
+  width:80px;
   border-radius: 5px;
   background-color: white;
   margin: 5px;
+  .p{
+  font-size:25px ;
+  }
 }
 
 .sus-score-chart{
@@ -51,4 +54,9 @@
   margin: 5px;
   width: 280px;
   height: 280px;
+}
+.small-text{
+  font-size: 10px;
+  font-weight: lighter;
+  padding: 0%;
 }

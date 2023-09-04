@@ -1,6 +1,7 @@
 .challenge-card{
   border: solid;
   transition: .5s ease-in-out;
+  flex-grow: 2;
 
   &:hover{
   transform:scale(1.05);
@@ -12,6 +13,11 @@
   position: relative;
   width: 100%;
 
+}
+
+.feature{
+  border: solid;
+  width: 100%;
 }
 
 .circle{
@@ -33,4 +39,13 @@
 
 .my-challenges{
   flex-grow: 2;
+}
+
+.friend-avatar{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
 }
