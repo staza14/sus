@@ -12,7 +12,7 @@ class ActiveChallengesController < ApplicationController
 
     if @active_challenge.save
       redirect_to challenges_path
-      flash[:notice] = "You've joined the challenge, well done."
+      flash[:notice] = "You've joined #{@active_challenge.challenge.name}, well done."
     else
       render "challenges/index", status: :unprocessable_entity
       flash.now[:alert] = "Something has gone wrong!"

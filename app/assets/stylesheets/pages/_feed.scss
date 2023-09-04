@@ -1,3 +1,26 @@
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leaderboard {
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: 150px;
+  padding-left: 150px;
+  background-color: white;
+  width: 100%;
+  max-width: 570px;
+  border-radius: 66px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow:  32px 32px 64px #b0b0b0,
+             -32px -32px 64px #ffffff;
+}
+
+.leaderboard:hover {
+  transform: scale(1.09);
+}
 .tag-item {
   display: inline-block;
 }
@@ -43,4 +66,13 @@ $primary-color: #007bff;
 
   .text-center {
     text-align: center;
+  }
+
+  .fa-trophy{
+    color: #FFD700;
+  }
+
+
+  .ranking-list{
+    margin-left: 40px;
   }

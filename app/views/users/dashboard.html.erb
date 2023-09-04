@@ -1,4 +1,13 @@
 <div class="container">
+    <!--  the worlds  -->
+    <h1>Welcome, <%= current_user.first_name %>!</h1>
+    <p>If everyone lived like you, we would need <%= current_user.baseline_stats.to_i %> Earths.</p>
+    <div class="d-flex">
+      <% current_user.baseline_stats.to_i.times do %>
+        <%= render partial: 'shared/baseline_image' %>
+      <% end %>
+    </div>
+    <!--   Sidebar     -->
 		<div class="user-dashboard-content">
 			<div class="sticky-side col-3">
 				<%= render "user_sidebar" %>

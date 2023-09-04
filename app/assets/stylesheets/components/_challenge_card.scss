@@ -1,8 +1,11 @@
 .challenge-card{
   border: solid;
+  background-color: white;
+  border-color: black;
   transition: .5s ease-in-out;
   flex-grow: 2;
-
+  color: black;
+  border-radius: 10px;
   &:hover{
   transform:scale(1.05);
   }
@@ -28,6 +31,9 @@
   display: flex;
 }
 
+.header{
+  color: black;
+}
 .green {
   background-color: green;
 }
@@ -46,8 +52,6 @@
   width: 20px;
   border-radius: 50%;
 }
-
-
 
 .user-dashboard-content{
   display: flex;
@@ -88,3 +92,7 @@
       object-fit: cover;
     }
   }
+
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
+}

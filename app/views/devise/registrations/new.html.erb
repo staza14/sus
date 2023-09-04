@@ -3,98 +3,79 @@
     <div class="col-12 col-sm-4">
       <div class="form-login">
         <h2>Sign up</h2>
-    
 
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= f.error_notification %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
 
-      <div class="form-inputs">
-        <%= f.input :first_name,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "email" }%>
-        <%= f.input :last_name,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "email" }%>
-        <%= f.input :avatar,
-            as: :radio_buttons,
-            collection_wrapper_tag: 'div',
-            collection_wrapper_class: 'category-wrapper',
-            item_wrapper_class: 'category-item',
-            input_html: {class: 'category-selector'},
-            collection:["avatar1.png","2","3","4","5","6","7","8","9"] %>
-        <%= f.input :email,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "email" }%>
-        <%= f.input :password,
-                    required: true,
-                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                    input_html: { autocomplete: "new-password" } %>
-        <%= f.input :password_confirmation,
-                    required: true,
-                    input_html: { autocomplete: "new-password" } %>
-      </div>
+          <div class="form-inputs">
+            <%= f.input :first_name,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+            <%= f.input :last_name,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" }%>
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
+          <div class="form-question">
+              <h2>What is your ecological footprint?</h2>
+              <p>Transportation</p>
+              <%= f.input :car_hours, label: "How many hours do you travel by car weekly?", input_html: {value: 0} %>
+              <%= f.input :bus_hours, label: "How many hours do you travel by bus weekly?", input_html: {value: 0} %>
+              <%= f.input :train_hours, label: "How many hours do you travel by train weekly?", input_html: {value: 0} %>
+              <%= f.input :cycle_hours, label: "How many hours do you travel by cycle weekly?", input_html: {value: 0} %>
+              <%= f.input :foot_hours, label: "How many hours do you walk weekly?", input_html: {value: 0} %>
+              <%= f.input :flight_long_hours, label: "How many times a year do you fly (long haul)?", input_html: {value: 0} %>
+              <%= f.input :flight_short_hours, label: "How many times a year do you fly (short haul)?", input_html: {value: 0} %>
+          </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Sign up" %>
+          <div class="form-question">
+            <p>Food</p>
+            <%= f.input :food, as: :select, collection: [["Never, I'm vegan", 0.2], ["Occasioanly, I'm vegetarian", 0.17], ["Often, but no beef", 0.06], ["Rarely meat", 0.09], ["Very often, meat in every meal", 0]],
+                          label: "How often do you eat animal-based products?"
+                          %>
+            <%= f.input :source, as: :select, collection: [["Supermarket", 0.03], ["Locally", 0.1], ["I grow my own", 0.15], ["I don't think about it", 0]],
+                          label: "Where do you source your food?"
+                          %>
+            <%= f.input :waste, as: :select, collection: [["None", 0.1], ["0-10%", 0.07], ["10-30%", 0.03], [">30%", 0]],
+                          label: "How much food waste do you produce weekly?"
+                          %>
+          </div>
+
+
+          <div class="form-question">
+            <p>Housing</p>
+            <%= f.input :lights, as: :select, collection: [["Yes", 0.18], ["No", 0]],
+                          label: "Do you regularly turn off lights?"
+                          %>
+            <%= f.input :clothing, as: :select, collection: [["0", 0.17], ["£1-£60",  0.09], ["£60-£100", 0.03], ["£100-£180", 0], ["£180+", 0]],
+                          label: "How much do you spend on clothing items(excluding second hand)?"
+                          %>
+            <%= f.input :temperature, as: :select, collection: [["Below 14", 0.16], ["14-17", 0.09], ["18-21", 0.03], [">21", 0]],
+                          label: "What temperature do you keep your home during winter?"
+                          %>
+            <%= f.input :bath, label: "How many times a week do you bath?", input_html: {value: 0} %>
+            <%= f.input :long_shower, label: "How many times a week do you shower under 10mins?", input_html: {value: 0} %>
+            <%= f.input :short_shower, label: "How many times a week do you shower over 10mins?", input_html: {value: 0} %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Sign up"  %>
+          </div>
+        <% end %>
+        <%= render "devise/shared/links" %>
       </div>
     </div>
   </div>
 </div>
-
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-4">
-            <div class="form-question">
-                <h2>Generate baseline stats</h2>
-                <p>Travel score</p>
-                <%= f.input :car_hours, label: "How many hours do you travel by car weekly?", input_html: {value: 0} %>
-                <%= f.input :bus_hours, label: "How many hours do you travel by bus weekly?", input_html: {value: 0} %>
-                <%= f.input :train_hours, label: "How many hours do you travel by train weekly?", input_html: {value: 0} %>
-                <%= f.input :cycle_hours, label: "How many hours do you travel by cycle weekly?", input_html: {value: 0} %>
-                <%= f.input :foot_hours, label: "How many hours do you walk weekly?", input_html: {value: 0} %>
-                <%= f.input :flight_long_hours, label: "How many times a year do you fly (long haul)?", input_html: {value: 0} %>
-                <%= f.input :flight_short_hours, label: "How many times a year do you fly (short haul)?", input_html: {value: 0} %>
-            </div>
-
-
-            <div class="form-question">
-            <p>Food score</p>
-              <%= f.input :bath, as: :select, collection: ["Meat in every meal", "Rarely meat", "No beef", "Vegetarian", "Vegan"],
-                            label: "How would you describe your diet?"
-                            %>
-              <%= f.input :long_shower, as: :select, collection: ["None", "0-10%", "10-30%", ">30%"],
-                            label: "How much food do you throw away week?"
-                            %>
-              <%= f.input :short_shower, as: :select, collection: ["Supermarket", "Locally", "I grow my own", "I don't think about it"],
-                            label: "Where do you source your food??"
-                            %>
-            </div>
-
-
-            <div class="form-question">
-            <p>Home score</p>
-              <%= f.input :bath, as: :select, collection: ["Yes", "No"],
-                            label: "Do you regularly turn off lights?"
-                            %>
-              <%= f.input :bath, as: :select, collection: ["0", "£1-£60", "£60-£100", "£100-£180", "£180+"],
-                            label: "How much do you spend on clothing items(excluding second hand)?"
-                            %>
-              <%= f.input :long_shower, as: :select, collection: ["Below 14", "14-17", "18-21", ">21"],
-                            label: "What temperature do you keep your home at during winter?"
-                            %>
-              <%= f.input :bath, label: "How many times a week do you bath?", input_html: {value: 0} %>
-              <%= f.input :long_shower, label: "How many times a week do you shower under 10mins?", input_html: {value: 0} %>
-              <%= f.input :short_shower, label: "How many times a week do you shower over 10mins?", input_html: {value: 0} %>
-            </div>
-
-              <div class="form-actions">
-              <%= f.button :submit, "Sign up"  %>
-              </div>
-              <% end %>
-              <%= render "devise/shared/links" %>
-    <div class="container">
-  <div class="row justify-content-center">
-<div class="col-12 col-sm-4">
