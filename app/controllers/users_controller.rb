@@ -2,7 +2,7 @@ require 'date'
 class UsersController < ApplicationController
   def feed
     @user = current_user
-    @today = Date.today
+    @today = Date.today.mjd
     @my_posts = current_user.posts
     @friends = current_user.friends
     @friends_posts = current_user.friends.map(&:posts).flatten
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     end
     @leaders = @friends << current_user
     @leaders = @friends.sort_by(&:overall_score).reverse!
-    @my_rank = @leaders.index(current_user.first_name)
+    @my_rank = @leaders.index(current_user)
     @leaders = @leaders.first(5)
     @entry = Entry.new
     @post = Post.new

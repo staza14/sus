@@ -62,7 +62,7 @@
         <div class="leaderboard">
           <h2>Leaderboard</h2>
           <ol>
-          <%= @leaders.each do |leader| %>
+          <% @leaders.each do |leader| %>
             <li> <%= leader.first_name %> <%= leader.overall_score %></li>
           <%end  %>
           </ol>
@@ -109,7 +109,7 @@
                 <div class='post-name'>
                 <%= post.user.first_name %> <%= post.user.last_name %>
               <br>
-              posted <%= post.created_at.strftime("%Y %m %d") %> days ago
+              posted <%= @today - (post.created_at.to_date.mjd) %> days ago
                 </div>
               </div>
             </div>

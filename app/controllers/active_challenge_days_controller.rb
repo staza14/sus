@@ -8,7 +8,7 @@ class ActiveChallengeDaysController < ApplicationController
     days = active_challenge.active_challenge_days
     @active_challenge_day.save
     head :ok
-    if days.all { |day| day.status == true }
+    if !(days.any? { |day| day.status == false })
       active_challenge.completed = true
        if active_challenge.save
         flash[:notice] = "Nice! You've completed #{active_challenge.challenge.name}."
