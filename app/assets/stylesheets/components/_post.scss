@@ -1,31 +1,5 @@
-.post-container {
-
+.post-card{
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  margin: 25px auto;
-  width: 100%;
-  max-width: 570px;
-  height: 200px;
-  border-radius: 45px;
-  background: linear-gradient(145deg, #e6e6e6, #ffffff);
-  box-shadow:  32px 32px 64px #b0b0b0,
-             -32px -32px 64px #ffffff;
-  margin-left: 150px;
-}
-
-.post-container:hover {
-  transform: scale(1.09);
-}
-
-.post-header {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  height: 50px;
-  padding: 5px 15px 5px 5px;
-  margin: 10px 0px 5px 0px;
 }
 .name-avatar {
   display: flex;
@@ -37,18 +11,7 @@
   border-radius: 50%;
   margin: 0px 5px 0px 0px;
 }
-.content-div {
 
-  border-radius: 45px;
-  width: 100%;
-  height: 150px;
-  padding:10px;
-  overflow: scroll;
-}
-
-.h1-post{
-  margin-left: 150px;
-}
 
 .heart-container {
   --heart-color: rgb(255, 91, 137);
