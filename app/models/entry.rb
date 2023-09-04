@@ -29,12 +29,12 @@ class Entry < ApplicationRecord
     }
 
     def calculate_travel_score
-      car_hours_weight = 0 *  TRANSPORT_WEIGHTS[:car_hours] * self.car_hours.to_i
-      bus_hours_weight = 10 * TRANSPORT_WEIGHTS[:bus_hours] * self.bus_hours.to_i
-      train_hours_weight = 15 * TRANSPORT_WEIGHTS[:train_hours] * self.train_hours.to_i
-      cycle_hours_weight = 20 * TRANSPORT_WEIGHTS[:cycle_hours] * self.cycle_hours.to_i
-      foot_hours_weight = 20 * TRANSPORT_WEIGHTS[:foot_hours] * self.foot_hours.to_i
-      travel_score = car_hours_weight + bus_hours_weight + train_hours_weight + cycle_hours_weight + foot_hours_weight
+    car_hours_weight = 0 *  TRANSPORT_WEIGHTS[:car_hours] * self.car_hours.to_i
+    bus_hours_weight = 10 * TRANSPORT_WEIGHTS[:bus_hours] * self.bus_hours.to_i
+    train_hours_weight = 15 * TRANSPORT_WEIGHTS[:train_hours] * self.train_hours.to_i
+    cycle_hours_weight = 20 * TRANSPORT_WEIGHTS[:cycle_hours] * self.cycle_hours.to_i
+    foot_hours_weight = 20 * TRANSPORT_WEIGHTS[:foot_hours] * self.foot_hours.to_i
+    travel_score = car_hours_weight + bus_hours_weight + train_hours_weight + cycle_hours_weight + foot_hours_weight
     end
 
     def calculate_food_score

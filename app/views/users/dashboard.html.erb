@@ -1,7 +1,13 @@
+<div class="container">
+    <h1>Welcome, <%= current_user.first_name %>!</h1>
+  <p>If everyone lived like you, we would need <%= current_user.baseline_stats.to_i %> Earths.</p>
+
+    <% current_user.baseline_stats.to_i.times do %>
+      <%= render partial: 'shared/baseline_image' %>
+    <% end %>
+
 
 <div class ="container">
-
-
 <div class="d-flex mt-5" >
   <div class="sticky-side">
     <div class="user-card mt-5 rounded-5">
@@ -194,6 +200,7 @@
     </div>
   </div>
 </div>
+
 
 <script>
 function updateTextInput2(val) {

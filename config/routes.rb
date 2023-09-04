@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   get '/feed', to: 'users#feed'
   get '/dashboard', to: 'users#dashboard'
-
   resources :challenges, only: :index do
     resources :active_challenges, only: :create
   end
@@ -26,4 +25,5 @@ Rails.application.routes.draw do
   resources :entries, only: :create
 
   resources :posts, only: %i[index create]
+
 end
