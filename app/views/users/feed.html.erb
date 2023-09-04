@@ -1,23 +1,8 @@
 
 <div class= "container">
 
-  <div class="row justify-content-center" >
-    <div class="col-sm-8 my-3">
-
-      <%= form_with url: feed_path, method: :get, class: "d-flex", html: {data: {action: "submit->user-card#revealContent"}} do |f| %>
-        <%= f.text_field :query,
-              value: params[:query],
-              class: "form-control",
-
-              placeholder: "Search by email for friends to follow",
-              data: { user_card_target: "input" }
-          %>
-          <div data-user-card-target="button">
-        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-        </div>
-      <% end %>
-    </div>
-  </div>
+  <%= render "searchbar" %>
+  <%= render "user_card" , user: @user %>
 
   <div class="d-flex mt-5">
     <div class="sticky-side">

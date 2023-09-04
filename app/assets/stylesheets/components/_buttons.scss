@@ -2,9 +2,11 @@
   border: solid;
   border-radius: 6px;
   transition: .2s ease-in-out;
+  padding: 10px;
 }
 .call-to-action:hover{
-background-color: #ccff66;
+background-color: $red;
+color: $gray;
 }
 
 .add-button{
