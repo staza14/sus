@@ -1,0 +1,107 @@
+.quick-fact {
+  font-size: 17px;
+  font-weight: lighter;
+  text-align: initial;
+}
+.fact-div {
+  background-color: #f5fcff;
+  margin: 17px 28px;
+  padding: 13px 16px;
+  border: solid 0.5px;
+  border-radius: 5px;
+}
+.fact-icon {
+  font-size: xx-large;
+}
+#fact-div-navbar {
+  border-top-left-radius: 12px;
+}
+
+
+// start of the sticky side
+.sticky-side { // Inline: Col-3, Children: <% render "user_sidebar" %>, Contains three divs that make up the sidebar;
+  position: sticky;
+  height: 90%;
+  align-self: flex-start;
+  margin-right: 45px;
+} // Sticky Side
+.user-info-div { //
+  /* border: solid 1px black; */
+  background-color: $dark-green;
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 5px 20px #605760d9;
+  border-radius: 12px;
+} //user-info-div
+.big-div {
+  color: $pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+  width: 100%;
+  height: 125%;
+  position: relative;
+  top: -55px;
+}
+.user-info {
+  // border: solid 1px black;
+  // background-color: $dark-green;
+  margin-bottom: 25px;
+  width: fit-content;
+  height: fit-content;
+
+  div {
+    background-color: $dark-green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.daily-facts {
+  background-color: $dark-green;
+  width: 100%;
+  height: 370px;
+  margin-top: 25px;
+  border-radius: 11px;
+  box-shadow: 0 5px 20px #605760d9;
+  overflow: hidden;
+} // daily facts
+
+.add-entry {
+  background-color: $pink;
+  color: $dark-green;
+  border: none;
+  margin-top: 25px;
+  border-radius: 10px;
+  font-size: 37px;
+  width: 100%;
+  padding: 0.4rem;
+  // box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.3), 0 0 25px -15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px #605760d9;
+} //add entry
+#add-entry {
+  height: 20%;
+}
+#floating-avatar {
+  border: solid 0.3px #c3c3c3;
+  background-color: #c25b5b;
+  /* border: solid 1px black; */
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+} // floating avatar
+#following-followers-posts {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
