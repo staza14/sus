@@ -17,6 +17,10 @@
   box-shadow:  32px 32px 64px #b0b0b0,
              -32px -32px 64px #ffffff;
 }
+
+.leaderboard:hover {
+  transform: scale(1.09);
+}
 .tag-item {
   display: inline-block;
 }
