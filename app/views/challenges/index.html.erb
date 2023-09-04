@@ -1,6 +1,6 @@
 <div class ="container">
 
-  <div class="d-flex justify-content-around">
+
 
     <div>
       <h2 class="header"> Today's feature challenge</h2>
@@ -8,29 +8,31 @@
         <h3> <%= @feature.name %></h3>
         <h5><%= @feature.description %></h5>
         <h5><%= @feature.duration %> days</h5>
-      <%= button_to "join challenge", challenge_active_challenges_path(@feature), class:"call-to-action" %>
+      <%= button_to "join challenge", challenge_active_challenges_path(@feature), class:"call-to-action8" %>
       </div>
     </div>
 
-  </div>
+
     <h2 class="header"> Explore all challenges:</h2>
   <div class="row justify-content-center">
     <% @challenges.each do |challenge| %>
-      <div class="challenge-card justify-content-center col-4 p-4 m-3">
+      <div class="challenge-card justify-content-center col-4 pt-3 px-3 m-3">
       <div class="grow">
         <a data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.id %>">
           <h3> <%=challenge.name %></h3>
           <h5><%= challenge.summary %></h5>
           <h5><%= challenge.duration %> days</h5>
+        </a>
+      </div>
+      <div class="d-flex justify-content-between pt-3 pb-2">
           <div class="d-flex">
             <% current_user.friends.each do |friend| %>
             <%=  image_tag friend.avatar, class:"friend-avatar"%>
             <% end %>
           </div>
-        </a>
-        </div>
-          <%= button_to "join challenge", challenge_active_challenges_path(challenge), class:"call-to-action" %>
 
+          <%= button_to "join challenge", challenge_active_challenges_path(challenge), class:"call-to-action8" %>
+      </div>
       </div>
       <!-- Modal -->
       <div class="modal fade" id="exampleModal<%= challenge.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

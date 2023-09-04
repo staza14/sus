@@ -1,11 +1,10 @@
 
 
 <% if user %>
-  <div>
-    <h4><%= user.first_name %></h4>
-    <p><%= user.last_name %></p>
-    <%= image_tag user.avatar, class: 'avatar' %>
-    <%= link_to "Add friend", user_friendships_path(user), data: {turbo_method: :post}, class:"btn btn-primary" %>
+  <div class="search-result d-flex">
+    <div class="p-2"><%= image_tag user.avatar, class:"feed-avatar"%></div>
+    <div class="p-2"><%= user.first_name %> <%= user.last_name %></div>
+    <div class="ml-auto p-2 button-container"><%= link_to "Add friend", user_friendships_path(user), data: {turbo_method: :post}, class:"call-to-action" %></div>
 
     <% else %>
         <div class="col-sm-8 text-center">
@@ -13,3 +12,15 @@
         </div>
  </div>
 <% end %>
+
+<div class="user-info-div">
+  <div class="user-info-children"><h6><%= user.first_name + ' ' + user.last_name %></h6></div>
+  <div class="user-info-children">
+    <div class="followers"></div>
+    <div class="following"></div>
+    <div class="groups"></div>
+  </div>
+  <div class="user-info-children">
+    <div class="user-stats"></div>
+  </div>
+</div>

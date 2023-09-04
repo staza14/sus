@@ -3,7 +3,7 @@
   width: 120px;
   border-radius: 50%;
   position: absolute;
-  top: -60px;
+  top: -40px;
   background-color: white;
   border: solid;
 
@@ -16,7 +16,7 @@
   margin:10%;
 }
 .user-card{
-  width:300px;
+  width:400px;
   height: fit-content;
   background-color: grey;
   display: flex;
@@ -26,17 +26,6 @@
   padding-top: 70px;
 }
 
-.daily-facts{
-  width:100%;
-  height:400px;
-  background-color: grey;
-}
-
-.sticky-side{
-  position: sticky;
-  top:60px;
-  align-self: flex-start;
-}
 .stats{
   height:80px;
   width:80px;

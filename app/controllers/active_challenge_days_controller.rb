@@ -10,6 +10,8 @@ class ActiveChallengeDaysController < ApplicationController
     head :ok
     if !(days.any? { |day| day.status == false })
       active_challenge.completed = true
+      current_user.overall_score = current_user.overall_score + 20
+      current_user.save
        if active_challenge.save
         flash[:notice] = "Nice! You've completed #{active_challenge.challenge.name}."
        end
