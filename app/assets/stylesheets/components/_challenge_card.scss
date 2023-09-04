@@ -52,6 +52,47 @@
   width: 40px;
   border-radius: 50%;
 }
+
+.user-dashboard-content{
+  display: flex;
+  margin-top: 60px;
+  }
+  .my-challenges-children {
+    margin: 30px 0px 0px 0px;
+  } // my-challenges-children
+  .challenge-iteration {
+    display: flex;
+    overflow: scroll;
+    flex-wrap: wrap;
+  } // challenge-iteration
+
+  .dashboard-challenges-card {
+    border: none;
+    background-color: #e5e0d6;
+    height: 265px;
+    width: 285px;
+    margin: 0px 30px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+  } // dashboard-challenges
+  .flower-pot {
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    position: relative;
+    img {
+      transition-duration: 0.3s;
+      height: 100%;
+      width: 100%;
+      -webkit-filter: drop-shadow(2px -2px 2px #2b2b2b);
+      object-fit: cover;
+    }
+  }
+
 .custom-tooltip {
   --bs-tooltip-bg: var(--bs-primary);
 }
