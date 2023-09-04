@@ -50,6 +50,7 @@ class Entry < ApplicationRecord
     food_score = beef_weight + lamb_weight + cheese_weight + pork_weight + poultry_weight + chocolate_weight + egg_weight
   end
 
+
   def calculate_home_score
     bath_weight = HOME_WEIGHTS[:bath] * (self.bath != nil && self.bath.downcase == "yes" ? 0 : 1)
     long_shower_weight = HOME_WEIGHTS[:long_shower] * (self.long_shower != nil && self.long_shower.downcase == "yes" ? 0 : 1)
