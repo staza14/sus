@@ -2,7 +2,7 @@
 <div class="user-info-div">
   <div class="big-div">
     <div class="user-info" id="floating-avatar">
-      <%= image_tag 'flower.png' %>
+      <%=  image_tag current_user.avatar%>
     </div>
     <div class="user-info" id="user-name">
       <h5><%= current_user.first_name.upcase + ' ' + current_user.last_name.upcase %></h5>

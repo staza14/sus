@@ -2,24 +2,63 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 2;
 }
 
 .leaderboard {
-  padding: 10px;
-  margin-top: 50px;
-  margin-left: 150px;
-  padding-left: 150px;
-  background-color: white;
   width: 100%;
-  max-width: 570px;
-  border-radius: 66px;
-  background: linear-gradient(145deg, #e6e6e6, #ffffff);
-  box-shadow:  32px 32px 64px #b0b0b0,
-             -32px -32px 64px #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.leaderboard:hover {
-  transform: scale(1.09);
+.leaderboard-leader {
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  p {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+}
+
+.leaderboard-result {
+  margin-top: 15px;
+
+  span {
+    font-size: 2rem;
+    color: rgb(27, 82, 64);
+  }
+}
+
+.image-small {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fa-medal {
+  font-size: 1.3rem;
+}
+
+.gold {
+  color: #FFD700;
+}
+
+.silver {
+  color: #C0C0C0;
+}
+
+.bronze {
+  color: #CD7F32;
 }
 .tag-item {
   display: inline-block;
@@ -75,4 +114,137 @@ $primary-color: #007bff;
 
   .ranking-list{
     margin-left: 40px;
+  }
+  .post-container {
+
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 25px auto;
+    width: 100%;
+    max-width: 570px;
+    height: 200px;
+    border-radius: 45px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  32px 32px 64px #b0b0b0,
+               -32px -32px 64px #ffffff;
+    margin-left: 150px;
+  }
+  .post-header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 50px;
+    padding: 5px 15px 5px 5px;
+    margin: 0px 0px 5px 0px;
+  }
+  .name-avatar {
+    display: flex;
+    align-items: center;
+  }
+  .feed-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px 5px 0px 0px;
+  }
+  .content-div {
+
+    border-radius: 45px;
+    width: 100%;
+    height: 150px;
+    padding:10px;
+    overflow: scroll;
+  }
+
+  .h1-post{
+    margin-left: 150px;
+  }
+
+  .heart-container {
+    --heart-color: rgb(255, 91, 137);
+    position: relative;
+    left: 490px;
+    width: 20px;
+    height: 20px;
+    transition: .3s;
+  }
+
+  .heart-container .checkbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 20;
+    cursor: pointer;
+  }
+
+  .heart-container .svg-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heart-container .svg-outline,
+          .heart-container .svg-filled {
+    fill: var(--heart-color);
+    position: absolute;
+  }
+
+  .heart-container .svg-filled {
+    animation: keyframes-svg-filled 1s;
+    display: none;
+  }
+
+  .heart-container .svg-celebrate {
+    position: absolute;
+    animation: keyframes-svg-celebrate .5s;
+    animation-fill-mode: forwards;
+    display: none;
+    stroke: var(--heart-color);
+    fill: var(--heart-color);
+    stroke-width: 2px;
+  }
+
+  .heart-container .checkbox:checked~.svg-container .svg-filled {
+    display: block
+  }
+
+  .heart-container .checkbox:checked~.svg-container .svg-celebrate {
+    display: block
+  }
+
+  @keyframes keyframes-svg-filled {
+    0% {
+      transform: scale(0);
+    }
+
+    25% {
+      transform: scale(1.2);
+    }
+
+    50% {
+      transform: scale(1);
+      filter: brightness(1.5);
+    }
+  }
+
+  @keyframes keyframes-svg-celebrate {
+    0% {
+      transform: scale(0);
+    }
+
+    50% {
+      opacity: 1;
+      filter: brightness(1.5);
+    }
+
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+      display: none;
+    }
   }
