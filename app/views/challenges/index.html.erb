@@ -1,11 +1,10 @@
 <div class ="container">
 
-  <h1 class="py-5">Challenges</h1>
   <div class="d-flex justify-content-around">
 
     <div>
-      <h2> Today's feature challenge</h2>
-      <div class="challenge-card p-3 my-3">
+      <h2 class="header"> Today's feature challenge</h2>
+      <div class="challenge-card p-4 my-3">
         <h3> <%= @feature.name %></h3>
         <h5><%= @feature.description %></h5>
         <h5><%= @feature.duration %> days</h5>
@@ -14,10 +13,10 @@
     </div>
 
   </div>
-    <h2> Explore all challenges:</h2>
+    <h2 class="header"> Explore all challenges:</h2>
   <div class="row justify-content-center">
     <% @challenges.each do |challenge| %>
-      <div class="challenge-card justify-content-center col-4 p-3 m-3">
+      <div class="challenge-card justify-content-center col-4 p-4 m-3">
       <div class="grow">
         <a data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.id %>">
           <h3> <%=challenge.name %></h3>

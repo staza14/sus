@@ -1,0 +1,20 @@
+<div class="row justify-content-center" >
+
+
+      <%= form_with url: feed_path, method: :get, class: "d-flex", html: {data: {action: "submit->user-card#revealContent"}} do |f| %>
+        <%= f.text_field :query,
+              value: params[:query],
+              class: "form-control",
+
+              placeholder: "Search by email for friends to follow",
+              data: { user_card_target: "input" },
+              id:"searchQueryInput"
+          %>
+          <div data-user-card-target="button">
+            <%= button_tag type:"submit", id: "searchQuerySubmit" do %>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <% end %>
+          </div>
+      <% end %>
+
+  </div>
