@@ -219,7 +219,7 @@ puts "creating challenges"
     summary: "No meat every Monday for 4 weeks",
     category: "Food",
     duration: 4,
-    challenge_score: 2,
+    challenge_score: 20,
     # badge: ,
     prompt: "Did you eat meat today?"
   )
@@ -229,7 +229,7 @@ puts "creating challenges"
     summary: "Don't eat any Beef for a week",
     category: "Food",
     duration: 7,
-    challenge_score: 2,
+    challenge_score: 20,
     # badge: ,
     prompt: "did you have beef today?"
   )
@@ -239,7 +239,7 @@ puts "creating challenges"
     summary: "Your meal plate proportion should be 50% veg, 25% fiber-rich carbohydrates and/or healthy fats, 25% protein-rich foods",
     category: "Food",
     duration: 7,
-    challenge_score: 3,
+    challenge_score: 20,
     # badge: ,
     prompt: "Do you think you had healthy plate proportions today?"
   )
@@ -250,7 +250,7 @@ puts "creating challenges"
     summary: "Once a week, walk or cycle to your weekly obligations",
     category: "Transport",
     duration: 4,
-    challenge_score: 5,
+    challenge_score: 20,
     # badge: ,
     prompt: "did you today?"
   )
@@ -260,7 +260,7 @@ puts "creating challenges"
     summary: "Walk or cycle every trip under 5km for a month",
     category: "Transport",
     duration: 4,
-    challenge_score: 6,
+    challenge_score: 20,
     # badge: ,
     prompt: "If you took a trip under 5km, did you walk or cycle?"
   )
@@ -271,7 +271,7 @@ puts "creating challenges"
     summary: "Turn off all lights not being actively used",
     category: "Home",
     duration: 7,
-    challenge_score: 1,
+    challenge_score: 20,
     # badge: ,
     prompt: "Did you turn off lights that weren't being used(that you know of)?"
   )
@@ -281,7 +281,7 @@ puts "creating challenges"
     summary: "Turn off all lights not being actively used",
     category: "Home",
     duration: 7,
-    challenge_score: 1,
+    challenge_score: 20,
     # badge: ,
     prompt: "Are you sticking to the challenge?"
   )
