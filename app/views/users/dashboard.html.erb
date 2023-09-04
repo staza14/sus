@@ -1,10 +1,11 @@
 <div class="container">
     <h1>Welcome, <%= current_user.first_name %>!</h1>
   <p>If everyone lived like you, we would need <%= current_user.baseline_stats.to_i %> Earths.</p>
-
+    <div class="d-flex">
     <% current_user.baseline_stats.to_i.times do %>
       <%= render partial: 'shared/baseline_image' %>
     <% end %>
+    </div>
 
 
 <div class ="container">
@@ -41,9 +42,24 @@
       </div>
     </div>
 
+    <div>
     <button type="button" class="call-to-action mt-5 p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">how are you doing today?</button>
+    </div>
+    <button type="button" class="call-to-action2 mt-5 p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">how are you doing today?</button>
+    <div>
+    <button type="button" class="call-to-action3 mt-5 p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">how are you doing today?</button>
+   </div>
+   <div>
+    <button type="button" class="call-to-action4 mt-5 p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">how are you doing today?</button>
+   </div>
+   <div>
+    <button type="button" class="call-to-action5 mt-5 p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">how are you doing today?</button>
+   </div>
+
     <div class="daily-facts rounded-5 mt-5"></div>
   </div>
+
+
 
   <div class=" conatiner my-challenges m-4">
         <h1>Your progress</h1>
