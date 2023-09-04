@@ -1,12 +1,12 @@
 <div class="container">
+
     <h1>Welcome, <%= current_user.first_name %>!</h1>
   <p>If everyone lived like you, we would need <%= current_user.baseline_stats.to_i %> Earths.</p>
-    <div class="d-flex">
+<div class="d-flex">
     <% current_user.baseline_stats.to_i.times do %>
       <%= render partial: 'shared/baseline_image' %>
     <% end %>
-    </div>
-
+</div>
 
 <div class ="container">
 <div class="d-flex mt-5" >
@@ -140,24 +140,27 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Daily Log</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <%= simple_form_for @entry do |f| %>
-          <%= f.input :car_hours, label: "How many hours did you travel by car today?", input_html: {value: 0} %>
-          <%= f.input :bus_hours, label: "How many hours did you travel by bus today?", input_html: {value: 0} %>
-          <%= f.input :train_hours, label: "How many hours did you travel by train today?", input_html: {value: 0} %>
-          <%= f.input :cycle_hours, label: "How many hours did you travel by cycle today?", input_html: {value: 0} %>
-          <%= f.input :foot_hours, label: "How many hours did you walk today?", input_html: {value: 0} %>
 
+      <div data-controller name end at the end>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Daily Log</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for @entry do |f| %>
+            <%= f.input :car_hours, label: "How many hours did you travel by car today?", input_html: { value: 0, class: "custom-input" }%>
+            <%= f.input :bus_hours, label: "How many hours did you travel by bus today?", input_html: { value: 0, class: "custom-input" }%>
+            <%= f.input :train_hours, label: "How many hours did you travel by train today?", input_html: { value: 0, class: "custom-input" } %>
+            <%= f.input :cycle_hours, label: "How many hours did you travel by cycle today?", input_html: { value: 0, class: "custom-input" } %>
+            <%= f.input :foot_hours, label: "How many hours did you walk today?", input_html: { value: 0, class: "custom-input" }  %>
+          </div>
+         <i class="fa-solid fa-arrow-right"></i> <%# button next ouside data action click %>
+      </div>
           <%= f.input :beef, as: :range, prompt: "my data", collection: 0..3,
                       label: "How many of your meals contained beef today?",
                       input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput1(this.value)" }
                       %>
           <input type="text" id="textInput1" value="" style= "border:none; background-color: #F4F4F4;">
-
 
           <%= f.input :lamb, as: :range, prompt: "my data", collection: 0..3,
                       label: "How many of your meals contained lamb today?",
@@ -216,8 +219,6 @@
           <%= f.input :short_shower, as: :select, collection: ["Yes", "No"],
                         label: "Today, I took a quick shower (less than 10mins)?"
                         %>
-
-
 
         <div class="modal-footer">
         <%= f.submit   %>
