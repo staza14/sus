@@ -21,6 +21,7 @@
 // start of the sticky side
 .sticky-side { // Inline: Col-3, Children: <% render "user_sidebar" %>, Contains three divs that make up the sidebar;
   position: sticky;
+  top: 69px;
   height: 90%;
   align-self: flex-start;
   margin-right: 45px;

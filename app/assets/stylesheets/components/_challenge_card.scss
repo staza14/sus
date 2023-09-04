@@ -61,9 +61,9 @@
     margin: 0px 0px 30px 0px;
   } // my-challenges-children
   .challenge-iteration {
+    width: 960px;
+    overflow-x: scroll;
     display: flex;
-    overflow: scroll;
-    flex-wrap: wrap;
   } // challenge-iteration
 
   .dashboard-challenges-card {
@@ -74,10 +74,15 @@
     margin: 0px 30px 20px 0px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 5px 10px;
+    padding: 20px 20px;
     border-radius: 5px;
     transition-duration: 0.3s;
+    flex-shrink: 0;
+
+    h3 {
+      font-size: 21px;
+    }
+    h6 {}
   } // dashboard-challenges
   .flower-pot {
     width: 50px;

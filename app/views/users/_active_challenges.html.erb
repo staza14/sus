@@ -5,6 +5,7 @@
     <div class="dashboard-challenges-card">
       <h3><%=challenge.challenge.name %></h3>
       <h5><%= challenge.challenge.summary %></h5>
+      <button type="button" class="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.challenge.id %>">Challenge info</button>
 
       <!-- Modal -->
       <div class="modal fade" id="exampleModal<%= challenge.challenge.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -22,11 +23,12 @@
           </div>
         </div>
       </div>
-      <div class="wrapper d-flex">
-        <%challenge.active_challenge_days.each do |day| %>
-        <div class="circle <%= day.status ? "green" : "grey" %>">
-          <h5 class="p-2"><%= day.day %></h5>
-        </div><%end %>
+      <div class="d-flex">
+        <% challenge.active_challenge_days.each do |day| %>
+          <div class="circle <%= day.status ? "green" : "grey" %>">
+            <h5 class="p-2"><%= day.day %></h5>
+          </div>
+        <%end %>
       </div>
     </div>
     <%end%>
