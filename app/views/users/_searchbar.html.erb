@@ -1,7 +1,7 @@
-<div class="row justify-content-center" >
+<div class="row justify-content-center friend-form" data-user-card-target="cont">
 
 
-      <%= form_with url: feed_path, method: :get, class: "d-flex search-form", html: {data: {action: "submit->user-card#revealContent"}} do |f| %>
+      <%= form_with url: feed_path, method: :get, class: "d-flex search-form col-12", html: {data: {action: "submit->user-card#revealContent"}} do |f| %>
         <%= f.text_field :query,
               value: params[:query],
               class: "form-control",
@@ -16,5 +16,6 @@
             <% end %>
           </div>
       <% end %>
-
+      <div class="col-12 friend-result" data-user-card-target="cards">
+      </div>
   </div>
