@@ -18,7 +18,7 @@
 .user-card{
   width:400px;
   height: fit-content;
-  background-color: grey;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,10 +31,16 @@
   width:80px;
   border-radius: 5px;
   background-color: white;
-  margin: 5px;
+  margin: 10px;
   .p{
   font-size:25px ;
   }
+}
+
+.ranking{
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .sus-score-chart{
