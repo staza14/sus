@@ -16,6 +16,7 @@ body {
   padding: 0;
   font-size: 1rem;
   color: white;
+  margin-left: 10px;
 }
 .wrapper {
   width: 100%;
@@ -67,4 +68,27 @@ body {
 
 #searchQuerySubmit:hover {
   cursor: pointer;
+}
+
+
+.friend-form {
+  position: relative;
+  &.active {
+    margin-bottom: 90px;
+  }
+  transition: margin .3s ease;
+}
+
+.friend-result{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  bottom: 100px;
+  transform: translateY(100%);
+  &.active {
+    bottom: 0px;
+    opacity: 1;
+    pointer-events: all;
+  }
+  transition: all .3s ease;
 }
