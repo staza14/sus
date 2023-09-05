@@ -1,5 +1,10 @@
 <div class="my-challenges-children" id="active-challenges">
   <h3>Your active challenges</h3>
+  <% if @active_challenges.count < 1 %>
+  <div class="no-challenge-active m-5 p-3">
+  <h4>You haven't joined any challenges, head over to the challenges page to find some.</h4>
+  </div>
+  <% else %>
   <div class="challenge-iteration" id="active-challenge">
     <%@active_challenges.each do |challenge| %>
       <div class="challenge-card-big-div">
@@ -14,6 +19,9 @@
           <div class="challenge-category">
           <%# Need to iterate for each category %>
             <div class="challenge-card-category"><p class="challenge-category-text"><%= challenge.challenge.category %></p></div>
+            <%= link_to active_challenge_path(challenge), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                <%= image_tag(("recycle-bin.png"), class:"delete-button")%>
+                <% end %>
           </div>
         </div>
         <div class="challenge-calls">
@@ -50,4 +58,5 @@
       </div>
     <% end %>
   </div>
+  <% end %>
 </div>

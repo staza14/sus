@@ -4,11 +4,19 @@
   text-align: initial;
 }
 .fact-div {
-  background-color: $orange;
   margin: 17px 28px;
   padding: 13px 16px;
   border: solid 0.5px;
   border-radius: 5px;
+  #home{
+  background-color: $orange;
+  }
+  #profile{
+    background-color: $green;
+  }
+  #contact{
+    background-color: $purple;
+  }
 }
 .fact-icon {
   font-size: xx-large;

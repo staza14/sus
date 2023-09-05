@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     resources :friendships, only: :create
   end
 
-  resources :active_challenges, only: [] do
+  resources :active_challenges, only: [:create, :destroy] do
 
     resources :active_challenge_days, only: [:create, :update]
 
