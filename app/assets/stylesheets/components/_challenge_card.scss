@@ -3,14 +3,14 @@
   width: 100%;
   overflow-x: scroll;
   flex-wrap: unset;
+  border:none;
 }
 .challenge-card{
   border: solid;
   background-color: white;
-  border-color: black;
   transition: .5s ease-in-out;
   flex-shrink: 0;
-  color: black;
+  color: $green;
   border-radius: 10px;
   &:hover{
   transform:scale(1.05);
@@ -29,7 +29,6 @@
 }
 
 .feature{
-  border: solid;
   width: 100%;
 }
 
@@ -42,9 +41,7 @@
   display: flex;
 }
 
-.header{
-  color: black;
-}
+
 .green {
   background-color: green;
 }
