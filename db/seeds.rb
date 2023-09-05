@@ -236,7 +236,7 @@ puts "creating challenges"
   Challenge.create(
     name: "Let the veg take over",
     description: "Is meat usually the biggest portion on your plate. If it is then this challenge is for you! In general, we want half our plate to be vegetables, preferably low-calorie, starchy vegetables with a quarter of the plate filled by fiber-rich carbohydrates and/or healthy fats and then the rest of your plate will be protein-rich foods(this is where your meat will be). Benefits of a balanced plate can include: healthy weight management, less body fat, easier muscle building, leaner physique, weight gain prevention",
-    summary: "Your meal plate proportion should be 50% veg, 25% fiber-rich carbohydrates and/or healthy fats, 25% protein-rich foods",
+    summary: "Your meal plate proportion should be 1/2 veg, 1/4 fiber-rich carbohydrates and/or healthy fats, 1/4 protein-rich foods",
     category: "Food",
     duration: 7,
     challenge_score: 20,

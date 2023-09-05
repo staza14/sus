@@ -1,12 +1,11 @@
 <div class="challenge-card-big-div">
-  <% challenge = ActiveChallenge.last %>
   <div class="challenge-card-quick-info">
     <div class="challenge-duration">
-      <h6 class="challenge-card-days"><%= challenge.active_challenge_days.count %> Days</h6>
+      <h6 class="challenge-card-days"><%= challenge.duration %> Days</h6>
     </div>
     <div class="title-summary">
-      <h6 class="challenge-card-title"><%=challenge.challenge.name %></h6>
-      <p class="challenge-card-summary"><%= challenge.challenge.summary %></p>
+      <h6 class="challenge-card-title"><%=challenge.name %></h6>
+      <p class="challenge-card-summary"><%= challenge.summary %></p>
     </div>
     <div class="challenge-category">
     <%# Need to iterate for each category %>
