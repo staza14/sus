@@ -3,10 +3,26 @@
   <div class="challenge-iteration" id="active-challenge">
     <%@active_challenges.each do |challenge| %>
     <div class="dashboard-challenges-card">
-      <h3><%=challenge.challenge.name %></h3>
-      <h5><%= challenge.challenge.summary %></h5>
-      <button type="button" class="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.challenge.id %>">Challenge info</button>
+      <div class="title-summary">
+        <h3><%=challenge.challenge.name %></h3>
+        <h5><%= challenge.challenge.summary %></h5>
+      </div>
 
+
+      <%# progress bar %>
+      <div class="progress-info"> <%# Ends after button. Contains progress bar and info button %>
+        <div class="progress" style="height: 20px;">
+          <div class="progress-bar"
+              role="progressbar"
+          <%= "aria-valuenow='#{@percentage}'" %>
+              aria-valuemin="0"
+              aria-valuemax="100">
+              <%= "#{@percentage}" %>%
+        </div>
+        <%# Progress Bar %>
+
+        <button type="button" class="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.challenge.id %>">Challenge info</button>
+      </div>
       <!-- Modal -->
       <div class="modal fade" id="exampleModal<%= challenge.challenge.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -22,13 +38,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="d-flex">
-        <% challenge.active_challenge_days.each do |day| %>
-          <div class="circle <%= day.status ? "green" : "grey" %>">
-            <h5 class="p-2"><%= day.day %></h5>
-          </div>
-        <%end %>
       </div>
     </div>
     <%end%>
