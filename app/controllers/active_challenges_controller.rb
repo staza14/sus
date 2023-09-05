@@ -20,4 +20,17 @@ class ActiveChallengesController < ApplicationController
 
   end
 
+  def calculate_completion
+    challenge = ActiveChallenge.current_user
+    @percentage = if challenge.active_challenge_days.where(status: true).zero?
+                    0
+                  else
+                    a = challenge.active_challenge_days.count
+                    b = challenge.active_challenge_days.where(status: true).count
+                    c = b / a
+                    c = c * 100
+                    c
+                  end
+
+  end
 end

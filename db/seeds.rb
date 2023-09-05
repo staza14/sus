@@ -705,6 +705,63 @@ puts "creating entries"
     created_at: "Fri, 01 Sep 2023 09:05:04.000000000 UTC +00:00",
     user_id: user2.id
   )
+  # User-9
+  Entry.create!(
+    food_score: 0.1,
+    travel_score: 0.4,
+    home_score: 0.5,
+    created_at: "Fri, 25 Sep 2023 09:20:04.000000000 UTC +00:00",
+    user_id: user9.id
+  )
+  Entry.create!(
+    food_score: 0.4,
+    travel_score: 0.5,
+    home_score: 0.5,
+    created_at: "Sat, 26 Sep 2023 09:27:04.000000000 UTC +00:00",
+    user_id: user9.id
+  )
+  Entry.create!(
+    food_score: 0.3,
+    travel_score: 0.7,
+    home_score: 0.6,
+    created_at: "Sun, 27 Sep 2023 09:29:04.000000000 UTC +00:00",
+    user_id: user9.id
+  )
+  Entry.create!(
+    food_score: 0.4,
+    travel_score: 0.6,
+    home_score: 0.5,
+    created_at: "Mon, 28 Sep 2023 09:29:04.000000000 UTC +00:00",
+    user_id: user9.id
+  )
+  Entry.create!(
+    food_score: 0.3,
+    travel_score: 0.7,
+    home_score: 0.4,
+    created_at: "Tue, 29 Sep 2023 09:29:04.000000000 UTC +00:00",
+    user_id: user9.id
+  )
+  Entry.create!(
+    food_score: 0.2,
+    travel_score: 0.2,
+    home_score: 0.3,
+    created_at: "Wed, 30 Aug 2023 09:45:04.000000000 UTC +00:00",
+    user_id: user9.id
+  )
+  Entry.create!(
+    food_score: 0.3,
+    travel_score: 0.3,
+    home_score: 0.3,
+    created_at: "Thu, 31 Aug 2023 09:00:04.000000000 UTC +00:00",
+    user_id: user9.id
+  )
+  Entry.create!(
+    food_score: 0.2,
+    travel_score: 0.3,
+    home_score: 0.4,
+    created_at: "Fri, 01 Sep 2023 09:05:04.000000000 UTC +00:00",
+    user_id: user9.id
+  )
 puts "Entries Created"
 puts "Creating Active Challenges"
   ActiveChallenge.create(
@@ -763,7 +820,7 @@ puts "Creating Active Challenges"
     challenge_id: second_hand_sourcing.id
   )
   ActiveChallenge.create(
-    completed: false,
+    completed: true,
     user_id: user9.id,
     challenge_id: second_hand_sourcing.id
   )

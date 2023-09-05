@@ -1,0 +1,20 @@
+<div class="challenge-card-big-div">
+  <% challenge = ActiveChallenge.last %>
+  <div class="challenge-card-quick-info">
+    <div class="challenge-duration">
+      <h6 class="challenge-card-days"><%= challenge.active_challenge_days.count %> Days</h6>
+    </div>
+    <div class="title-summary">
+      <h6 class="challenge-card-title"><%=challenge.challenge.name %></h6>
+      <p class="challenge-card-summary"><%= challenge.challenge.summary %></p>
+    </div>
+    <div class="challenge-category">
+    <%# Need to iterate for each category %>
+      <div class="challenge-card-category"><p class="challenge-category-text"><%= challenge.challenge.category %></p></div>
+    </div>
+  </div>
+  <div class="challenge-calls">
+    <div class="progress progress-bar-div"><div class="progress-bar" role="progressbar" aria-valuenow= 25 aria-valuemin="0" aria-valuemax="100">25%</div></div>
+    <button type="button" class="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button>
+  </div>
+</div>
