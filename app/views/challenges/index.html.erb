@@ -11,15 +11,15 @@
 
 
   <h2 class="header"> Explore all challenges:</h2>
-  <h3 class="header underline"> Food challenges:</h3>
+  <div class="challenge-card-category"><h3 class="challenge-category-text">Food</h3></div>
   <div class="challenge-category-wrapper">
     <%= render "category", challenges: @challenges_food %>
   </div>
-  <h3 class="header underline"> Home challenges:</h3>
+  <div class="challenge-card-category"><h3 class="challenge-category-text">Home</h3></div>
   <div class="challenge-category-wrapper">
     <%= render "category", challenges: @challenges_home %>
   </div>
-  <h3 class="header underline"> Transport challenges:</h3>
+  <div class="challenge-card-category"><h3 class="challenge-category-text">Travel</h3></div>
   <div class="challenge-category-wrapper">
     <%= render "category", challenges: @challenges_transport %>
   </div>
