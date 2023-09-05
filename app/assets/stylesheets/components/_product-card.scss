@@ -88,13 +88,14 @@
   justify-content: space-between;
   align-items: center;
 }
-.add-button {
+.details-button {
   border: none;
   height: 63%;
   width: 30%;
   border-radius: 25px;
   background-color: black;
   color: white;
+  position: static;
 }
 .progress-bar-div {
   height: 45%;
