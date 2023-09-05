@@ -58,76 +58,76 @@
   border-color: #FD1015;
 }
 
-#user_avatar_2 + label {
+#user_avatar_avatar2_png + label {
   background-image: url("avatar2.png");
   background-size: contain;
   background-repeat: no-repeat
 }
 
-#user_avatar_2:checked + label {
+#user_avatar_avatar2_png:checked + label {
   border-color: #FD1015;
 }
-#user_avatar_3 + label {
+#user_avatar_avatar3_png + label {
   background-image: url("avatar3.png");
   background-size: contain;
   background-repeat: no-repeat
 }
 
-#user_avatar_3:checked + label {
+#user_avatar_avatar3_png:checked + label {
   border-color: #FD1015;
 }
-#user_avatar_4 + label {
+#user_avatar_avatar4_png + label {
   background-image: url("avatar4.png");
   background-size: contain;
   background-repeat: no-repeat
 }
 
-#user_avatar_4:checked + label {
+#user_avatar_avatar4_png:checked + label {
   border-color: #FD1015;
 }
-#user_avatar_5 + label {
+#user_avatar_avatar5_png + label {
   background-image: url("avatar5.png");
   background-size: contain;
   background-repeat: no-repeat
 }
 
-#user_avatar_5:checked + label {
+#user_avatar_avatar5_png:checked + label {
   border-color: #FD1015;
 }
-#user_avatar_6 + label {
+#user_avatar_avatar6_png + label {
   background-image: url("avatar6.png");
   background-size: contain;
   background-repeat: no-repeat
 }
 
-#user_avatar_6:checked + label {
+#user_avatar_avatar6_png:checked + label {
   border-color: #FD1015;
 }
-#user_avatar_7 + label {
+#user_avatar_avatar7_png + label {
   background-image: url("avatar7.png");
   background-size: contain;
   background-repeat: no-repeat
 }
 
-#user_avatar_7:checked + label {
+#user_avatar_avatar7_png:checked + label {
   border-color: #FD1015;
 }
-#user_avatar_8 + label {
+#user_avatar_avatar8_png + label {
   background-image: url("avatar8.png");
   background-size: contain;
   background-repeat: no-repeat
 }
 
-#user_avatar_8:checked + label {
+#user_avatar_avatar8_png:checked + label {
   border-color: #FD1015;
 }
-#user_avatar_9 + label {
+#user_avatar_avatar9_png + label {
   background-image: url("avatar9.png");
   background-size: contain;
   background-repeat: no-repeat
 }
 
-#user_avatar_9:checked + label {
+#user_avatar_avatar9_png:checked + label {
   border-color: #FD1015;
 
 }
@@ -155,4 +155,63 @@
   .btn {
     width: 100%;
     margin-bottom: 20px
+  }
+
+
+  .custom-input {
+    border: 0;
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 5px solid #eee;
+    font: inherit;
+    font-size: 1.125rem;
+    padding: .25rem 0;
+    &:focus, &:valid {
+      outline: 0;
+      border-bottom-color: #6a994e;
+      &+.input-label {
+        color: #6a994e;
+        transform: translateY(-1.5rem);
+      }
+    }
+  }
+
+  .modal-fade-show {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    padding-top: 1.5rem;
+    &+.input {
+      margin-top: 1.5rem;
+    }
+  }
+
+
+  .modal-header{
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 65%;
+    background-image: url('https://sustainability-speakers.com/wp-content/uploads/2020/11/sustainability-environment-featured.jpg');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 0 5%;
+    position: relative;
+  }
+
+  .modal-title {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    right: 10%;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #281e02;
+    line-height: 1.222;
+    small {
+      display: block;
+      font-size: .75em;
+      font-weight: 400;
+      margin-top: .25em;
+    }
   }

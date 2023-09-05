@@ -1,0 +1,14 @@
+.search-result{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-radius: 10px;
+}
+
+.button-container {
+  margin-left: auto;
+  padding: 5px 10px;
+}

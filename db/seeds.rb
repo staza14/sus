@@ -220,7 +220,7 @@ puts "creating challenges"
     category: "Food",
     duration: 4,
     challenge_score: 20,
-    # badge: ,
+    badge:"stickers/Plant1.png" ,
     prompt: "Did you eat meat today?"
   )
   moove_the_beef = Challenge.create(
@@ -230,7 +230,7 @@ puts "creating challenges"
     category: "Food",
     duration: 7,
     challenge_score: 20,
-    # badge: ,
+    badge:"stickers/Plant2.png",
     prompt: "did you have beef today?"
   )
   Challenge.create(
@@ -240,7 +240,7 @@ puts "creating challenges"
     category: "Food",
     duration: 7,
     challenge_score: 20,
-    # badge: ,
+    badge:"stickers/Plant3.png",
     prompt: "Do you think you had healthy plate proportions today?"
   )
   # Transport
@@ -251,7 +251,7 @@ puts "creating challenges"
     category: "Transport",
     duration: 4,
     challenge_score: 20,
-    # badge: ,
+    badge:"stickers/Plant4.png",
     prompt: "did you today?"
   )
   Challenge.create(
@@ -261,7 +261,7 @@ puts "creating challenges"
     category: "Transport",
     duration: 4,
     challenge_score: 20,
-    # badge: ,
+    badge:"stickers/Plant5.png",
     prompt: "If you took a trip under 5km, did you walk or cycle?"
   )
   # Home
@@ -272,7 +272,7 @@ puts "creating challenges"
     category: "Home",
     duration: 7,
     challenge_score: 20,
-    # badge: ,
+    badge:"stickers/Plant6.png",
     prompt: "Did you turn off lights that weren't being used(that you know of)?"
   )
   second_hand_sourcing = Challenge.create(
@@ -282,7 +282,7 @@ puts "creating challenges"
     category: "Home",
     duration: 7,
     challenge_score: 20,
-    # badge: ,
+    badge: "stickers/Plant1.png",
     prompt: "Are you sticking to the challenge?"
   )
   # Combination
@@ -293,7 +293,7 @@ puts "creating challenges"
     category: ["Food", "Transport", "Home"],
     duration: 14,
     challenge_score: 7,
-    # badge: ,
+    badge:"stickers/Plant2.png",
     prompt: "Did you try at least one healthy habit?"
   )
 puts "Challenges Created"

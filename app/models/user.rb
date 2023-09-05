@@ -8,12 +8,12 @@ class User < ApplicationRecord
   # validates :email, presence: true
   has_many :active_challenges, dependent: :destroy
   has_many :challenges, through: :active_challenges
-  has_many :friendships_as_asker, class_name: "Friendship", foreign_key: :asker_id
-  has_many :friendships_as_receiver, class_name: "Friendship", foreign_key: :receiver_id
+  has_many :friendships_as_asker, class_name: "Friendship", foreign_key: :asker_id, dependent: :destroy
+  has_many :friendships_as_receiver, class_name: "Friendship", foreign_key: :receiver_id, dependent: :destroy
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true
-  # validates :avatar, presence: true
+  validates :avatar, presence: true
 
   before_create :calculate_baseline_stats
 
@@ -118,6 +118,7 @@ class User < ApplicationRecord
 
   def calculate_baseline_stats
     self.baseline_stats = self.calculate_food_score + self.calculate_travel_score + self.calculate_home_score
+    self.overall_score = self.calculate_food_score + self.calculate_travel_score + self.calculate_home_score
   end
 
 

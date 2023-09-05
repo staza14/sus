@@ -1,4 +1,14 @@
 <div class="container">
+
+
+    <h1>Welcome, <%= current_user.first_name %>!</h1>
+  <p>If everyone lived like you, we would need <%= current_user.baseline_stats.to_i %> Earths.</p>
+<div class="d-flex">
+    <% current_user.baseline_stats.to_i.times do %>
+      <%= render partial: 'shared/baseline_image' %>
+    <% end %>
+</div>
+
     <!--   Sidebar     -->
 		<div class="user-dashboard-content">
 			<div class="sticky-side col-3">
@@ -62,6 +72,7 @@
 			</div>
 		</div>
 	</div>
+
 <script>
 function updateTextInput2(val) {document.getElementById('textInput2').value=val;}
 function updateTextInput1(val) {document.getElementById('textInput1').value=val;}

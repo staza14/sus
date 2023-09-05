@@ -6,10 +6,31 @@
   padding: 10px;
 }
 .call-to-action8:hover{
-background-color: $red;
+background-color: $pink;
+color: $gray;
+}
+.call-to-action10{
+  border: solid;
+  border-radius: 6px;
+  transition: .2s ease-in-out;
+  padding: 10px;
+  width: 100%;
+}
+.call-to-action10:hover{
+background-color: $pink;
 color: $gray;
 }
 
+.add-button{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: $black;
+  color: $pink;
+}
 .call-to-action {
   background-color: #c2fbd7;
   border-radius: 100px;
@@ -18,7 +39,7 @@ color: $gray;
   cursor: pointer;
   display: inline-block;
   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 7px 5px;
+  padding: 7px 10px;
   text-align: center;
   text-decoration: none;
   transition: all 250ms;
@@ -193,4 +214,9 @@ color: $gray;
 
 .call-to-action5:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+.button-icon{
+  background-color: $black;
+  color:$pink;
 }

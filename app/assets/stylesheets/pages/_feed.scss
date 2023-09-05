@@ -5,21 +5,71 @@
 }
 
 .leaderboard {
-  padding: 10px;
-  margin-top: 50px;
-  margin-left: 150px;
-  padding-left: 150px;
-  background-color: white;
   width: 100%;
-  max-width: 570px;
-  border-radius: 66px;
-  background: linear-gradient(145deg, #e6e6e6, #ffffff);
-  box-shadow:  32px 32px 64px #b0b0b0,
-             -32px -32px 64px #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow:2 ;
+  border-radius: 5px;
+  height: fit-content;
+  background-color: white;
+
+}
+.sticky-feed{
+  position: sticky;
+  top:30px;
+  align-self: flex-start;
 }
 
-.leaderboard:hover {
-  transform: scale(1.09);
+
+.leaderboard-leader {
+flex-grow:2 ;
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  p {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+}
+
+.leaderboard-result {
+  margin-top: 15px;
+
+  span {
+    font-size: 2rem;
+    color: rgb(27, 82, 64);
+  }
+}
+
+.image-small {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fa-medal {
+  font-size: 1.3rem;
+}
+
+.gold {
+  color: #FFD700;
+}
+
+.silver {
+  color: #C0C0C0;
+}
+
+.bronze {
+  color: #CD7F32;
 }
 .tag-item {
   display: inline-block;
