@@ -137,6 +137,7 @@
   margin-top: 50px;
   border-radius: 3px;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  color: #010000;
   h2 {
     font-size: 25px;
     font-weight: bold;
@@ -149,6 +150,7 @@
     font-weight: bold;
     margin-bottom: 30px;
     text-align: center;
+    color: black;
 
   }
 
@@ -158,60 +160,113 @@
   }
 
 
-  .custom-input {
-    border: 0;
-    z-index: 1;
-    background-color: transparent;
-    border-bottom: 5px solid #eee;
-    font: inherit;
-    font-size: 1.125rem;
-    padding: .25rem 0;
-    &:focus, &:valid {
-      outline: 0;
-      border-bottom-color: #6a994e;
-      &+.input-label {
-        color: #6a994e;
-        transform: translateY(-1.5rem);
-      }
-    }
-  }
 
-  .modal-fade-show {
-    display: flex;
-    flex-direction: column-reverse;
-    position: relative;
-    padding-top: 1.5rem;
-    &+.input {
-      margin-top: 1.5rem;
-    }
+  // ENTRY FORM STYLING - VASANA
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  h1{
+    text-align: center;
   }
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+.modal-header {
+  background-color: #88674F;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-header > h1 {
+  text-align: center;
+  color: #fff;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+// .modal-body {
+//   padding: 20px;
+// }
+
+.simple_form {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.simple_form label {
+  font-weight: bold;
+}
 
 
-  .modal-header{
-    border-radius: 20px;
-    overflow: hidden;
-    padding-bottom: 65%;
-    background-image: url('https://sustainability-speakers.com/wp-content/uploads/2020/11/sustainability-environment-featured.jpg');
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: 150%;
-    background-position: 0 5%;
-    position: relative;
-  }
+.form-range {
+  width: 100%;
+}
 
-  .modal-title {
-    position: absolute;
-    left: 10%;
-    top: 15%;
-    right: 10%;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #281e02;
-    line-height: 1.222;
-    small {
-      display: block;
-      font-size: .75em;
-      font-weight: 400;
-      margin-top: .25em;
-    }
-  }
+.form-range + input[type="text"] {
+  width: 50px;
+  text-align: center;
+  border: none;
+  background-color: #010000;
+  color: #000;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body button {
+  background-color: #88674F;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+
+.modal-footer button {
+  margin-right: 10px;
+  background-color: #88674F;
+  color: #715656;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #4C362F;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 5px;
+}
+.submit-button-container {
+  text-align: left; /* Align content to the left */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
