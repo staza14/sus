@@ -1,26 +1,4 @@
 
-.call-to-action8{
-  border: solid;
-  border-radius: 6px;
-  transition: .2s ease-in-out;
-  padding: 10px;
-}
-.call-to-action8:hover{
-background-color: $pink;
-color: $gray;
-}
-.call-to-action10{
-  border: solid;
-  border-radius: 6px;
-  transition: .2s ease-in-out;
-  padding: 10px;
-  width: 100%;
-}
-.call-to-action10:hover{
-background-color: $pink;
-color: $gray;
-}
-
 .add-button{
   height: 50px;
   width: 50px;
@@ -30,6 +8,16 @@ color: $gray;
   right: 20px;
   background-color: $black;
   color: $pink;
+}
+.join-button{
+ border:none;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: $black;
+  color: $pink;
+  padding: 5px;
 }
 .call-to-action {
   background-color: #c2fbd7;

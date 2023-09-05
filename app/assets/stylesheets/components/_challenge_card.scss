@@ -8,12 +8,12 @@
 .challenge-card{
   border: solid;
   background-color: white;
-  transition: .5s ease-in-out;
+  transition: .6s ease-in-out;
   flex-shrink: 0;
   color: $green;
   border-radius: 10px;
   &:hover{
-  transform:scale(1.05);
+  transform:scale(1.02);
   }
 }
 
