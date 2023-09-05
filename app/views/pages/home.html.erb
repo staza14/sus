@@ -1,11 +1,12 @@
-<div class="container home-page">
-<button onclick="typeWriter()" class="period"> <i class="fa-solid fa-circle fa-2xl" style="color: #85ff93;"></i> </button>
+<div class="home-page">
+<div class="container" data-controller="apparition-button">
+<button onclick="typeWriter()" class="period" data-action="click->apparition-button#loginbutton"> <i class="fa-solid fa-circle fa-2xl" style="color: #85ff93;"></i> <i class="fa-solid fa-arrow-pointer"></i> </button>
 
 <p id="demo"></p>
 
 <script>
 var i = 0;
-var txt = 'Are you the most sustainable in your circle? Lets make you.';
+var txt = 'Are you the most sustainable in your circle? Lets make you. ↓ ';
 var speed = 50;
 
 function typeWriter() {
@@ -16,4 +17,11 @@ function typeWriter() {
   }
 }
 </script>
+
+<% if current_user %>
+  <%= link_to "Explore", dashboard_path, class:"add-entry d-none", id:"login-button", data: {"apparition-button-target": "button"} %>
+<% else %>
+  <%= link_to "Login", new_user_session_path, class:"add-entry d-none", id:"login-button", data: {"apparition-button-target": "button"} %>
+<% end %>
+</div>
 </div>
