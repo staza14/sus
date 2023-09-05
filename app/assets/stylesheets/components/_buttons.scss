@@ -29,6 +29,8 @@ color: $gray;
   position: absolute;
   top: 20px;
   right: 20px;
+  background-color: $black;
+  color: $pink;
 }
 
 .call-to-action {
@@ -214,4 +216,9 @@ color: $gray;
 
 .call-to-action5:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+.button-icon{
+  background-color: $black;
+  color:$pink;
 }
