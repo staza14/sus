@@ -37,49 +37,49 @@ class User < ApplicationRecord
     car_hours: 0.16,
     bus_hours: 0.1,
     train_hours: 0.18,
-    cycle_hours: 0.23,
-    foot_hours: 0.23,
-    flight_long_hours: 0.04,
-    flight_short_hours: 0.06
+    cycle_hours: 0.03,
+    foot_hours: 0.03,
+    flight_long_hours: 0.4,
+    flight_short_hours: 0.6
   }
 
   HOME_WEIGHTS = {
-    lights: 30,
+    lights: 20,
     # lights_yes: 0.18,
     # lights_no: 0,
 
-    clothing: 40,
+    clothing: 30,
     # clothing_zero: 0.17,
     # clothing_sixty: 0.09,
     # clothing_hundred: 0.03,
     # clothing_hundreadeighty: 0,
     # clothing_overeigthy: 0,
 
-    temperature: 30,
+    temperature: 20,
     # temp_fourteen: 0.16,
     # temp_seventeen: 0.09,
     # temp_twentyone: 0.03,
     # temp_abovetwentyone: 0,
-    bath: 0.14,
-    long_shower: 0,
-    short_shower: 0.04
+    bath: 0.4,
+    long_shower: 0.04,
+    short_shower: 0.01
   }
 
   FOOD_WEIGHTS = {
-    food: 40,
+    food: 10,
     # meat_everyday: 0,
     # meat_rarely: 0.09,
     # no_beef: 0.06,
     # vegetarian: 0.17,
     # vegan: 0.2,
 
-    waste: 30,
+    waste: 10,
     # throw_none: 0.1,
     # throw_ten: 0.07,
     # throw_thirty: 0.03,
     # throw_abovethirty: 0,
 
-    source: 30,
+    source: 10,
     # food_supermarket: 0.03,
     # food_locally: 0.1,
     # food_own: 0.15,
