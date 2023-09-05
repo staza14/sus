@@ -579,72 +579,72 @@ puts "Creating Friendships"
 puts "Friendships Created"
 puts "creating entries"
   Entry.create!(
-    food_score: 0.5,
-    travel_score: 0.4,
-    home_score: 0.9,
+    food_score: 7.0,
+    travel_score: 2.0,
+    home_score: 9,
     created_at: "Wed, 23 Aug 2023 09:20:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 0.3,
-    travel_score: 0.4,
-    home_score: 1,
+    food_score: 5.0,
+    travel_score: 2.0,
+    home_score: 10,
     created_at: "Thu, 24 Aug 2023 09:27:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 0.8,
-    travel_score: 0.6,
-    home_score: 0.9,
+    food_score: 12.0,
+    travel_score: 6.5,
+    home_score: 9,
     created_at: "Fri, 25 Aug 2023 09:29:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 0.3,
+    food_score: 5.0,
     travel_score: 0,
-    home_score: 0.4,
+    home_score: 5,
     created_at: "Sat, 26 Aug 2023 08:58:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 0.6,
-    travel_score: 0.2,
-    home_score: 0.8,
+    food_score: 7.0,
+    travel_score: 1.1,
+    home_score: 8,
     created_at: "Sun, 27 Aug 2023 09:02:72.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 0.3,
+    food_score: 5.0,
     travel_score: 0,
-    home_score: 0.4,
+    home_score: 4,
     created_at: "Mon, 28 Aug 2023 09:31:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 0.6,
-    travel_score: 0.2,
-    home_score: 0.8,
+    food_score: 5.5,
+    travel_score: 1.1,
+    home_score: 8,
     created_at: "Tue, 29 Aug 2023 09:45:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 0.7,
-    travel_score: 0.4,
-    home_score: 0.8,
+    food_score: 11.0,
+    travel_score: 2.6,
+    home_score: 8,
     created_at: "Wed, 30 Aug 2023 09:45:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 0.6,
-    travel_score: 0.5,
-    home_score: 0.7,
+    food_score: 10.5,
+    travel_score: 2.0,
+    home_score: 7,
     created_at: "Thu, 31 Aug 2023 09:00:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 0.8,
-    travel_score: 0.6,
-    home_score: 0.8,
+    food_score: 14.4,
+    travel_score: 3.0,
+    home_score: 8,
     created_at: "Fri, 01 Sep 2023 09:05:04.000000000 UTC +00:00",
     user_id: user1.id
   )
@@ -652,14 +652,14 @@ puts "creating entries"
   Entry.create!(
     food_score: 0.1,
     travel_score: 0.4,
-    home_score: 0.5,
+    home_score: 5,
     created_at: "Fri, 25 Sep 2023 09:20:04.000000000 UTC +00:00",
     user_id: user2.id
   )
   Entry.create!(
     food_score: 0.4,
     travel_score: 0.5,
-    home_score: 0.5,
+    home_score: 5,
     created_at: "Sat, 26 Sep 2023 09:27:04.000000000 UTC +00:00",
     user_id: user2.id
   )
@@ -764,70 +764,511 @@ puts "creating entries"
   )
 puts "Entries Created"
 puts "Creating Active Challenges"
-  ActiveChallenge.create(
+  active1 = ActiveChallenge.create(
     completed: false,
     user_id: user1.id,
     challenge_id: marvelous_mitochondria.id
   )
-  ActiveChallenge.create(
+
+  ActiveChallengeDay.create(
+   day: 1,
+   active_challenge_id: active1.id
+  )
+  ActiveChallengeDay.create(
+    day: 2,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 3,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 4,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 5,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 6,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 7,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 8,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 9,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 10,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 11,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 12,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 13,
+    active_challenge_id: active1.id
+   )
+   ActiveChallengeDay.create(
+    day: 14,
+    active_challenge_id: active1.id
+   )
+
+  active2 = ActiveChallenge.create(
     completed: false,
     user_id: user2.id,
     challenge_id: marvelous_mitochondria.id
   )
-  ActiveChallenge.create(
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active2.id
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 5,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 6,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 7,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 8,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 9,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 10,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 11,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 12,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 13,
+     active_challenge_id: active2.id
+    )
+    ActiveChallengeDay.create(
+     day: 14,
+     active_challenge_id: active2.id
+    )
+
+  active3 = ActiveChallenge.create(
     completed: false,
     user_id: user9.id,
     challenge_id: marvelous_mitochondria.id
   )
-  ActiveChallenge.create(
+
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active3.id
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 5,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 6,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 7,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 8,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 9,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 10,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 11,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 12,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 13,
+     active_challenge_id: active3.id
+    )
+    ActiveChallengeDay.create(
+     day: 14,
+     active_challenge_id: active3.id
+    )
+
+  active4 = ActiveChallenge.create(
     completed: false,
     user_id: user5.id,
     challenge_id: marvelous_mitochondria.id
   )
-  ActiveChallenge.create(
+
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active4.id
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 5,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 6,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 7,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 8,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 9,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 10,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 11,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 12,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 13,
+     active_challenge_id: active4.id
+    )
+    ActiveChallengeDay.create(
+     day: 14,
+     active_challenge_id: active4.id
+    )
+
+  active5 = ActiveChallenge.create(
     completed: false,
     user_id: user1.id,
     challenge_id: meatless_mondays.id
   )
-  ActiveChallenge.create(
+
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active5.id,
+    status: true
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active5.id,
+     status: true
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active5.id,
+     status: true
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active5.id
+    )
+
+  active6 = ActiveChallenge.create(
     completed: false,
     user_id: user3.id,
     challenge_id: meatless_mondays.id
   )
-  ActiveChallenge.create(
+
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active6.id
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active6.id
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active6.id
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active6.id
+    )
+
+  active7 = ActiveChallenge.create(
     completed: false,
     user_id: user7.id,
     challenge_id: meatless_mondays.id
   )
-  ActiveChallenge.create(
+
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active7.id
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active7.id
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active7.id
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active7.id
+    )
+
+  active8 = ActiveChallenge.create(
     completed: false,
     user_id: user8.id,
     challenge_id: meatless_mondays.id
   )
-  ActiveChallenge.create(
+
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active8.id
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active8.id
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active8.id
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active8.id
+    )
+
+  active9 = ActiveChallenge.create(
     completed: false,
     user_id: user10.id,
     challenge_id: meatless_mondays.id
   )
-  ActiveChallenge.create(
+
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active9.id
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active9.id
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active9.id
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active9.id
+    )
+
+  active10 = ActiveChallenge.create(
     completed: false,
     user_id: user8.id,
     challenge_id: moove_the_beef.id
   )
-  ActiveChallenge.create(
+
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active10.id
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active10.id
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active10.id
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active10.id
+    )
+    ActiveChallengeDay.create(
+     day: 5,
+     active_challenge_id: active10.id
+    )
+    ActiveChallengeDay.create(
+     day: 6,
+     active_challenge_id: active10.id
+    )
+    ActiveChallengeDay.create(
+     day: 7,
+     active_challenge_id: active10.id
+    )
+
+  active11 = ActiveChallenge.create(
     completed: false,
     user_id: user1.id,
     challenge_id: second_hand_sourcing.id
   )
-  ActiveChallenge.create(
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active11.id
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active11.id
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active11.id
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active11.id
+    )
+    ActiveChallengeDay.create(
+     day: 5,
+     active_challenge_id: active11.id
+    )
+    ActiveChallengeDay.create(
+     day: 6,
+     active_challenge_id: active11.id
+    )
+    ActiveChallengeDay.create(
+     day: 7,
+     active_challenge_id: active11.id
+    )
+
+  active12 = ActiveChallenge.create(
     completed: true,
     user_id: user9.id,
     challenge_id: second_hand_sourcing.id
   )
-  ActiveChallenge.create(
+
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active12.id
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active12.id
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active12.id
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active12.id
+    )
+    ActiveChallengeDay.create(
+     day: 5,
+     active_challenge_id: active12.id
+    )
+    ActiveChallengeDay.create(
+     day: 6,
+     active_challenge_id: active12.id
+    )
+    ActiveChallengeDay.create(
+     day: 7,
+     active_challenge_id: active12.id
+    )
+
+  active13 = ActiveChallenge.create(
     completed: false,
     user_id: user6.id,
     challenge_id: second_hand_sourcing.id
   )
+  ActiveChallengeDay.create(
+    day: 1,
+    active_challenge_id: active13.id
+   )
+   ActiveChallengeDay.create(
+     day: 2,
+     active_challenge_id: active13.id
+    )
+    ActiveChallengeDay.create(
+     day: 3,
+     active_challenge_id: active13.id
+    )
+    ActiveChallengeDay.create(
+     day: 4,
+     active_challenge_id: active13.id
+    )
+    ActiveChallengeDay.create(
+     day: 5,
+     active_challenge_id: active13.id
+    )
+    ActiveChallengeDay.create(
+     day: 6,
+     active_challenge_id: active13.id
+    )
+    ActiveChallengeDay.create(
+     day: 7,
+     active_challenge_id: active13.id
+    )
 puts "Active Challenges Created"
 puts "Finished Seeding"
