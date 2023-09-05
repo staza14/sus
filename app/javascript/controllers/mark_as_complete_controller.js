@@ -17,7 +17,7 @@ export default class extends Controller {
       .then(response => response.text())
       .then((data) => {
         console.log(this.submitTarget)
-        this.submitTarget.classList.add("green");
+        this.submitTarget.classList.toggle("green");
       })
   }
 }
