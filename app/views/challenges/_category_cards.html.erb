@@ -1,0 +1,125 @@
+<div class="challenge-page-challenge-card">
+  <a class="challenge-page-left-div" data-bs-toggle="modal" data-bs-target="#exampleModal"> <%# <%= challenge.id %>
+      <div class="challenge-page-name-summary">
+        <div class="name-category">
+          <h6 class="challenge-page-card-name">Namedy</h6>
+          <div class="challenge-page-category">
+            <p class="category">Food</p>
+        </div>
+        </div>
+        <p class="challenge-page-card-summary"> I am the superhero of simplification! I swoop in, squash the info monsters, and give you quick, snappy versions of long stories!</p>
+      </div>
+      <div class="challenge-page-div-friends">
+        <%# User.friends.active_challenge ? %>
+      </div>
+    </a>
+  <div class="challenge-page-right-div">
+    <div class="challenge-total-days">
+      <h1 class="day-number">7</h1>
+      <h3>Days</h3>
+    </div>
+    <button type="button" class="join-button">Join</button>
+  </div>
+</div>
+
+<style>
+/* biggest div */
+.challenge-page-challenge-card {
+  border: solid 1px black;
+  background-color: #dedede;
+  height: 300px;
+  width: 500px;
+  padding: 10px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+/* Left big div */
+.challenge-page-left-div {
+  border: solid 1px black;
+  background-color: #dbf5eda6;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 12px 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.name-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.challenge-page-card-name {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+.challenge-page-card-summary {
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: start;
+    margin: 0;
+}
+.challenge-page-category {
+  border: solid 1px black;
+  background-color: white;
+  padding: 4px 17px;
+  border-radius: 25px;
+  height: fit-content;
+  margin-right: 3px;
+  display: flex;
+  justify-content: center;
+
+  .category {
+    font-size: 17px;
+    font-weight: lighter;
+    margin: 0;
+  }
+}
+
+/* Right Big Div */
+.challenge-page-right-div {
+    /* border: solid 1px black; */
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+    flex-shrink: 0;
+    /* border-radius: 15px; */
+}
+.challenge-total-days {
+  background-color: white;
+  border: solid 1px black;
+  height: 45%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2px;
+}
+.join-button {
+  border: solid 1px black;
+  background-color: #ffa980;
+  height: 12%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

@@ -14,13 +14,17 @@
 /* a Big div */
 .challenge-card-quick-info {
     border: solid 0.7px #807d7d;
-    background-color: #dbf5eda6;;
+    background-color: #dbf5eda6;
     height: 75%;
     display: flex;
     flex-direction: column;
     padding: 8px 17px 8px 8px;
     border-radius: 12px;
     overflow: hidden;
+}
+#completed-challenges-info {
+  height: 95%;
+  width: 95%;
 }
 .challenge-duration {
     /* border: solid 1px black; */
