@@ -20,56 +20,74 @@
 					<div class="modal-header add-entry-form" data-header-color="section-transportation">
 						<h1 class="modal-title" id="exampleModalLabel">Daily Log</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
 					</div>
-          <div class="modal-body">
+          <div class="modal-body entry-form">
             <%= simple_form_for @entry  do |f| %>
               <div data-daily-log-target="section"><h4>Transportation</h4>
-                <%= f.input :car_hours, label: "How many hours did you travel by car today?", input_html: {value: 0} %>
-                <%= f.input :bus_hours, label: "How many hours did you travel by bus today?", input_html: {value: 0} %>
-                <%= f.input :train_hours, label: "How many hours did you travel by train today?", input_html: {value: 0} %>
-                <%= f.input :cycle_hours, label: "How many hours did you travel by cycle today?", input_html: {value: 0} %>
-                <%= f.input :foot_hours, label: "How many hours did you walk today?", input_html: {value: 0} %>
+              <h5>Today, how many hours did you travel by:</h5>
+              <%= f.input :car_hours, as: :range, prompt: "my data", collection: 0..5,
+                  label: "🚗",
+                  input_html: { class: "form-range first-slider", value: 0, min:"0", max:"5", step:"1", oninput:"updateTextInput8(this.value)" }
+                  %><input id="textInput8" style="border:none; background-color: #F4F4F4;" type="text" value="">
+              <%= f.input :bus_hours, as: :range, prompt: "my data", collection: 0..5,
+                  label: "🚌",
+                  input_html: { class: "form-range first-slider", value: 0, min:"0", max:"5", step:"1", oninput:"updateTextInput9(this.value)" }
+                  %><input id="textInput9" style="border:none; background-color: #F4F4F4;" type="text" value="">
+              <%= f.input :train_hours, as: :range, prompt: "my data", collection: 0..5,
+                  label: "🚝",
+                  input_html: { class: "form-range first-slider", value: 0, min:"0", max:"5", step:"1", oninput:"updateTextInput10(this.value)" }
+                  %><input id="textInput10" style="border:none; background-color: #F4F4F4;" type="text" value="">
+              <%= f.input :cycle_hours, as: :range, prompt: "my data", collection: 0..5,
+                  label: "🚲",
+                  input_html: { class: "form-range first-slider", value: 0, min:"0", max:"5", step:"1", oninput:"updateTextInput11(this.value)" }
+                  %><input id="textInput11" style="border:none; background-color: #F4F4F4;" type="text" value="">
+              <%= f.input :foot_hours, as: :range, prompt: "my data", collection: 0..5,
+                  label: "🚶",
+                  input_html: { class: "form-range first-slider", value: 0, min:"0", max:"5", step:"1", oninput:"updateTextInput12(this.value)" }
+                  %><input id="textInput12" style="border:none; background-color: #F4F4F4;" type="text" value="">
+
                 <button data-action="click->daily-log#showSection2" style="background-color: #BBACEC; color: white;" id="purplebutton">Next</button>
               </div>
               <div data-daily-log-target="section" class="d-none"><h4>Meals</h4>
+              <h5>How many of your today's meals contained:</h5>
                 <%= f.input :beef, as: :range, prompt: "my data", collection: 0..3,
-                  label: "How many of your meals contained beef today?",
-                  input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput1(this.value)" }
+                  label: "🥩",
+                  input_html: { id:"slider-green", class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput1(this.value)" }
                   %><input id="textInput1" style="border:none; background-color: #F4F4F4;" type="text" value="">
 
                 <%= f.input :lamb, as: :range, prompt: "my data", collection: 0..3,
-                  label: "How many of your meals contained lamb today?",
+                  label: "🐑",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput2(this.value)"}
                     %> <input id="textInput2" style="border:none; background-color: #F4F4F4;" type="text" value="">
 
                   <%= f.input :cheese, as: :range, prompt: "my data", collection: 0..3,
-                  label: "How many of your meals contained cheese today?",
+                  label: "🧀",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput3(this.value)"}
                     %> <input id="textInput3" style="border:none; background-color: #F4F4F4;" type="text" value="">
 
                     <%= f.input :pork, as: :range, prompt: "my data", collection: 0..3,
-                  label: "How many of your meals contained pork today?",
+                  label: "🐖",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput4(this.value)"}
                     %> <input id="textInput4" style="border:none; background-color: #F4F4F4;" type="text" value="">
 
-                    <%= f.input :chocolate, as: :range, prompt: "my data", collection: 0..3,
-                  label: "How many of your meals contained chocolate today?",
+                    <%#= f.input :chocolate, as: :range, prompt: "my data", collection: 0..3,
+                  label: "🍫",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput5(this.value)"}
-                    %> <input id="textInput5" style="border:none; background-color: #F4F4F4;" type="text" value="">
+                    %> <!--input id="textInput5" style="border:none; background-color: #F4F4F4;" type="text" value=""!-->
 
                     <%= f.input :fish, as: :range, prompt: "my data", collection: 0..3,
-                  label: "How many of your meals contained fish today?",
+                  label: "🐟",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput6(this.value)"}
                     %> <input id="textInput6" style="border:none; background-color: #F4F4F4;" type="text" value="">
 
                     <%= f.input :egg, as: :range, prompt: "my data", collection: 0..3,
-                  label: "How many of your meals contained egg today?",
+                  label: "🥚",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput7(this.value)"}
                     %> <input id="textInput7" style="border:none; background-color: #F4F4F4;" type="text" value="">
                     <br>
                   <button data-action="click->daily-log#showSection1" style="background-color: #80DBC1; color: white;" id="greenbutton">Back</button>
                   <button data-action="click->daily-log#showSection3" style="background-color: #80DBC1; color: white;" id="greenbutton">Next</button>
               </div>
-              <div data-daily-log-target="section" class="d-none"><h4>Home</h4>
+              <div data-daily-log-target="section" class="d-none third-modal"><h4>Home</h4>
                 <%= f.input :bath, as: :select, collection: ["Yes", "No"], label: "Today, I took a bath" %>
                 <%= f.input :long_shower, as: :select, collection: ["Yes", "No"],label: "Today, I took a long shower (more than 10mins)?"%>
                 <%= f.input :short_shower, as: :select, collection: ["Yes", "No"],label: "Today, I took a quick shower (less than 10mins)?"%>
@@ -83,7 +101,7 @@
 		</div>
 	</div>
 
-<script>
+<script class="number-slider">
 function updateTextInput2(val) {document.getElementById('textInput2').value=val;}
 function updateTextInput1(val) {document.getElementById('textInput1').value=val;}
 function updateTextInput3(val) {document.getElementById('textInput3').value=val;}
@@ -91,4 +109,9 @@ function updateTextInput4(val) {document.getElementById('textInput4').value=val;
 function updateTextInput5(val) {document.getElementById('textInput5').value=val;}
 function updateTextInput6(val) {document.getElementById('textInput6').value=val;}
 function updateTextInput7(val) {document.getElementById('textInput7').value=val;}
+function updateTextInput8(val) {document.getElementById('textInput8').value=val;}
+function updateTextInput9(val) {document.getElementById('textInput9').value=val;}
+function updateTextInput10(val) {document.getElementById('textInput10').value=val;}
+function updateTextInput11(val) {document.getElementById('textInput11').value=val;}
+function updateTextInput12(val) {document.getElementById('textInput12').value=val;}
 </script>
