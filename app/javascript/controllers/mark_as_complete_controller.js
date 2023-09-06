@@ -32,10 +32,10 @@ export default class extends Controller {
       }
       event.target.classList.toggle("green");
 
+
   }
 
   async fetchSave(url, status) {
-    if (status == "true") {
       const response = await fetch(url, {
         method: "PATCH",
         headers: { "Accept": "application/json",
@@ -46,9 +46,6 @@ export default class extends Controller {
       const data = await response.json()
       await console.log(data)
       return true;
-    } else {
-      return false
-    }
   }
 
   async saveDay(dayDiv) {
@@ -56,7 +53,7 @@ export default class extends Controller {
     const challengeId = dayDiv.dataset.challengeId
     const status = dayDiv.dataset.dayStatus
 
-    const url = `${this.element.dataset.host}active_challenges/${challengeId}/active_challenge_days/${dayId}`
+    const url = `${this.element.dataset.host}active_challenges/${challengeId}/active_challenge_days/${dayId}?status=${status}`
     console.log(url)
     console.log(status)
     await this.fetchSave(url, status)
@@ -68,11 +65,18 @@ export default class extends Controller {
 
     console.log(this.idTargets)
 
-    await this.idTargets.forEach(dayDiv => {
-      this.saveDay(dayDiv)
-    })
-    console.log("it finished")
+    await Promise.all(
+      this.idTargets.map( async dayDiv => {
+        const promise = await this.saveDay(dayDiv)
+        return promise
+      })
+    )
 
+    // await this.idTargets.forEach(dayDiv => {
+    //   // this.saveDay(dayDiv)
+    // })
+    console.log("it finished")
+    location.reload();
     //window.location.href = "http://localhost:3000/dashboard"
   }
 
