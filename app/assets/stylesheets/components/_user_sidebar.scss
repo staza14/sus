@@ -86,7 +86,9 @@
   border-radius: 11px;
   overflow: hidden;
 } // daily facts
-
+.progress-header{
+align-items: center;
+}
 .add-entry {
   background-color: $black;
   color: $pink;

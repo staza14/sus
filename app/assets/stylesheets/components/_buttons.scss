@@ -10,6 +10,7 @@
   color: $pink;
 }
 
+
 .add-entry-button{
   background-color: $black;
   color: $pink;
@@ -214,7 +215,14 @@
 .button-icon{
   background-color: $black;
   color:$pink;
+  transition: .2s ease-in-out;
 }
+.button-icon:hover{
+  background-color: $pink;
+  color:$black;
+  transform: scale(1.01);
+}
+
 
 
 // form button
