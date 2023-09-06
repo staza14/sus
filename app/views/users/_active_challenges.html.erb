@@ -19,10 +19,12 @@
           <div class="challenge-category">
           <%# Need to iterate for each category %>
             <div class="challenge-card-category"><p class="challenge-category-text"><%= challenge.challenge.category %></p></div>
-            <%= link_to active_challenge_path(challenge), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                <%= image_tag(("recycle-bin.png"), class:"delete-button")%>
-                <% end %>
           </div>
+          <%# delete button %>
+          <%= link_to active_challenge_path(challenge), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+              <%= image_tag(("recycle-bin.png"), class:"delete-button")%>
+          <% end %>
+          <%# delete button %>
         </div>
         <div class="challenge-calls">
 

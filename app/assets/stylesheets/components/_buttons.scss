@@ -9,7 +9,16 @@
   background-color: $black;
   color: $pink;
 }
-
+// .join-button{
+//  border:none;
+//   border-radius: 5px;
+//   position: absolute;
+//   top: 20px;
+//   right: 20px;
+//   background-color: $black;
+//   color: $pink;
+//   padding: 5px;
+// }
 .add-entry-button{
   background-color: $black;
   color: $pink;
@@ -23,8 +32,11 @@
   margin-top: 10px;
 }
 .delete-button{
- height:20px;
-  width: 20px;
+  height:25px;
+  width: 25px;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
 }
 .call-to-action {
   background-color: #c2fbd7;

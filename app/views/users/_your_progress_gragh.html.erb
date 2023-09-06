@@ -3,9 +3,9 @@
   <% if @food_data != 0 && @travel_data != 0  && @home_data != 0 %>
     <div class="container">
       <%= line_chart [
-      {name: "Food Score", data: @food_data, color: "#ADEBDC"},
-      {name: "Travel Score", data: @travel_data, color: "#E1DBF7"},
-      {name: "Home Score", data: @home_data, color: "#FAE2CE"}
+      {name: "Food", data: @food_data, color: "#ADEBDC"},
+      {name: "Travel", data: @travel_data, color: "#E1DBF7"},
+      {name: "Home", data: @home_data, color: "#FAE2CE"}
       ] %>
     </div>
       <% else %>
