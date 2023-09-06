@@ -1,11 +1,11 @@
 .my-avatar{
-  height: 120px;
-  width: 120px;
+  height: 110px;
+  width: 110px;
   border-radius: 50%;
   position: absolute;
   top: -40px;
   background-color: white;
-  border: solid;
+  border: $green 2px solid;
 
   object-position: center;
   object-fit: cover;
@@ -16,7 +16,7 @@
   margin:10%;
 }
 .user-card{
-  width:400px;
+  width:350px;
   height: fit-content;
   background-color: white;
   display: flex;

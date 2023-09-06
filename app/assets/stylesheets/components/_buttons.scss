@@ -19,10 +19,19 @@
   color: $pink;
   padding: 5px;
 }
-.delete-button{
-  height:20px;
-  width: 20px;
+.add-entry-button{
+  background-color: $black;
+  color: $pink;
+  border-radius: 5px;
+  border: none;
+  justify-content: center;
+  align-content: center;
+  padding: 5px;
+  font-size: large;
+  width: 100%;
+  margin-top: 10px;
 }
+
 .call-to-action {
   background-color: #c2fbd7;
   border-radius: 100px;
