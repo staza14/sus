@@ -4,8 +4,10 @@
   text-align: initial;
 }
 .fact-div {
+  background-color: #f5fcff;
+  height: 288px;
   margin: 17px 28px;
-  padding: 13px 16px;
+  padding: 14px 16px;
   border: solid 0.5px;
   border-radius: 5px;
   #home{
@@ -18,6 +20,7 @@
     background-color: $purple;
   }
 }
+
 .fact-icon {
   font-size: xx-large;
   color:$black;
@@ -45,7 +48,8 @@
   /* border: solid 1px black; */
   background-color: white;
   width: 100%;
-  height: 200px;
+  height: 180px;
+  box-shadow: 0 5px 20px #605760d9;
   border-radius: 12px;
 } //user-info-div
 .big-div {
@@ -87,7 +91,7 @@
   background-color: $black;
   color: $pink;
   border: none;
-  margin-top: 25px;
+  margin-top: 20px;
   border-radius: 10px;
   font-size: 37px;
   width: 100%;

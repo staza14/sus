@@ -17,66 +17,66 @@
 		<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
 			<div class="modal-dialog">
 				<div class="modal-content">
-					<div class="modal-header">
+					<div class="modal-header add-entry-form" data-header-color="section-transportation">
 						<h1 class="modal-title" id="exampleModalLabel">Daily Log</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
 					</div>
           <div class="modal-body">
-            <div data-daily-log-target="section"><h4>Transportation</h4>
-              <%= simple_form_for @entry do |f| %>
-              <%= f.input :car_hours, label: "How many hours did you travel by car today?", input_html: {value: 0} %>
-              <%= f.input :bus_hours, label: "How many hours did you travel by bus today?", input_html: {value: 0} %>
-              <%= f.input :train_hours, label: "How many hours did you travel by train today?", input_html: {value: 0} %>
-              <%= f.input :cycle_hours, label: "How many hours did you travel by cycle today?", input_html: {value: 0} %>
-              <%= f.input :foot_hours, label: "How many hours did you walk today?", input_html: {value: 0} %>
-              <button data-action="click->daily-log#showSection2">Next</button>
-            </div>
-            <div data-daily-log-target="section" class="d-none"><h4>Meals</h4>
-              <%= f.input :beef, as: :range, prompt: "my data", collection: 0..3,
-                label: "How many of your meals contained beef today?",
-                input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput1(this.value)" }
-                %><input id="textInput1" style="border:none; background-color: #F4F4F4;" type="text" value="">
+            <%= simple_form_for @entry  do |f| %>
+              <div data-daily-log-target="section"><h4>Transportation</h4>
+                <%= f.input :car_hours, label: "How many hours did you travel by car today?", input_html: {value: 0} %>
+                <%= f.input :bus_hours, label: "How many hours did you travel by bus today?", input_html: {value: 0} %>
+                <%= f.input :train_hours, label: "How many hours did you travel by train today?", input_html: {value: 0} %>
+                <%= f.input :cycle_hours, label: "How many hours did you travel by cycle today?", input_html: {value: 0} %>
+                <%= f.input :foot_hours, label: "How many hours did you walk today?", input_html: {value: 0} %>
+                <button data-action="click->daily-log#showSection2" style="background-color: #BBACEC; color: white;" id="purplebutton">Next</button>
+              </div>
+              <div data-daily-log-target="section" class="d-none"><h4>Meals</h4>
+                <%= f.input :beef, as: :range, prompt: "my data", collection: 0..3,
+                  label: "How many of your meals contained beef today?",
+                  input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput1(this.value)" }
+                  %><input id="textInput1" style="border:none; background-color: #F4F4F4;" type="text" value="">
 
-              <%= f.input :lamb, as: :range, prompt: "my data", collection: 0..3,
-                label: "How many of your meals contained lamb today?",
-                input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput2(this.value)"}
-                  %> <input id="textInput2" style="border:none; background-color: #F4F4F4;" type="text" value="">
+                <%= f.input :lamb, as: :range, prompt: "my data", collection: 0..3,
+                  label: "How many of your meals contained lamb today?",
+                  input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput2(this.value)"}
+                    %> <input id="textInput2" style="border:none; background-color: #F4F4F4;" type="text" value="">
 
-                <%= f.input :cheese, as: :range, prompt: "my data", collection: 0..3,
-                label: "How many of your meals contained cheese today?",
-                input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput3(this.value)"}
-                  %> <input id="textInput3" style="border:none; background-color: #F4F4F4;" type="text" value="">
+                  <%= f.input :cheese, as: :range, prompt: "my data", collection: 0..3,
+                  label: "How many of your meals contained cheese today?",
+                  input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput3(this.value)"}
+                    %> <input id="textInput3" style="border:none; background-color: #F4F4F4;" type="text" value="">
 
-                  <%= f.input :pork, as: :range, prompt: "my data", collection: 0..3,
-                label: "How many of your meals contained pork today?",
-                input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput4(this.value)"}
-                  %> <input id="textInput4" style="border:none; background-color: #F4F4F4;" type="text" value="">
+                    <%= f.input :pork, as: :range, prompt: "my data", collection: 0..3,
+                  label: "How many of your meals contained pork today?",
+                  input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput4(this.value)"}
+                    %> <input id="textInput4" style="border:none; background-color: #F4F4F4;" type="text" value="">
 
-                  <%= f.input :chocolate, as: :range, prompt: "my data", collection: 0..3,
-                label: "How many of your meals contained chocolate today?",
-                input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput5(this.value)"}
-                  %> <input id="textInput5" style="border:none; background-color: #F4F4F4;" type="text" value="">
+                    <%= f.input :chocolate, as: :range, prompt: "my data", collection: 0..3,
+                  label: "How many of your meals contained chocolate today?",
+                  input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput5(this.value)"}
+                    %> <input id="textInput5" style="border:none; background-color: #F4F4F4;" type="text" value="">
 
-                  <%= f.input :fish, as: :range, prompt: "my data", collection: 0..3,
-                label: "How many of your meals contained fish today?",
-                input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput6(this.value)"}
-                  %> <input id="textInput6" style="border:none; background-color: #F4F4F4;" type="text" value="">
+                    <%= f.input :fish, as: :range, prompt: "my data", collection: 0..3,
+                  label: "How many of your meals contained fish today?",
+                  input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput6(this.value)"}
+                    %> <input id="textInput6" style="border:none; background-color: #F4F4F4;" type="text" value="">
 
-                  <%= f.input :egg, as: :range, prompt: "my data", collection: 0..3,
-                label: "How many of your meals contained egg today?",
-                input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput7(this.value)"}
-                  %> <input id="textInput7" style="border:none; background-color: #F4F4F4;" type="text" value="">
-                  <br>
-                <button data-action="click->daily-log#showSection1">Back</button>
-                <button data-action="click->daily-log#showSection3">Next</button>
-            </div>
-            <div data-daily-log-target="section" class="d-none"><h4>Home</h4>
-              <%= f.input :bath, as: :select, collection: ["Yes", "No"], label: "Today, I took a bath" %>
-              <%= f.input :long_shower, as: :select, collection: ["Yes", "No"],label: "Today, I took a long shower (more than 10mins)?"%>
-              <%= f.input :short_shower, as: :select, collection: ["Yes", "No"],label: "Today, I took a quick shower (less than 10mins)?"%>
-              <button data-action="click->daily-log#backToSection2">Back</button>
-						<%= f.submit  %>
+                    <%= f.input :egg, as: :range, prompt: "my data", collection: 0..3,
+                  label: "How many of your meals contained egg today?",
+                  input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput7(this.value)"}
+                    %> <input id="textInput7" style="border:none; background-color: #F4F4F4;" type="text" value="">
+                    <br>
+                  <button data-action="click->daily-log#showSection1" style="background-color: #80DBC1; color: white;" id="greenbutton">Back</button>
+                  <button data-action="click->daily-log#showSection3" style="background-color: #80DBC1; color: white;" id="greenbutton">Next</button>
+              </div>
+              <div data-daily-log-target="section" class="d-none"><h4>Home</h4>
+                <%= f.input :bath, as: :select, collection: ["Yes", "No"], label: "Today, I took a bath" %>
+                <%= f.input :long_shower, as: :select, collection: ["Yes", "No"],label: "Today, I took a long shower (more than 10mins)?"%>
+                <%= f.input :short_shower, as: :select, collection: ["Yes", "No"],label: "Today, I took a quick shower (less than 10mins)?"%>
+                <button data-action="click->daily-log#backToSection2" style="background-color: #FACDA4; color: white;" id="yellowbutton">Back</button>
+                <%= f.submit class: "submit-button" %>
+              </div>
             <%end %>
-            </div>
           </div>
 				</div>
 			</div>
