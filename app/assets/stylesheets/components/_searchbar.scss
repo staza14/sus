@@ -20,8 +20,10 @@ body {
 }
 .wrapper {
   width: 100%;
+  overflow-x: scroll;
   max-width: 31.25rem;
-  margin: 6rem auto;
+  margin: 2rem auto;
+  padding-bottom: 20px;
 }
 
 .label {
