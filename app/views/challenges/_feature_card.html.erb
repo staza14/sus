@@ -1,0 +1,30 @@
+<div class="row">
+<div class="challenge-page-challenge-card m-3 col-4">
+  <a class="challenge-page-left-div"> <%# <%= challenge.id %>
+      <div class="challenge-page-name-summary">
+        <div class="name-category">
+          <h6 class="challenge-page-card-name"><%=@feature.name %></h6>
+          <div class="challenge-page-category">
+            <p class="category"><%= @feature.category %></p>
+        </div>
+        </div>
+        <p class="challenge-page-card-summary"><%= @feature.summary %></p>
+      </div>
+      <div class="challenge-page-div-friends d-flex">
+      <% friends = @feature.users.select do |user| %>
+      <%Friendship.where(asker_id: user.id, receiver_id: current_user.id).any? ||
+      Friendship.where(asker_id: current_user.id, receiver_id: user.id).any?%>
+    <%end %>
+        <% friends.each do |friend| %>
+        <%=  image_tag friend.avatar, class:"challenge-friends", data: {bs_toggle:"tooltip", bs_placement:"top"}, title:"#{friend.first_name}"%>
+        <%end %>
+      </div>
+    </a>
+  <div class="challenge-page-right-div">
+    <div class="challenge-total-days">
+      <h1 class="day-number"><%= @feature.duration %></h1>
+      <h3>Days</h3>
+    </div>
+    <%= button_to "join", challenge_active_challenges_path(@feature), class:"join-button" %>
+  </div>
+</div>

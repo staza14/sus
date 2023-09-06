@@ -15,7 +15,7 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :avatar, presence: true
 
-  before_create :calculate_baseline_stats
+  #before_create :calculate_baseline_stats
 
   include PgSearch::Model
   pg_search_scope :search_by_first_name_and_last_name,

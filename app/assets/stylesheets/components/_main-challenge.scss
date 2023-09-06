@@ -1,0 +1,34 @@
+.main-challenges{
+  background-color: #ffffff;
+  height: 300px;
+  width: 500px;
+  padding: 6px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.main-info-card{
+  background-color: #dbf5eda6;;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 17px 8px 8px;
+  border-radius: 12px;
+}
+
+.main-card-title {
+  font-size: 18px;
+  font-weight: lighter;
+  text-align: start;
+  margin: 0;
+}
+.main-card-summary {
+  font-size: 12px;
+  font-weight: lighter;
+  text-align: start;
+  margin: 0;
+}

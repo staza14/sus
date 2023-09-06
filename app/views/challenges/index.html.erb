@@ -1,26 +1,10 @@
-
+<div class="container m-4">
     <div>
       <h2 class="header"> Today's feature challenge</h2>
-      <div class="challenge-card p-4 my-3">
-        <h3> <%= @feature.name %></h3>
-        <h5><%= @feature.description %></h5>
-        <h5><%= @feature.duration %> days</h5>
-        <%= button_to "join challenge", challenge_active_challenges_path(@feature), class:"call-to-action8" %>
-      </div>
+      <%= render "feature_card"%>
     </div>
 
 
   <h2 class="header"> Explore all challenges:</h2>
-  <h3 class="header underline"> Food challenges:</h3>
-  <div class="challenge-category-wrapper">
-    <%= render "category", challenges: @challenges_food %>
-  </div>
-  <h3 class="header underline"> Home challenges:</h3>
-  <div class="challenge-category-wrapper">
-    <%= render "category", challenges: @challenges_home %>
-  </div>
-  <h3 class="header underline"> Transport challenges:</h3>
-  <div class="challenge-category-wrapper">
-    <%= render "category", challenges: @challenges_transport %>
-  </div>
+  <%= render "category_cards"%>
 </div>

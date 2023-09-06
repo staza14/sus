@@ -1,3 +1,12 @@
+.no-challenge-active{
+  color: $gray;
+  font-weight: lighter;
+  border-radius: 25px;
+  border: solid 1px black;
+  width: 60%;
+  justify-content: center;
+  text-align: center;
+}
 .challenge-category-wrapper {
   display: flex;
   width: 100%;
@@ -8,12 +17,12 @@
 .challenge-card{
   border: solid;
   background-color: white;
-  transition: .5s ease-in-out;
+  transition: .6s ease-in-out;
   flex-shrink: 0;
   color: $green;
   border-radius: 10px;
   &:hover{
-  transform:scale(1.05);
+  transform:scale(1.02);
   }
 }
 
@@ -91,7 +100,6 @@
     border-radius: 5px;
     transition-duration: 0.3s;
     flex-shrink: 0;
-
     h3 {
       font-size: 21px;
     }

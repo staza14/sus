@@ -2,30 +2,32 @@
 <div class="user-info-div">
   <div class="big-div">
     <div class="user-info" id="floating-avatar">
-      <%= image_tag 'flower.png' %>
+      <%= image_tag current_user.avatar %>
     </div>
     <div class="user-info" id="user-name">
       <h5><%= current_user.first_name.upcase + ' ' + current_user.last_name.upcase %></h5>
     </div>
     <div class="user-info" id="following-followers-posts">
       <div id="followers">
+        <h4><%=current_user.friends.count%></h4><%# <h5><%= current_user.friendships </h5> %>
         <h6>Friends</h6>
-        <h4>4</h4><%# <h5><%= current_user.friendships </h5> %>
       </div>
       <div id="following">
-        <h6>Challenges</h6>
-        <h4>7</h4><%# <h5><%= current_user.completed_challenges </h5> %>
+        <h4><%= @completed.count  %></h4><%# <h5><%= current_user.completed_challenges </h5> %>
+        <h6>Completed <br>Challenges</h6>
       </div>
       <div id="posts">
-        <h6>Posts</h6>
-        <h4>11</h4><%# <h5><%= current_user.posts.count </h5> %>
+        <h4><%= current_user.overall_score.truncate()  %></h4><%# <h5><%= current_user.posts.count </h5> %>
+        <h6>Score</h6>
       </div>
     </div>
   </div>
 </div>
 
 <%# Add Entry Div %>
-<button class="add-entry" data-bs-target="#exampleModal" data-bs-toggle="modal" id="add-entry" type="button">ADD ENTRY</button>
+<button class="add-entry-button" data-bs-target="#exampleModal" data-bs-toggle="modal" id="add-entry" type="button">
+add entry
+</button>
 
 <%# Bottom Div %>
 <div class="daily-facts">
@@ -44,20 +46,21 @@
     <%# Home Tab %>
 
     <div class="tab-pane fade show active fact-div" id="home" role="tabpanel" aria-labelledby="home-tab">
-      <h4>Home Fact</h4>
-      <p class="quick-fact">The Eiffel Tower can be 15 cm taller during the summer, due to thermal expansion meaning the iron heats up, the particles gain kinetic energy and take up more space.</p>
+      <h4>Daily Home Fact</h4>
+      <p class="quick-fact">
+UK households discard around £470 worth of edible food annually, contributing to 4.5 million tonnes of nationwide food waste, releasing 14 million tonnes of CO2e, equivalent to 14.5 million London-to-Perth flights.</p>
     </div>
 
 
     <%# Food Tab %>
     <div class="tab-pane fade fact-div" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <h4>Food Fact</h4>
-      <p class="quick-fact">The Eiffel Tower can be 15 cm taller during the summer, due to thermal expansion meaning the iron heats up, the particles gain kinetic energy and take up more space.</p>
+      <h4>Daily Food Fact</h4>
+      <p class="quick-fact">It takes more than 11 times as much fossil fuel to make one calorie from animal protein as it does to make one calorie from plant protein</p>
     </div>
     <%# Transport Tab %>
     <div class="tab-pane fade fact-div" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-      <h4>Transport Fact</h4>
-      <p class="quick-fact">The Eiffel Tower can be 15 cm taller during the summer, due to thermal expansion meaning the iron heats up, the particles gain kinetic energy and take up more space.</p>
+      <h4>Daily Transport Fact</h4>
+      <p class="quick-fact">Cities with extensive public transportation systems, like Tokyo and New York, have lower per capita emissions because they reduce the need for individual car usage, curbing climate impacts</p>
     </div>
   </div>
 </div>

@@ -5,7 +5,6 @@ class ChallengesController < ApplicationController
     @challenges_food = Challenge.where(category: "Food")
     @challenges_home = Challenge.where(category: "Home")
     @challenges_transport = Challenge.where(category: "Transport")
-
   end
 
   def show

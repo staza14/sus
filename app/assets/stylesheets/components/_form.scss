@@ -48,6 +48,9 @@
   color: white !important;
 }
 
+
+
+// AVATAR
 #user_avatar_avatar1_png + label {
   background-image: url("avatar1.png");
   background-size: contain;
@@ -131,6 +134,8 @@
   border-color: #FD1015;
 
 }
+
+//SIGN UP FORM
 .form-question {
   background: peachpuff;
   padding: 10px 20px;
@@ -169,11 +174,22 @@
   }
 }
 
+#post-header{
+  background-color: #6a994e;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .modal-content {
   border-radius: 10px;
+  color: #000;
 }
 .modal-header {
-  background-color: #88674F;
+  background-color: #E1DCF7;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   display: flex;
@@ -194,7 +210,7 @@
 // }
 
 .simple_form {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   color: black;
 }
 
@@ -230,8 +246,6 @@
   margin: 0 5px;
 }
 
-
-
 .modal-footer {
   display: flex;
   justify-content: center;
@@ -249,17 +263,31 @@
 }
 
 .submit-button {
-  background-color: #4C362F;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
+  background-color: #FACDA4;
+  border-radius: 10px;
+  box-shadow: rgba(187, 149, 44, 0.2) 0 -25px 18px -14px inset,rgba(176, 131, 41, 0.15) 0 1px 2px,rgba(176, 131, 41, 0.15) 0 2px 4px,rgba(176, 131, 41, 0.15) 0 4px 8px,rgba(176, 131, 41, 0.15) 0 8px 16px,rgba(176, 131, 41, 0.15) 0 16px 32px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
   font-size: 16px;
-  text-align: left;
-  border-radius: 5px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 2px;
 }
-.submit-button-container {
-  text-align: left; /* Align content to the left */
+
+.submit-button:hover {
+  box-shadow: rgba(187, 156, 44, 0.35) 0 -25px 18px -14px inset,rgba(206, 141, 45, 0.25) 0 1px 2px,rgba(206, 141, 45, 0.25) 0 2px 4px,rgba(206, 141, 45, 0.25) 0 4px 8px,rgba(206, 141, 45, 0.25) 0 8px 16px,rgba(206, 141, 45, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
 }
+
+
 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -267,6 +295,112 @@ input[type=range]::-webkit-slider-thumb {
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    background: goldenrod;
+    background: #80DBC1;
     margin-top: -4px;
+}
+
+
+
+#purplebutton {
+  background-color: #FACDA4;
+  border-radius: 10px;
+  box-shadow: rgba(106, 44, 187, 0.2) 0 -25px 18px -14px inset,rgba(108, 41, 176, 0.15) 0 1px 2px,rgba(08, 41, 176, 0.15) 0 2px 4px,rgba(08, 41, 176, 0.15) 0 4px 8px,rgba(08, 41, 176, 0.15) 0 8px 16px,rgba(08, 41, 176, 0.15) 0 16px 32px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 2px;
+
+
+}
+
+#purplebutton:hover {
+  box-shadow: rgba(62, 12, 115, 0.35) 0 -25px 18px -14px inset,rgba(89, 29, 142, 0.25) 0 1px 2px,rgba(89, 29, 142, 0.25) 0 2px 4px,rgba(89, 29, 142, 0.25) 0 4px 8px,rgba(89, 29, 142, 0.25) 0 8px 16px,rgba(89, 29, 142, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+#yellowbutton{
+  background-color: #FACDA4;
+  border-radius: 10px;
+  box-shadow: rgba(187, 149, 44, 0.2) 0 -25px 18px -14px inset,rgba(176, 131, 41, 0.15) 0 1px 2px,rgba(176, 131, 41, 0.15) 0 2px 4px,rgba(176, 131, 41, 0.15) 0 4px 8px,rgba(176, 131, 41, 0.15) 0 8px 16px,rgba(176, 131, 41, 0.15) 0 16px 32px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 2px;
+}
+
+#yellowbutton:hover {
+  box-shadow: rgba(187, 156, 44, 0.35) 0 -25px 18px -14px inset,rgba(206, 141, 45, 0.25) 0 1px 2px,rgba(206, 141, 45, 0.25) 0 2px 4px,rgba(206, 141, 45, 0.25) 0 4px 8px,rgba(206, 141, 45, 0.25) 0 8px 16px,rgba(206, 141, 45, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
+#greenbutton {
+  background-color: #80DBC1;
+  border-radius: 10px;
+  box-shadow: rgba(44, 187, 89, 0.2) 0 -25px 18px -14px inset,rgba(41, 176, 99, 0.15) 0 1px 2px,rgba(41, 176, 99, 0.15) 0 2px 4px,rgba(41, 176, 99, 0.15) 0 4px 8px,rgba(41, 176, 99, 0.15) 0 8px 16px,rgba(41, 176, 99, 0.15) 0 16px 32px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 2px;
+}
+
+#greenbutton:hover {
+  box-shadow: rgba(44, 187, 92, 0.35) 0 -25px 18px -14px inset,rgba(45, 206, 128, 0.25) 0 1px 2px,rgba(5, 206, 128, 0.25) 0 2px 4px,rgba(5, 206, 128, 0.25) 0 4px 8px,rgba(5, 206, 128, 0.25) 0 8px 16px,rgba(5, 206, 128, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
+.postbutton{
+  background-color: #6a994e;
+  border-radius: 10px;
+  box-shadow: rgba(23, 106, 49, 0.2) 0 -25px 18px -14px inset,rgba(41, 176, 99, 0.15) 0 1px 2px,rgba(23, 136, 72, 0.15) 0 2px 4px,rgba(41, 176, 99, 0.15) 0 4px 8px,rgba(41, 176, 99, 0.15) 0 8px 16px,rgba(41, 176, 99, 0.15) 0 16px 32px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 2px;
+}
+
+.postbutton:hover {
+  box-shadow: rgba(22, 104, 49, 0.35) 0 -25px 18px -14px inset,rgba(22, 96, 60, 0.25) 0 1px 2px,rgba(22, 96, 60, 0.25) 0 2px 4px,rgba(22, 96, 60, 0.25) 0 4px 8px,rgba(22, 96, 60, 0.25) 0 8px 16px,rgba(22, 96, 60, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
 }

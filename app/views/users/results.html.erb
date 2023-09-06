@@ -1,0 +1,22 @@
+<div class="container" >
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-4">
+      <div class="form-login" data-controller="sign-up">
+        <% if current_user %>
+          <div class="results" data-sign-up-target="results">
+            <h1>Welcome, <%= current_user.first_name %>!</h1>
+            <p>If everyone lived like you, we would need <%= current_user.baseline_stats.to_i %> Earths.</p>
+            <div class="d-flex">
+                <% current_user.baseline_stats.to_i.times do %>
+                  <%= render partial: 'shared/baseline_image' %>
+                <% end %>
+            </div>
+          </div>
+          <button class="results-button">
+            <%= link_to "Let's change that", dashboard_path %>
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

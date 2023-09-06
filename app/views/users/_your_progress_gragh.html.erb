@@ -1,10 +1,22 @@
 <div class="my-challenges-children" id="your-progress">
-  <h1>Your progress</h1>
-  <div class="container">
-    <%= line_chart [
-    {name: "Food Score", data: @food_data, color: "#ED936D"},
-    {name: "Travel Score", data: @travel_data, color: "#2A6465"},
-    {name: "Home Score", data: @home_data, color: "#97C5DE"}
-    ] %>
-  </div>
+  <h3>Your progress</h1>
+  <% if @food_data != 0 && @travel_data != 0  && @home_data != 0 %>
+    <div class="container">
+      <%= line_chart [
+      {name: "Food Score", data: @food_data, color: "#ADEBDC"},
+      {name: "Travel Score", data: @travel_data, color: "#E1DBF7"},
+      {name: "Home Score", data: @home_data, color: "#FAE2CE"}
+      ] %>
+    </div>
+      <% else %>
+    <div class="no-challenge-active m-5 p-3">
+      <h4>Start tracking your habits to see your trends. </h4>
+    </div>
+  <%end %>
 </div>
+
+
+darker
+    <%# {name: "Food Score", data: @food_data, color: "#4AD3B1"},
+    {name: "Travel Score", data: @travel_data, color: "#9E8AE5"},
+    {name: "Home Score", data: @home_data, color: "#F3AC6F"} %>

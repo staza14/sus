@@ -1,13 +1,12 @@
-<div class="container">
+<div class="container" >
   <div class="row justify-content-center">
     <div class="col-12 col-sm-4">
-      <div class="form-login">
-        <h2>Sign up</h2>
+      <div class="form-login" data-controller="sign-up">
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= f.error_notification %>
 
-          <div class="form-inputs">
+          <div class="form-inputs" data-sign-up-target="section">
             <%= f.input :first_name,
                           required: true,
                           autofocus: true,
@@ -34,35 +33,36 @@
             <%= f.input :password_confirmation,
                         required: true,
                         input_html: { autocomplete: "new-password" } %>
-          </div>
-          <div class="form-question">
-              <h2>What is your ecological footprint?</h2>
-              <p>Transportation</p>
-              <%= f.input :car_hours, label: "How many hours do you travel by car weekly?", input_html: {value: 0} %>
-              <%= f.input :bus_hours, label: "How many hours do you travel by bus weekly?", input_html: {value: 0} %>
-              <%= f.input :train_hours, label: "How many hours do you travel by train weekly?", input_html: {value: 0} %>
-              <%= f.input :cycle_hours, label: "How many hours do you travel by cycle weekly?", input_html: {value: 0} %>
-              <%= f.input :foot_hours, label: "How many hours do you walk weekly?", input_html: {value: 0} %>
-              <%= f.input :flight_long_hours, label: "How many times a year do you fly (long haul)?", input_html: {value: 0} %>
-              <%= f.input :flight_short_hours, label: "How many times a year do you fly (short haul)?", input_html: {value: 0} %>
+            <button data-action="click->sign-up#nextToSection2">Next</button>
           </div>
 
-          <div class="form-question">
-            <p>Food</p>
+          <div class="form-question d-none" data-sign-up-target="section">
+            <h4>Transportation</h4>
+            <%= f.input :car_hours, label: "How many hours do you travel by car weekly?", input_html: {value: 0} %>
+            <%= f.input :bus_hours, label: "How many hours do you travel by bus weekly?", input_html: {value: 0} %>
+            <%= f.input :train_hours, label: "How many hours do you travel by train weekly?", input_html: {value: 0} %>
+            <%= f.input :cycle_hours, label: "How many hours do you travel by cycle weekly?", input_html: {value: 0} %>
+            <%= f.input :foot_hours, label: "How many hours do you walk weekly?", input_html: {value: 0} %>
+            <%= f.input :flight_long_hours, label: "How many times a year do you fly (long haul)?", input_html: {value: 0} %>
+            <%= f.input :flight_short_hours, label: "How many times a year do you fly (short haul)?", input_html: {value: 0} %>
+            <button data-action="click->sign-up#backToSection1">Back</button>
+            <button data-action="click->sign-up#nextToSection3">Next</button>
+          </div>
+
+          <div class="form-question d-none" data-sign-up-target="section">
+            <h4>Food</h4>
             <%= f.input :food, as: :select, collection: [["Never, I'm vegan", 0.2], ["Occasioanly, I'm vegetarian", 0.17], ["Often, but no beef", 0.06], ["Rarely meat", 0.09], ["Very often, meat in every meal", 0]],
-                          label: "How often do you eat animal-based products?"
-                          %>
+                          label: "How often do you eat animal-based products?"%>
             <%= f.input :source, as: :select, collection: [["Supermarket", 0.03], ["Locally", 0.1], ["I grow my own", 0.15], ["I don't think about it", 0]],
-                          label: "Where do you source your food?"
-                          %>
+                          label: "Where do you source your food?"%>
             <%= f.input :waste, as: :select, collection: [["None", 0.1], ["0-10%", 0.07], ["10-30%", 0.03], [">30%", 0]],
-                          label: "How much food waste do you produce weekly?"
-                          %>
+                          label: "How much food waste do you produce weekly?"%>
+            <button data-action="click->sign-up#backToSection2">Back</button>
+            <button data-action="click->sign-up#nextToSection4">Next</button>
           </div>
 
-
-          <div class="form-question">
-            <p>Housing</p>
+          <div class="form-question d-none" data-sign-up-target="section">
+            <h4>Home</h4>
             <%= f.input :lights, as: :select, collection: [["Yes", 0.18], ["No", 0]],
                           label: "Do you regularly turn off lights?"
                           %>
@@ -75,14 +75,14 @@
             <%= f.input :bath, label: "How many times a week do you bath?", input_html: {value: 0} %>
             <%= f.input :long_shower, label: "How many times a week do you shower under 10mins?", input_html: {value: 0} %>
             <%= f.input :short_shower, label: "How many times a week do you shower over 10mins?", input_html: {value: 0} %>
-          </div>
-
-          <div class="form-actions">
-            <%= f.button :submit, "Sign up"  %>
+            <button data-action="click->sign-up#backToSection3">Back</button>
+            <div class="form-actions">
+              <%= f.button :submit, "Get results", data: {action: "click->sign-up#showResults"}  %>
+            </div>
           </div>
         <% end %>
-        <%= render "devise/shared/links" %>
       </div>
     </div>
+  <%= render "devise/shared/links" %>
   </div>
 </div>

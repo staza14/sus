@@ -1,26 +1,4 @@
 
-.call-to-action8{
-  border: solid;
-  border-radius: 6px;
-  transition: .2s ease-in-out;
-  padding: 10px;
-}
-.call-to-action8:hover{
-background-color: $pink;
-color: $gray;
-}
-.call-to-action10{
-  border: solid;
-  border-radius: 6px;
-  transition: .2s ease-in-out;
-  padding: 10px;
-  width: 100%;
-}
-.call-to-action10:hover{
-background-color: $pink;
-color: $gray;
-}
-
 .add-button{
   height: 50px;
   width: 50px;
@@ -30,6 +8,23 @@ color: $gray;
   right: 20px;
   background-color: $black;
   color: $pink;
+}
+
+.add-entry-button{
+  background-color: $black;
+  color: $pink;
+  border-radius: 5px;
+  border: none;
+  justify-content: center;
+  align-content: center;
+  padding: 5px;
+  font-size: large;
+  width: 100%;
+  margin-top: 10px;
+}
+.delete-button{
+ height:20px;
+  width: 20px;
 }
 .call-to-action {
   background-color: #c2fbd7;
@@ -219,4 +214,44 @@ color: $gray;
 .button-icon{
   background-color: $black;
   color:$pink;
+}
+
+
+// form button
+
+.button-transportation { background-color: #BBACEC; color: white; }
+.button-meals { background-color: #80DBC1; color: white; }
+.button-home { background-color: #FAE2CE; color: white; }
+
+// results button earths
+
+.results-button{
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #245501;
+  background-image: linear-gradient(45deg, #73a942 0%, #F09819  51%, #aad576  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.results-button:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.results-button:active {
+  transform: scale(0.95);
 }
