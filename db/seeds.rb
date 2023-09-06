@@ -197,7 +197,7 @@ puts "creating users..."
     password: "123456",
     overall_score: 12,
     baseline_stats: 66,
-    avatar: "avatar10.png"
+    avatar: "avatar9.png"
   )
   user19.save
   user20= User.create!(
@@ -290,7 +290,7 @@ puts "creating challenges"
     name: "Marvelous Mitochondria",
     description: "Are you noticing a drag on your daily energy, feeling sluggish and fatigued? Whatever the external cause may be, it's your mitochondria that are ultimately responsible for your mental and physical energy at the cellular level. Many of the ways we can improve our mitochondrial health often improve your own personal footprint. Diet: try avoiding processed foods, excess sugar and white carbs. Instead eat more antioxidants like blueberries and dark chocolate, a healthy balance of nuts as your go-to snack. Keep active: Try replace some of your shorter trips with walking or cycling. Toxic Products: Sometimes the products we use on a daily basis can contain toxins that can restrict our mitochondria so it might be a good idea to reevaluate your makeup, skincare and cleaning products. Sleep: Make sure you are getting the right amount of sleep!! If you don't practice any of these tips on a regular basis,try implement them one at a time starting with the one you think you will find easiest. We have found the most constructive method is to develop habits over time, the first two weeks are always the hardest, if you miss a day or a period of time, don't be hard on yourself, understand why you didn't and try again. Habits rarely stick the first time",
     summary: "Develop some healthy habits with a slice of saving the planet on the side",
-    category: ["Food", "Transport", "Home"],
+    category: "Food",
     duration: 14,
     challenge_score: 7,
     badge:"stickers/Plant2.png",
