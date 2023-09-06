@@ -49,17 +49,8 @@ class User < ApplicationRecord
     # lights_no: 0,
 
     clothing: 30,
-    # clothing_zero: 0.17,
-    # clothing_sixty: 0.09,
-    # clothing_hundred: 0.03,
-    # clothing_hundreadeighty: 0,
-    # clothing_overeigthy: 0,
 
     temperature: 20,
-    # temp_fourteen: 0.16,
-    # temp_seventeen: 0.09,
-    # temp_twentyone: 0.03,
-    # temp_abovetwentyone: 0,
     bath: 0.4,
     long_shower: 0.04,
     short_shower: 0.01
@@ -67,11 +58,6 @@ class User < ApplicationRecord
 
   FOOD_WEIGHTS = {
     food: 10,
-    # meat_everyday: 0,
-    # meat_rarely: 0.09,
-    # no_beef: 0.06,
-    # vegetarian: 0.17,
-    # vegan: 0.2,
 
     waste: 10,
     # throw_none: 0.1,
