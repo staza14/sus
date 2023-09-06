@@ -8,7 +8,7 @@
     <div class="challenge-iteration" id="completed-challenges">
       <%@completed_challenges.each do |challenge| %>
         <div class="challenge-card-big-div">
-          <div class="challenge-card-quick-info">
+          <div class="challenge-card-quick-info" id="completed-challenges-info">
             <div class="challenge-duration">
               <h6 class="challenge-card-days"><%= challenge.challenge.duration %> Days</h6>
             </div>

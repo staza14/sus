@@ -19,17 +19,19 @@
           <div class="challenge-category">
           <%# Need to iterate for each category %>
             <div class="challenge-card-category"><p class="challenge-category-text"><%= challenge.challenge.category %></p></div>
-            <%= link_to active_challenge_path(challenge), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                <%= image_tag(("recycle-bin.png"), class:"delete-button")%>
-                <% end %>
           </div>
+          <%# delete button %>
+          <%= link_to active_challenge_path(challenge), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+              <%= image_tag(("recycle-bin.png"), class:"delete-button")%>
+          <% end %>
+          <%# delete button %>
         </div>
         <div class="challenge-calls">
-          <div class="progress progress-bar-div">
-            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-              25%
-            </div>
-          </div>
+
+
+             <div class="progress progress-bar-div"><div class="progress-bar" role="progressbar" style="width: <%= challenge.calculate_completion %>%" aria-valuenow=<%= challenge.calculate_completion %> aria-valuemin="0" aria-valuemax="100"><%= challenge.calculate_completion %>%</div></div>
+
+
           <button type="button" class="details-button" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.challenge.id %>">Details</button>
         </div>
       </div>
@@ -41,17 +43,44 @@
               <h5 class="modal-title" id="exampleModalLabel"><%= challenge.challenge.name %></h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" data-controller="mark-as-complete" data-host="<%= root_url %>">
               <h4><%= challenge.challenge.prompt %></h4>
-              <div  class="wrapper d-flex">
+
+              <div class="wrapper d-flex">
                 <% challenge.active_challenge_days.each do |day| %>
-                  <%= simple_form_for [challenge, day], html: {data: {controller: "mark-as-complete", action: "submit->mark-as-complete#update"}} do |f| %>
-                    <%= f.input :status , as: :boolean , input_html: {checked: true}, wrapper_html: {class: "d-none"} %>
-                    <%= f.submit day.day, data: {mark_as_complete_target: "submit"}, class:"p-2 mx-2 rounded-4" %>
-                  <% end  %>
+
+                  <%# simple_form_for [challenge, day], html: {data: { action: "submit->mark-as-complete#update"}} do |f| %>
+                    <%# f.input :status , as: :boolean , input_html: {checked: true}, wrapper_html: {class: "d-none"} %>
+                    <%# if day.status %>
+                      <%# f.input day.day, data: {mark_as_complete_target: "submit"}, class:"p-2 mx-2 rounded-4 green" %>
+                    <%# else %>
+                      <%# f.input day.day, data: {mark_as_complete_target: "submit"}, class:"p-2 mx-2 rounded-4" %>
+                    <%# end %>
+                    <%# f.submit data: {mark_as_complete_target: "submit"}, class:"p-2 mx-2 rounded-4" %>
+                  <%# end %>
+
+                  <div data-mark-as-complete-target="id" data-challenge-id="<%= day.active_challenge_id %>" data-day-id="<%= day.id %>" data-day-status="<%= day.status %>" >
+
+                    <% if day.status %>
+                      <div class="p-2 mx-2 rounded-circle green day-wrapper" data-action="click->mark-as-complete#update"><%= day.day %></div>
+                      <%# f.input day.day, data: {mark_as_complete_target: "submit"}, class:"p-2 mx-2 rounded-4 green" %>
+                    <% else %>
+                      <div class="p-2 mx-2 rounded-circle day-wrapper" data-action="click->mark-as-complete#update"><%= day.day %></div>
+                      <%# f.input day.day, data: {mark_as_complete_target: "submit"}, class:"p-2 mx-2 rounded-4" %>
+                    <% end %>
+
+                    <%# form_with model: [challenge, day] do |f| %>
+                      <%# f.text_field :status %>
+                      <%# f.text_field :day %>
+                    <%# end %>
+                  </div>
+
                 <% end %>
+
               </div>
-              <%= button_to "save", challenges_path, class:"call-to-action mt-3" %>
+              <div class="call-to-action mt-3" data-action="click->mark-as-complete#save">Save</div>
+
+
             </div>
           </div>
         </div>

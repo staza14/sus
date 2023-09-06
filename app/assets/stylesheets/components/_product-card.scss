@@ -21,9 +21,10 @@
     padding: 8px 17px 8px 8px;
     border-radius: 12px;
     overflow: hidden;
+    position: relative;
 }
 #completed-challenges-info {
-  height: 95%;
+  height: 90%;
   width: 95%;
 }
 .challenge-duration {
