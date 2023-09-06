@@ -18,6 +18,7 @@
   overflow-x: scroll;
   flex-wrap: unset;
   border:none;
+  padding-bottom:20px;
 }
 .challenge-card{
   border: solid;
@@ -46,7 +47,12 @@
   width: 100%;
 }
 
-
+#your-progress{
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px 15px 10px 15px;
+  margin-top: 16px;
+}
 .circle{
   height: 30px;
   width: 30px;
@@ -67,6 +73,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border: solid 1px $black;
 
 }
 
@@ -77,6 +84,7 @@
 
 .my-challenges{
   flex-grow: 2;
+  margin-left: 30px;
 }
 
 .friend-avatar{

@@ -1,53 +1,51 @@
-<div class="row">
-<% @challenges.each do |challenge| %>
-<div class="challenge-page-challenge-card m-3 col-4">
-  <a class="challenge-page-left-div" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.id %>"> <%# <%= challenge.id %>
+<% challenges.each do |challenge| %>
+  <div class="challenge-page-challenge-card m-3">
+    <a class="challenge-page-left-div" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.id %>"> <%# <%= challenge.id %>
       <div class="challenge-page-name-summary">
         <div class="name-category">
           <h6 class="challenge-page-card-name"><%=challenge.name %></h6>
           <div class="challenge-page-category">
             <p class="category"><%= challenge.category %></p>
-        </div>
+          </div>
         </div>
         <p class="challenge-page-card-summary"><%= challenge.summary %></p>
       </div>
       <div class="challenge-page-div-friends d-flex">
       <% friends = challenge.users.select do |user| %>
-      <%Friendship.where(asker_id: user.id, receiver_id: current_user.id).any? ||
-      Friendship.where(asker_id: current_user.id, receiver_id: user.id).any?%>
-    <%end %>
-        <% friends.each do |friend| %>
+        <%Friendship.where(asker_id: user.id, receiver_id: current_user.id).any? ||
+        Friendship.where(asker_id: current_user.id, receiver_id: user.id).any?%>
+      <%end %>
+      <% friends.each do |friend| %>
         <%=  image_tag friend.avatar, class:"challenge-friends", data: {bs_toggle:"tooltip", bs_placement:"top"}, title:"#{friend.first_name}"%>
-        <%end %>
+      <%end %>
       </div>
     </a>
-  <div class="challenge-page-right-div">
-    <div class="challenge-total-days">
-      <h1 class="day-number"><%= challenge.duration %></h1>
-      <h3>Days</h3>
+    <div class="challenge-page-right-div">
+      <div class="challenge-total-days">
+        <h1 class="day-number"><%= challenge.duration %></h1>
+        <h3>Days</h3>
+      </div>
+      <%= button_to "join", challenge_active_challenges_path(challenge), class:"join-button" %>
     </div>
-    <%= button_to "join", challenge_active_challenges_path(challenge), class:"join-button" %>
   </div>
-</div>
 
-<div class="modal fade" id="exampleModal<%= challenge.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"><%= challenge.name %></h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <%= challenge.description %>
-            </div>
-            <div class="modal-footer">
-              <%= button_to "join challenge", challenge_active_challenges_path(challenge), class:"join-button" %>
-            </div>
-          </div>
+  <div class="modal fade" id="exampleModal<%= challenge.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><%= challenge.name %></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%= challenge.description %>
+        </div>
+        <div class="modal-footer">
+          <%= button_to "join challenge", challenge_active_challenges_path(challenge), class:"join-button" %>
         </div>
       </div>
+    </div>
+  </div>
 <%end  %>
-</div>
 <style>
 /* biggest div */
 .challenge-page-challenge-card {
@@ -162,4 +160,9 @@
   border-radius:50%;
   padding: 5px;
 }
+/* .challenges-wrapper{
+  width:100px;
+  overflow-x: scroll;
+
+} */
 </style>

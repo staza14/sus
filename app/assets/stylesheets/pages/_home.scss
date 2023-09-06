@@ -1,19 +1,44 @@
 // Specific CSS for your home-page
 .home-page{
-background-image: url("sus-background.png");
-background-size: cover;
-height: 964px;
+background-color: $green;
+height: 2000px;
 color: #e2acbb;
 position: relative;
+justify-content: center;
+align-items: center;
+h3{
+  text-align: center;
 }
-
-.period{
-  font-size:60px;
+}
+.underline{
+  text-decoration: underline;
+}
+#home-page-header{
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: $pink;
+  font-size: 500px;
+  text-shadow:  10px 8px #733737;
+  text-align: center;
+}
+.contents{
+  justify-content: center;
+}
+.learn-more{
+  text-align: center;
+  border:none;
+  height: 100px;
+  width:300px;
+  border-radius: 15px;
+  font-size: 50px;
   background-color: transparent;
-  height: fit-content;
-  position: absolute;
-  right: 10px;
-  bottom: 460px;
+  border: solid 3px $pink;
+  color: $pink;
+  transition: .2s ease-in;
+  margin: auto;
+}
+.learn-more:hover{
+  border: solid 3px #CCFF66;
+  color: #CCFF66;
 }
 
 #demo{
@@ -30,13 +55,6 @@ body {
 }
 
 
-.fa-arrow-pointer{
-  position: absolute;
-  bottom: 30px;
-  left: 60px;
-  font-size: 25px;
-}
-
 #login-button{
   position: absolute;
   bottom: 270px;
@@ -45,4 +63,140 @@ body {
   font-size: 20px;
   text-decoration: none;
   text-align: center;
+}
+
+.flower-1{
+  height:70px;
+  width: 70px;
+  color: #FFE1CB;
+  position: absolute;
+  top:20px;
+  left:200px;
+  transition: transform .7s ease-in-out;
+}
+.flower-1:hover {
+  transform: rotate(360deg);
+}
+.flower-2{
+  height:90px;
+  width: 90px;
+  color: #E2DBF9;
+  position: absolute;
+  top:160px;
+  right:250px;
+  transition: transform 1s ease-in-out;
+}
+.flower-2:hover {
+  transform: rotateY(360deg);
+}
+.flower-3{
+  height:40px;
+  width: 40px;
+  color: $orange;
+  position: absolute;
+  top:700px;
+  right:500px;
+  transition: transform .2s ease-in-out;
+}
+.flower-3:hover {
+  transform: rotate(560deg);
+}
+.flower-4{
+  height:50px;
+  width: 50px;
+  color: $orange;
+  position: absolute;
+  top:690px;
+  left:60px;
+  transition: transform 1s ease-in-out;
+}
+.flower-4:hover {
+  transform: rotate(160deg);
+}
+.flower-5{
+  height:50px;
+  width: 50px;
+  color: #FFE1CB;
+  position: absolute;
+  top:300px;
+  left:100px;
+  transition: transform 1s ease-in-out;
+}
+.flower-5:hover {
+  transform: rotateY(360deg);
+}
+.flower-6{
+  height:70px;
+  width: 70px;
+  color: $orange;
+  position: absolute;
+  top:700px;
+  right:30px;
+  transition: transform .7s ease-in-out;
+}
+.flower-6:hover {
+  transform: rotate(360deg);
+}
+.flower-7{
+  height:90px;
+  width: 90px;
+  color: $orange;
+  position: absolute;
+  top:200px;
+  left:30px;
+  transition: .3s ease-in-out;
+}
+.flower-7:hover{
+  transform: scale(.6);
+}
+.flower-8{
+  height:30px;
+  width: 30px;
+  color: #E2DBF9;
+  position: absolute;
+  top:400px;
+  right:30px;
+  transition: .3s ease-in-out;
+}
+.flower-8:hover{
+  transform: scale(1.6);
+}
+.flower-9{
+  height:90px;
+  width: 90px;
+  color: $orange;
+  position: absolute;
+  top:500px;
+  left:200px;
+  transition: transform .7s ease-in-out;
+}
+.flower-9:hover {
+  transform: rotate(360deg);
+}
+.flower-10{
+  height:50px;
+  width: 50px;
+  color: $orange;
+  position: absolute;
+  top:100px;
+  right:200px;
+  transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.flower-10:hover{
+  transform: scale(1.9);
+}
+.landing-info{
+  background-image: url("landing-page-background.png") ;
+  width: 80%;
+  height: 600px;
+  object-fit: cover;
+  object-fit: center;
+  margin-top: 400px;
+  border-radius: 15px;
+  margin: auto;
+  justify-content: center;
+}
+
+.top{
+  margin-bottom: 600px;
 }

@@ -1,10 +1,27 @@
-<div class="container m-4">
-    <div>
-      <h2 class="header"> Today's feature challenge</h2>
-      <%= render "feature_card"%>
-    </div>
+<div class="container mt-4">
+  <div>
+    <h2 class="header"> Today's feature challenge</h2>
+    <%= render "feature_card" %>
+  </div>
 
 
   <h2 class="header"> Explore all challenges:</h2>
-  <%= render "category_cards"%>
+  <div class="challenge-card-category">
+    <h3 class="challenge-category-text">Food</h3>
+  </div>
+  <div class="challenge-category-wrapper">
+    <%= render "category_cards", challenges: @challenges_food %>
+  </div>
+  <div class="challenge-card-category">
+    <h3 class="challenge-category-text">Home</h3>
+  </div>
+  <div class="challenge-category-wrapper">
+    <%= render "category_cards", challenges: @challenges_home %>
+  </div>
+  <div class="challenge-card-category">
+    <h3 class="challenge-category-text">Travel</h3>
+  </div>
+  <div class="challenge-category-wrapper">
+    <%= render "category_cards", challenges: @challenges_transport %>
+  </div>
 </div>
