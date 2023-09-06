@@ -14,7 +14,7 @@ class ActiveChallengeDaysController < ApplicationController
     active_challenge = @active_challenge_day.active_challenge
     days = active_challenge.active_challenge_days
 
-    if days.all? { |day| day.status == true }
+    if !(days.any? { |day| day.status == false })
       active_challenge.completed = true
       current_user.overall_score = current_user.overall_score + 20
       current_user.save
