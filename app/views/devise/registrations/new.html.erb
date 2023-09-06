@@ -1,6 +1,9 @@
 <div class="container" >
   <div class="row justify-content-center">
     <div class="col-12 col-sm-4">
+        <div class="login-heading">
+          <h2>Sign up</h2>
+        </div>
       <div class="form-login" data-controller="sign-up">
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -33,7 +36,7 @@
             <%= f.input :password_confirmation,
                         required: true,
                         input_html: { autocomplete: "new-password" } %>
-            <button data-action="click->sign-up#nextToSection2">Next</button>
+            <button data-action="click->sign-up#nextToSection2" class= "postbutton" >Check your Ecological Footprint</button>
           </div>
 
           <div class="form-question d-none" data-sign-up-target="section">
@@ -45,8 +48,8 @@
             <%= f.input :foot_hours, label: "How many hours do you walk weekly?", input_html: {value: 0} %>
             <%= f.input :flight_long_hours, label: "How many times a year do you fly (long haul)?", input_html: {value: 0} %>
             <%= f.input :flight_short_hours, label: "How many times a year do you fly (short haul)?", input_html: {value: 0} %>
-            <button data-action="click->sign-up#backToSection1">Back</button>
-            <button data-action="click->sign-up#nextToSection3">Next</button>
+            <button data-action="click->sign-up#backToSection1" class= "postbutton">Back</button>
+            <button data-action="click->sign-up#nextToSection3" class= "postbutton">Next</button>
           </div>
 
           <div class="form-question d-none" data-sign-up-target="section">
@@ -57,8 +60,8 @@
                           label: "Where do you source your food?"%>
             <%= f.input :waste, as: :select, collection: [["None", 0.1], ["0-10%", 0.07], ["10-30%", 0.03], [">30%", 0]],
                           label: "How much food waste do you produce weekly?"%>
-            <button data-action="click->sign-up#backToSection2">Back</button>
-            <button data-action="click->sign-up#nextToSection4">Next</button>
+            <button data-action="click->sign-up#backToSection2" class= "postbutton">Back</button>
+            <button data-action="click->sign-up#nextToSection4" class= "postbutton">Next</button>
           </div>
 
           <div class="form-question d-none" data-sign-up-target="section">
@@ -75,9 +78,9 @@
             <%= f.input :bath, label: "How many times a week do you bath?", input_html: {value: 0} %>
             <%= f.input :long_shower, label: "How many times a week do you shower under 10mins?", input_html: {value: 0} %>
             <%= f.input :short_shower, label: "How many times a week do you shower over 10mins?", input_html: {value: 0} %>
-            <button data-action="click->sign-up#backToSection3">Back</button>
+            <button data-action="click->sign-up#backToSection3" class= "postbutton">Back</button>
             <div class="form-actions">
-              <%= f.button :submit, "Get results", data: {action: "click->sign-up#showResults"}  %>
+              <%= f.button :submit, "Get results", class: "postbutton", data: {action: "click->sign-up#showResults"}  %>
             </div>
           </div>
         <% end %>
