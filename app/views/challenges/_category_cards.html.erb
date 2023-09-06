@@ -41,7 +41,7 @@
               <%= challenge.description %>
             </div>
             <div class="modal-footer">
-              <%= button_to "join challenge", challenge_active_challenges_path(challenge), class:"call-to-action" %>
+              <%= button_to "join challenge", challenge_active_challenges_path(challenge), class:"join-button" %>
             </div>
           </div>
         </div>
@@ -77,6 +77,7 @@
   border-radius: 15px;
   cursor: pointer;
   text-decoration: none;
+  color: #0B2B2B;
 }
 .name-category {
   display: flex;
@@ -137,8 +138,8 @@
   border-radius: 10px;
 }
 .join-button {
-  border: solid 1px black;
-  background-color: #ffa980;
+  background-color: #0B2B2B;
+  color: #FFB4C6;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -146,6 +147,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  font-weight: bold;
+  transition: .2s ease-in-out;
+}
+.join-button:hover {
+  color: #0B2B2B;
+  background-color: #FFB4C6;
 }
 .challenge-friends{
   height:40px;

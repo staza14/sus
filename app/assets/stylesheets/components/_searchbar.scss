@@ -2,7 +2,9 @@ HTML CSSResult Skip Results Iframe
 body {
   font-family: 'Roboto', Arial, sans-serif;
 }
-
+.form-control:focus{
+  box-shadow: none !important;
+}
 .search-form{
   display: flex;
   justify-content: center;

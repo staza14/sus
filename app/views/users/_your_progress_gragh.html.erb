@@ -1,6 +1,16 @@
 <div class="my-challenges-children" id="your-progress">
+  <div class="d-flex progress-header">
   <h3>Your progress</h1>
-  <% if @food_data != 0 && @travel_data != 0  && @home_data != 0 %>
+  <button class="add button-icon" data-bs-target="#exampleModal" data-bs-toggle="modal" type="button">
+    <i class="fa-solid fa-plus fa-xl"></i>
+    </button>
+</div>
+  <% if current_user.entries.count === 0 %>
+        <div class="no-challenge-active m-5 p-3">
+          <h4>Start tracking your habits to see your trends. </h4>
+          <p>Add your first entry above!</p>
+        </div>
+      <% else %>
     <div class="container">
       <%= line_chart [
       {name: "Food", data: @food_data, color: "#ADEBDC"},
@@ -8,15 +18,9 @@
       {name: "Home", data: @home_data, color: "#FAE2CE"}
       ] %>
     </div>
-      <% else %>
-    <div class="no-challenge-active m-5 p-3">
-      <h4>Start tracking your habits to see your trends. </h4>
-    </div>
   <%end %>
 </div>
-
-
-darker
+ <%#darker%>
     <%# {name: "Food Score", data: @food_data, color: "#4AD3B1"},
     {name: "Travel Score", data: @travel_data, color: "#9E8AE5"},
     {name: "Home Score", data: @home_data, color: "#F3AC6F"} %>

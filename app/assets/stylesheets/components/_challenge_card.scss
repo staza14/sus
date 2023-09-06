@@ -6,6 +6,11 @@
   width: 60%;
   justify-content: center;
   text-align: center;
+  p{
+    color: $gray;
+    font-weight: lighter;
+    font-size: 18px;
+  }
 }
 .challenge-category-wrapper {
   display: flex;

@@ -14,8 +14,8 @@ puts "creating users..."
     last_name: "Smith",
     email: "test@hotmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 44,
+    car_hours: 12,
+    waste: 4,
     avatar: "avatar1.png"
   )
   user1.save
@@ -24,8 +24,8 @@ puts "creating users..."
     last_name: "Donker",
     email: "samuel.donker@hotmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 22,
+    car_hours: 12,
+    waste: 2,
     avatar: "avatar2.png"
   )
   user2.save
@@ -34,8 +34,8 @@ puts "creating users..."
     last_name: "Patel",
     email: "samadi.patel@hotmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 99,
+    car_hours: 12,
+    waste: 9,
     avatar: "avatar3.png"
   )
   user3.save
@@ -44,8 +44,8 @@ puts "creating users..."
     last_name: "Woldu",
     email: "silas.woldu@hotmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 22,
+    car_hours: 12,
+    waste: 2,
     avatar: "avatar4.png"
   )
   user4.save
@@ -54,8 +54,8 @@ puts "creating users..."
     last_name: "Deane",
     email: "isaiah.deane@hotmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 99,
+    car_hours: 12,
+    waste: 9,
     avatar: "avatar5.png"
   )
   user5.save
@@ -64,8 +64,8 @@ puts "creating users..."
     last_name: "Xuan",
     email: "jade.xuan@gmail.com",
     password: "123456",
-    overall_score: 26,
-    baseline_stats: 55,
+    car_hours: 26,
+    waste: 5,
     avatar: "avatar6.png"
   )
   user6.save
@@ -74,8 +74,8 @@ puts "creating users..."
     last_name: "Ferrari",
     email: "roberta.ferrari@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 86,
+    car_hours: 12,
+    waste: 9,
     avatar: "avatar7.png"
   )
   user7.save
@@ -84,8 +84,8 @@ puts "creating users..."
     last_name: "Yi",
     email: "Wang.Yi@gmail.com",
     password: "123456",
-    overall_score: 22,
-    baseline_stats: 98,
+    car_hours: 22,
+    waste: 6,
     avatar: "avatar8.png"
   )
   user8.save
@@ -95,8 +95,8 @@ puts "creating users..."
     last_name: "Chaplin",
     email: "Charlie.Chaplin@gmail.com",
     password: "123456",
-    overall_score: 56,
-    baseline_stats: 65,
+    car_hours: 30,
+    waste: 3,
     avatar: "avatar1.png"
   )
   user9.save
@@ -105,8 +105,8 @@ puts "creating users..."
     last_name: "Taylor",
     email: "Olivia.Taylor@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 22,
+    car_hours: 15,
+    waste: 5,
     avatar: "avatar2.png"
   )
   user10.save
@@ -115,8 +115,8 @@ puts "creating users..."
     last_name: "Thomas",
     email: "Kevin.Thomas@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 22,
+    car_hours: 3,
+    waste: 12,
     avatar: "avatar3.png"
   )
   user11.save
@@ -125,8 +125,8 @@ puts "creating users..."
     last_name: "Cruz",
     email: "stella.cruz@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 12,
+    car_hours: 22,
+    waste: 3,
     avatar: "avatar4.png"
   )
   user12.save
@@ -135,8 +135,8 @@ puts "creating users..."
     last_name: "Jackson",
     email: "louise.jackson@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 22,
+    car_hours: 12,
+    waste: 3,
     avatar: "avatar5.png"
   )
   user13.save
@@ -145,8 +145,8 @@ puts "creating users..."
     last_name: "Omari",
     email: "deji.omari@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 22,
+    car_hours: 1,
+    waste: 4,
     avatar: "avatar6.png"
   )
   user14.save
@@ -155,8 +155,8 @@ puts "creating users..."
     last_name: "Young",
     email: "thadsana.young@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 22,
+    car_hours: 2,
+    waste: 8,
     avatar: "avatar7.png"
   )
   user15.save
@@ -165,8 +165,8 @@ puts "creating users..."
     last_name: "Rosario",
     email: "vanessa.rosario@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 22,
+    car_hours: 16,
+    waste: 1,
     avatar: "avatar8.png"
   )
   user16.save
@@ -175,8 +175,8 @@ puts "creating users..."
     last_name: "Bastien",
     email: "eloise.bastien@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 75,
+    car_hours: 5,
+    waste: 3,
     avatar: "avatar1.png"
   )
   user17.save
@@ -185,8 +185,8 @@ puts "creating users..."
     last_name: "rodriguez",
     email: "jose.rodriguez@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 35,
+    car_hours: 5,
+    waste: 6,
     avatar: "avatar2.png"
   )
   user18.save
@@ -195,9 +195,9 @@ puts "creating users..."
     last_name: "Ivanov",
     email: "mila.ivanov@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 66,
-    avatar: "avatar9.png"
+    car_hours: 3,
+    waste: 9,
+    avatar: "avatar8.png"
   )
   user19.save
   user20= User.create!(
@@ -205,8 +205,8 @@ puts "creating users..."
     last_name: "Perera",
     email: "prash.perera@gmail.com",
     password: "123456",
-    overall_score: 12,
-    baseline_stats: 66,
+    car_hours: 12,
+    waste: 5,
     avatar: "avatar9.png"
   )
   user20.save
@@ -290,7 +290,7 @@ puts "creating challenges"
     name: "Marvelous Mitochondria",
     description: "Are you noticing a drag on your daily energy, feeling sluggish and fatigued? Whatever the external cause may be, it's your mitochondria that are ultimately responsible for your mental and physical energy at the cellular level. Many of the ways we can improve our mitochondrial health often improve your own personal footprint. Diet: try avoiding processed foods, excess sugar and white carbs. Instead eat more antioxidants like blueberries and dark chocolate, a healthy balance of nuts as your go-to snack. Keep active: Try replace some of your shorter trips with walking or cycling. Toxic Products: Sometimes the products we use on a daily basis can contain toxins that can restrict our mitochondria so it might be a good idea to reevaluate your makeup, skincare and cleaning products. Sleep: Make sure you are getting the right amount of sleep!! If you don't practice any of these tips on a regular basis,try implement them one at a time starting with the one you think you will find easiest. We have found the most constructive method is to develop habits over time, the first two weeks are always the hardest, if you miss a day or a period of time, don't be hard on yourself, understand why you didn't and try again. Habits rarely stick the first time",
     summary: "Develop some healthy habits with a slice of saving the planet on the side",
-    category: "Food",
+    category: "Home",
     duration: 14,
     challenge_score: 7,
     badge:"stickers/Plant2.png",
