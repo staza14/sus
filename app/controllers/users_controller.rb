@@ -32,7 +32,7 @@ class UsersController < ApplicationController
     @challenges = current_user.active_challenges
     @active_challenges = @challenges.where(completed: false)
     @completed_challenges = @challenges.where(completed: true)
-
+    @friends = current_user.friends
     @day = ActiveChallengeDay.new
 
     @entry = Entry.new
@@ -47,6 +47,10 @@ class UsersController < ApplicationController
     @entry_user.each { |entry| @day_data.store(entry.created_at.strftime("%Y%m%d"), entry.day_score) }
     @leaders = current_user.friends.sort_by(&:overall_score)
     @completed = current_user.active_challenges.where(completed: true)
+    @leaders = @friends << current_user
+    @leaders = @friends.sort_by(&:overall_score).reverse!
+    @my_rank = @leaders.index(current_user)
+    @leaders = @leaders.first(5)
   end
 
   private
