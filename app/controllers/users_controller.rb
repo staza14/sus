@@ -32,6 +32,9 @@ class UsersController < ApplicationController
     @challenges = current_user.active_challenges
     @active_challenges = @challenges.where(completed: false)
     @completed_challenges = @challenges.where(completed: true)
+
+    @day = ActiveChallengeDay.new
+
     @entry = Entry.new
     @entry_user = current_user.entries
     @food_data = {}

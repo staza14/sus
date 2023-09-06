@@ -14,20 +14,20 @@
   border-radius: 5px;
   height: fit-content;
   background-color: white;
-
+  margin-top: 20px;
 }
 .sticky-feed{
   position: sticky;
-  top:30px;
+  top:100px;
   align-self: flex-start;
 }
 
 
 .leaderboard-leader {
-flex-grow:2 ;
+  flex-grow:2 ;
   width: 100%;
   background-color: white;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 10px;
   margin-bottom: 10px;
   display: flex;
