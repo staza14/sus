@@ -1,0 +1,38 @@
+.post-container {
+  border: solid 1px black;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 25px 0px 0px 0px;
+  width: 100%;
+  max-width: 570px;
+  height: 200px;
+}
+.post-header {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 50px;
+  padding: 5px 15px 5px 5px;
+  margin: 0px 0px 5px 0px;
+}
+.name-avatar {
+  display: flex;
+  align-items: center;
+}
+.feed-avatar {
+  border: solid 1px black;
+  width: 35px;
+  height: 100%;
+  border-radius: 50%;
+  margin: 0px 5px 0px 0px;
+}
+.content-div {
+  border: solid 1px black;
+  border-radius: 3px;
+  width: 100%;
+  height: 150px;
+  padding:10px;
+  overflow: scroll;
+}
