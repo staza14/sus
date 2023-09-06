@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -12,12 +12,13 @@ Rails.application.routes.draw do
     resources :active_challenges, only: :create
   end
 
+  get "/results", to: 'users#results'
 
   resources :user, only: :dashboard do
     resources :friendships, only: :create
   end
 
-  resources :active_challenges, only: [] do
+  resources :active_challenges, only: [:create, :destroy] do
 
     resources :active_challenge_days, only: [:create, :update]
 

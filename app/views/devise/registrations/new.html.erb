@@ -77,7 +77,7 @@
             <%= f.input :short_shower, label: "How many times a week do you shower over 10mins?", input_html: {value: 0} %>
             <button data-action="click->sign-up#backToSection3">Back</button>
             <div class="form-actions">
-              <%= f.button :submit, "Sign up"  %>
+              <%= f.button :submit, "Get results", data: {action: "click->sign-up#showResults"}  %>
             </div>
           </div>
         <% end %>

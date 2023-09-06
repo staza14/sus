@@ -20,6 +20,15 @@ class ActiveChallengesController < ApplicationController
 
   end
 
+  def destroy
+    @active_challenge = ActiveChallenge.find(params[:id])
+    if @active_challenge.destroy
+      redirect_to dashboard_path
+    else
+      redirect_to
+    end
+  end
+
   def calculate_completion
     challenge = ActiveChallenge.current_user
     @percentage = if challenge.active_challenge_days.where(status: true).zero?

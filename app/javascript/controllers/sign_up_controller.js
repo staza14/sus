@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["section"];
+  static targets = ["section", "results"];
 
   connect() {
     console.log("sign up connected");
@@ -41,6 +41,10 @@ export default class extends Controller {
     e.preventDefault();
     this.sectionTargets[2].classList.remove("d-none");
     this.sectionTargets[3].classList.add("d-none");
+  }
+
+  showResults() {
+    console.log(this.resultsTarget);
   }
 
   // showSection2(e) {

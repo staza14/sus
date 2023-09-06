@@ -2,23 +2,23 @@
 <div class="user-info-div">
   <div class="big-div">
     <div class="user-info" id="floating-avatar">
-      <%= image_tag 'flower.png' %>
+      <%= image_tag current_user.avatar %>
     </div>
     <div class="user-info" id="user-name">
       <h5><%= current_user.first_name.upcase + ' ' + current_user.last_name.upcase %></h5>
     </div>
     <div class="user-info" id="following-followers-posts">
       <div id="followers">
+        <h4><%=current_user.friends.count%></h4><%# <h5><%= current_user.friendships </h5> %>
         <h6>Friends</h6>
-        <h4>4</h4><%# <h5><%= current_user.friendships </h5> %>
       </div>
       <div id="following">
-        <h6>Challenges</h6>
-        <h4>7</h4><%# <h5><%= current_user.completed_challenges </h5> %>
+        <h4><%= @completed.count  %></h4><%# <h5><%= current_user.completed_challenges </h5> %>
+        <h6>Completed <br>Challenges</h6>
       </div>
       <div id="posts">
-        <h6>Posts</h6>
-        <h4>11</h4><%# <h5><%= current_user.posts.count </h5> %>
+        <h4><%= current_user.overall_score.truncate()  %></h4><%# <h5><%= current_user.posts.count </h5> %>
+        <h6>Score</h6>
       </div>
     </div>
   </div>

@@ -1,3 +1,12 @@
+.no-challenge-active{
+  color: $gray;
+  font-weight: lighter;
+  border-radius: 25px;
+  border: solid 1px black;
+  width: 60%;
+  justify-content: center;
+  text-align: center;
+}
 .challenge-category-wrapper {
   display: flex;
   width: 100%;

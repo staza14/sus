@@ -10,10 +10,26 @@
   padding: 14px 16px;
   border: solid 0.5px;
   border-radius: 5px;
+  #home{
+  background-color: $orange;
+  }
+  #profile{
+    background-color: $green;
+  }
+  #contact{
+    background-color: $purple;
+  }
 }
 
 .fact-icon {
   font-size: xx-large;
+  color:$black;
+}
+
+.nav-link.active {
+  i {
+    color: $green;
+  }
 }
 #fact-div-navbar {
   border-top-left-radius: 12px;
@@ -30,14 +46,14 @@
 } // Sticky Side
 .user-info-div { //
   /* border: solid 1px black; */
-  background-color: $dark-green;
+  background-color: white;
   width: 100%;
   height: 180px;
   box-shadow: 0 5px 20px #605760d9;
   border-radius: 12px;
 } //user-info-div
 .big-div {
-  color: $pink;
+  color: $green;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +71,7 @@
   height: fit-content;
 
   div {
-    background-color: $dark-green;
+    background-color: $white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,18 +79,17 @@
 }
 
 .daily-facts {
-  background-color: $dark-green;
+  background-color: $white;
   width: 100%;
   height: 370px;
   margin-top: 25px;
   border-radius: 11px;
-  box-shadow: 0 5px 20px #605760d9;
   overflow: hidden;
 } // daily facts
 
 .add-entry {
-  background-color: $pink;
-  color: $dark-green;
+  background-color: $black;
+  color: $pink;
   border: none;
   margin-top: 20px;
   border-radius: 10px;
@@ -82,14 +97,13 @@
   width: 100%;
   padding: 0.4rem;
   // box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.3), 0 0 25px -15px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 20px #605760d9;
 } //add entry
 #add-entry {
   height: 20%;
 }
 #floating-avatar {
-  border: solid 0.3px #c3c3c3;
-  background-color: #c25b5b;
+  border: solid 1px $green;
+  background-color: white;
   /* border: solid 1px black; */
   width: 100px;
   height: 100px;
