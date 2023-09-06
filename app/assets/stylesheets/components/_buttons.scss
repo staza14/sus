@@ -19,10 +19,13 @@
 //   color: $pink;
 //   padding: 5px;
 // }
-// .delete-button{
-//   height:20px;
-//   width: 20px;
-// }
+.delete-button{
+  height:25px;
+  width: 25px;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
 .call-to-action {
   background-color: #c2fbd7;
   border-radius: 100px;
