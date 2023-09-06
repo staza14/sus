@@ -28,9 +28,9 @@
         </div>
         <div class="challenge-calls">
 
-
+           <% if challenge.active_challenge_days != [] %>
              <div class="progress progress-bar-div"><div class="progress-bar" role="progressbar" style="width: <%= challenge.calculate_completion %>%" aria-valuenow=<%= challenge.calculate_completion %> aria-valuemin="0" aria-valuemax="100"><%= challenge.calculate_completion %>%</div></div>
-
+           <% end %>
 
           <button type="button" class="details-button" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.challenge.id %>">Details</button>
         </div>
