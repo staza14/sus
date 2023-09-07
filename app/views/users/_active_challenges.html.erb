@@ -32,7 +32,9 @@
              <div class="progress progress-bar-div"><div class="progress-bar" role="progressbar" style="width: <%= challenge.calculate_completion %>%" aria-valuenow=<%= challenge.calculate_completion %> aria-valuemin="0" aria-valuemax="100"><%= challenge.calculate_completion %>%</div></div>
            <% end %>
 
-          <button type="button" class="details-button" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.challenge.id %>">Details</button>
+          <button type="button" class="add reverse-icon" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.challenge.id %>">
+          <i class="fa-regular fa-calendar fa-2xl "></i>
+          </button>
         </div>
       </div>
       <!-- Modal -->
@@ -44,7 +46,8 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" data-controller="mark-as-complete" data-host="<%= root_url %>">
-              <h4><%= challenge.challenge.prompt %></h4>
+              <h4>Update your challenge prgress for today:</h4>
+              <h6><%= challenge.challenge.prompt %></h6>
 
               <div class="wrapper d-flex">
                 <% challenge.active_challenge_days.each do |day| %>

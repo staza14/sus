@@ -10,6 +10,16 @@
   color: $pink;
 }
 
+.add{
+  height:40px;
+  width: 40px;
+  border-radius: 10px;
+  justify-content: center;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
 
 .add-entry-button{
   background-color: $black;
@@ -226,7 +236,16 @@
   transform: scale(1.01);
 }
 
-
+.reverse-icon{
+  background-color: $pink;
+  color:$black;
+  transition: .2s ease-in-out;
+}
+.reverse-icon:hover{
+  background-color: $black;
+  color:$pink;
+  transform: scale(1.01);
+}
 
 // form button
 

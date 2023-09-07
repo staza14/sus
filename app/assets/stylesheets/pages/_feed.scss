@@ -3,6 +3,10 @@
   flex-direction: column;
   align-items: center;
 }
+.line{
+  width: 80%;
+  border: solid 1px $green;
+}
 
 .leaderboard {
   width: 100%;
@@ -15,10 +19,11 @@
   height: fit-content;
   background-color: white;
   margin-top: 20px;
+  border-radius: 15px;
 }
 .sticky-feed{
   position: sticky;
-  top:100px;
+  top:105px;
   align-self: flex-start;
 }
 
@@ -54,6 +59,7 @@
   height: 30px;
   border-radius: 50%;
   object-fit: cover;
+  border: solid 1px $green;
 }
 
 .fa-medal {
