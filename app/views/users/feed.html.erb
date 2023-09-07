@@ -86,7 +86,7 @@
                   <div class='post-name'>
                   <%= post.user.first_name %> <%= post.user.last_name %>
                 <br>
-              <em> Posted <%= @today - (post.created_at.to_date.mjd) %> days ago</em>
+              Posted <%= @today - (post.created_at.to_date.mjd) %> days ago
               <div class="heart-container" title="Like">
             <input type="checkbox" class="checkbox" id="love">
             <div class="svg-container">

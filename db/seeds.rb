@@ -288,7 +288,7 @@ puts "creating challenges"
   # Combination
   marvelous_mitochondria = Challenge.create(
     name: "Marvelous Mitochondria",
-    description: "Feeling tired and drained lately? It's could be your mitochondria, the 'powerhouse of the cell', that play a key role in your vitality. Boost your mitochondrial health and reduce your environmental footprint with these simple steps. Opt for a diet rich in antioxidants like blueberries, tomatoes and green tea, and try go for nuts as your go-to snack. Stay active by walking or cycling more, reconsider the toxins in your daily products, prioritize quality sleep, and implement these changes gradually to build lasting habits. Remember, habits take time to stick!",
+    description: "Feeling tired? It could be your mitochondria, 'powerhouse of the cell', key to vitality. Improve their efficiency and reduce environmental impact by focusing on a few major areas including diet, activity and sleep: Look into antioxidant-rich foods, I go nuts for nuts, stay active, check your hygiene products for toxins and prioritize sleep. Remember, habits take time to stick! If you miss a day, don't fret, enjoy the sunset.",
     summary: "Develop some healthy habits with a slice of saving the planet on the side",
     category: "Home",
     duration: 14,
