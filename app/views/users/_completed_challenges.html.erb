@@ -8,7 +8,14 @@
     <div class="challenge-iteration" id="completed-challenges">
       <%@completed_challenges.each do |challenge| %>
         <div class="challenge-card-big-div">
-          <div class="challenge-card-quick-info" id="completed-challenges-info">
+        <% if challenge.challenge.category == "Food" %>
+          <div class="challenge-card-quick-info bg-green"  id="completed-challenges-info">
+        <% elsif challenge.challenge.category == "Transport"%>
+          <div class="challenge-card-quick-info bg-purple"  id="completed-challenges-info">
+        <% else %>
+          <div class="challenge-card-quick-info bg-orange"  id="completed-challenges-info">
+        <% end %>
+          <div class="challenge-card-quick-info">
             <div class="challenge-duration">
               <h6 class="challenge-card-days"><%= challenge.challenge.duration %> Days</h6>
             </div>

@@ -1,6 +1,12 @@
 <% challenges.each do |challenge| %>
   <div class="challenge-page-challenge-card m-3">
-    <a class="challenge-page-left-div" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.id %>"> <%# <%= challenge.id %>
+  <% if challenge.category == "Food" %>
+          <a class="challenge-page-left-div bg-green" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.id %>"> <%# <%= challenge.id %>
+        <% elsif challenge.category == "Transport"%>
+          <a class="challenge-page-left-div bg-purple" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.id %>"> <%# <%= challenge.id %>
+        <% else %>
+          <a class="challenge-page-left-div bg-orange" data-bs-toggle="modal" data-bs-target="#exampleModal<%= challenge.id %>"> <%# <%= challenge.id %>
+        <% end %>
       <div class="challenge-page-name-summary">
         <div class="name-category">
           <h6 class="challenge-page-card-name"><%=challenge.name %></h6>
