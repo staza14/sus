@@ -263,15 +263,74 @@
 
 .simple_form label {
   font-weight: bold;
+  margin-right: 10px;
+}
+
+.entry-form label {
+  font-size: 30px;
+  margin-left: 100px;
+}
+
+#textInput1{
+  margin-left: 100px;
+}
+
+#textInput2{
+  margin-left: 100px;
+}
+
+#textInput3{
+  margin-left: 100px;
+}
+
+#textInput4{
+  margin-left: 100px;
+}
+
+#textInput5{
+  margin-left: 100px;
+}
+
+#textInput6{
+  margin-left: 100px;
+}
+
+#textInput7{
+  margin-left: 100px;
+}
+
+#textInput8{
+  margin-left: 100px;
+}
+
+#textInput9{
+  margin-left: 100px;
+}
+
+#textInput10{
+  margin-left: 100px;
+}
+
+#textInput11{
+  margin-left: 100px;
+}
+
+#textInput12{
+  margin-left: 100px;
+}
+
+.third-modal label {
+  font-size: 15px;
+  margin-left: 0px;
 }
 
 
 .form-range {
-  width: 100%;
+  width: 50%;
+  display: inline-flex;
 }
 
 .form-range + input[type="text"] {
-  width: 50px;
   text-align: center;
   border: none;
   background-color: #010000;
@@ -333,7 +392,6 @@
 }
 
 
-
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
     border: none;
@@ -344,6 +402,10 @@ input[type=range]::-webkit-slider-thumb {
     margin-top: -4px;
 }
 
+input[type=range]::-webkit-slider-thumb.first-slider {
+  background: #E1DCF7;
+  font-size: 15px;
+}
 
 
 #purplebutton {

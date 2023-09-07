@@ -3,7 +3,7 @@
   width: 110px;
   border-radius: 50%;
   position: absolute;
-  top: -40px;
+  top: -50px;
   background-color: white;
   border: $green 2px solid;
 
@@ -23,17 +23,26 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding-top: 70px;
+  padding-top: 60px;
+  border-radius: 15px;
 }
 
 .stats{
-  height:80px;
-  width:80px;
+  height:95px;
+  width:95px;
   border-radius: 5px;
-  background-color: white;
+  background-color: $pink;
   margin: 10px;
-  .p{
-  font-size:25px ;
+  justify-content: center;
+  .number{
+  font-size:30px ;
+  color: $green;
+  margin-bottom: 0px;
+  }
+  hr{
+    margin:auto;
+    border: solid 1px $green;
+    width: 80%;
   }
 }
 
@@ -51,7 +60,9 @@
   height: 280px;
 }
 .small-text{
-  font-size: 10px;
-  font-weight: lighter;
+  font-size: 12px;
+  font-weight:100;
+  color: darkgrey;
   padding: 0%;
+  margin-top: 3px;
 }

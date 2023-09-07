@@ -1,28 +1,33 @@
 <div class="home-page">
-<div class="container" data-controller="apparition-button">
-<button onclick="typeWriter()" class="period" data-action="click->apparition-button#loginbutton"> <i class="fa-solid fa-circle fa-2xl" style="color: #85ff93;"></i> <i class="fa-solid fa-arrow-pointer"></i> </button>
+  <div class="container contents" data-controller="apparition-button">
+    <div class="top">
+      <h1 id="home-page-header">SUS</h1>
+      <h3>Are you the most sustainable in your circle? <em class="underline">Lets make you.</em></h3>
+      <div class="d-flex justify-content-center pt-3">
+        <button class="learn-more" data-action="click->apparition-button#loginbutton">
+        intrigued?
+        </button>
+        <%=  image_tag "flower.png", class:"flower-1"%>
+        <%=  image_tag "flower.png", class:"flower-2"%>
+        <%=  image_tag "flower.png", class:"flower-3"%>
+        <%=  image_tag "flower.png", class:"flower-4"%>
+        <%=  image_tag "flower.png", class:"flower-5"%>
+        <%=  image_tag "flower.png", class:"flower-6"%>
+        <%=  image_tag "flower.png", class:"flower-7"%>
+        <%=  image_tag "flower.png", class:"flower-8"%>
+        <%=  image_tag "flower.png", class:"flower-9"%>
+        <%=  image_tag "flower.png", class:"flower-10"%>
+      </div>
+    </div>
+    <div class="landing-info">
 
-<p id="demo"></p>
+      <p id="demo"></p>
 
-<script>
-var i = 0;
-var txt = 'Are you the most sustainable in your circle? Lets make you. ';
-var speed = 50;
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-</script>
-
-<% if current_user %>
-  <%= link_to "Explore", dashboard_path, class:"add-entry d-none", id:"login-button", data: {"apparition-button-target": "button"} %>
-<% else %>
-  <%= link_to "Login", new_user_session_path, class:"add-entry d-none", id:"login-button", data: {"apparition-button-target": "button"} %>
-<% end %>
-
-</div>
+      <% if current_user %>
+        <%= link_to "Let's go in", dashboard_path, class:"learn-more d-none", id:"login-button", data: {"apparition-button-target": "button"} %>
+      <% else %>
+        <%= link_to "Login", new_user_session_path, class:"learn-more d-none", id:"login-button", data: {"apparition-button-target": "button"} %>
+      <% end %>
+    </div>
+  </div>
 </div>
