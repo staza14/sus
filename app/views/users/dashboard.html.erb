@@ -70,65 +70,81 @@
             <%= simple_form_for @entry  do |f| %>
               <div data-daily-log-target="section"><h4>Transportation</h4>
               <h5>Today, how many hours did you travel by:</h5>
+              <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Car">
               <%= f.input :car_hours, as: :range, prompt: "my data", collection: 0..5,
                   label: "🚗",
                   input_html: { class: "form-range first-slider", value: 0, min:"0", max:"5", step:"1", oninput:"updateTextInput8(this.value)" }
                   %><input id="textInput8" style="border:none; background-color: #F4F4F4;" type="text" value="">
+              </div>
+              <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Bus">
               <%= f.input :bus_hours, as: :range, prompt: "my data", collection: 0..5,
                   label: "🚌",
                   input_html: { class: "form-range first-slider", value: 0, min:"0", max:"5", step:"1", oninput:"updateTextInput9(this.value)" }
                   %><input id="textInput9" style="border:none; background-color: #F4F4F4;" type="text" value="">
+               </div>
+             <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Train">
               <%= f.input :train_hours, as: :range, prompt: "my data", collection: 0..5,
                   label: "🚝",
                   input_html: { class: "form-range first-slider", value: 0, min:"0", max:"5", step:"1", oninput:"updateTextInput10(this.value)" }
                   %><input id="textInput10" style="border:none; background-color: #F4F4F4;" type="text" value="">
+              </div>
+              <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Cycle">
               <%= f.input :cycle_hours, as: :range, prompt: "my data", collection: 0..5,
                   label: "🚲",
                   input_html: { class: "form-range first-slider", value: 0, min:"0", max:"5", step:"1", oninput:"updateTextInput11(this.value)" }
                   %><input id="textInput11" style="border:none; background-color: #F4F4F4;" type="text" value="">
+              </div>
+              <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Walking">
               <%= f.input :foot_hours, as: :range, prompt: "my data", collection: 0..5,
                   label: "🚶",
                   input_html: { class: "form-range first-slider", value: 0, min:"0", max:"5", step:"1", oninput:"updateTextInput12(this.value)" }
                   %><input id="textInput12" style="border:none; background-color: #F4F4F4;" type="text" value="">
+                </div>
 
                 <button data-action="click->daily-log#showSection2" style="background-color: #BBACEC; color: white;" id="purplebutton">Next</button>
               </div>
               <div data-daily-log-target="section" class="d-none"><h4>Meals</h4>
               <h5>How many of your today's meals contained:</h5>
+                <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Beef">
                 <%= f.input :beef, as: :range, prompt: "my data", collection: 0..3,
                   label: "🥩",
                   input_html: { id:"slider-green", class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput1(this.value)" }
                   %><input id="textInput1" style="border:none; background-color: #F4F4F4;" type="text" value="">
-
+                </div>
+                <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Lamb">
                 <%= f.input :lamb, as: :range, prompt: "my data", collection: 0..3,
                   label: "🐑",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput2(this.value)"}
                     %> <input id="textInput2" style="border:none; background-color: #F4F4F4;" type="text" value="">
-
+                  </div>
+                  <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Cheese">
                   <%= f.input :cheese, as: :range, prompt: "my data", collection: 0..3,
                   label: "🧀",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput3(this.value)"}
                     %> <input id="textInput3" style="border:none; background-color: #F4F4F4;" type="text" value="">
-
+                  </div>
+                  <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Pork">
                     <%= f.input :pork, as: :range, prompt: "my data", collection: 0..3,
                   label: "🐖",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput4(this.value)"}
                     %> <input id="textInput4" style="border:none; background-color: #F4F4F4;" type="text" value="">
-
+                  </div>
                     <%#= f.input :chocolate, as: :range, prompt: "my data", collection: 0..3,
                   label: "🍫",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput5(this.value)"}
                     %> <!--input id="textInput5" style="border:none; background-color: #F4F4F4;" type="text" value=""!-->
-
+                  <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Fish">
                     <%= f.input :fish, as: :range, prompt: "my data", collection: 0..3,
                   label: "🐟",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput6(this.value)"}
                     %> <input id="textInput6" style="border:none; background-color: #F4F4F4;" type="text" value="">
-
+                  </div>
+                  <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Eggs">
                     <%= f.input :egg, as: :range, prompt: "my data", collection: 0..3,
                   label: "🥚",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput7(this.value)"}
                     %> <input id="textInput7" style="border:none; background-color: #F4F4F4;" type="text" value="">
+                  </div>
                     <br>
                   <button data-action="click->daily-log#showSection1" style="background-color: #80DBC1; color: white;" id="greenbutton">Back</button>
                   <button data-action="click->daily-log#showSection3" style="background-color: #80DBC1; color: white;" id="greenbutton">Next</button>
