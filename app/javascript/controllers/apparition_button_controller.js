@@ -13,7 +13,7 @@ export default class extends Controller {
 
   loginbutton() {
     window.scrollTo(0, document.body.scrollHeight);
-    setTimeout(() => this.showButton(), 3000)
+    this.showButton()
   }
 
 }

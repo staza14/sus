@@ -52,11 +52,12 @@ h3{
 body {
   background-color: $beige;
   color: $green;
+  scroll-behavior: smooth;
 }
 
 
 #login-button{
-  width: 100px;
+  width: fit-content;
   font-size: 60px;
   font-weight: bold;
   text-decoration: none;
@@ -190,14 +191,16 @@ body {
   margin-top: 400px;
   margin: auto;
   justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .info-image{
   width: 80%;
   height: 600px;
   border-radius: 15px;
-  margin:auto;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .top{
