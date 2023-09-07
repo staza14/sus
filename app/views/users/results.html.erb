@@ -1,6 +1,4 @@
 <div class="container-earths">
-  <div class="row justify-content-center">
-    <div style="display: flex; width:<%= current_user.baseline_stats.to_i * 10 %>%">
       <div class="form-login-earth" data-controller="sign-up">
         <% if current_user %>
           <div class="results" data-sign-up-target="results">
@@ -12,12 +10,10 @@
               <% end %>
             </div>
               <p>If everyone lived like you, we would need <%= current_user.baseline_stats.to_i %> Earths</p>
-            <%= link_to "Let's improve that!", dashboard_path, class: "postbutton"%>
+            <%= link_to "Let's improve that!", dashboard_path, class: "postbutton-earth"%>
               <div class="d-flex">
             </div>
           </div>
         <% end %>
       </div>
-    </div>
-  </div>
 </div>

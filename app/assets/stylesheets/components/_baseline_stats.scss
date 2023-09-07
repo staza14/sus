@@ -1,8 +1,33 @@
 .container-base {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .baseline-image {
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 240px;
+  padding: 15px;
+  animation: rotation 12s infinite linear;
+}
 
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container-earths{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
 }
