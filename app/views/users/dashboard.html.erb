@@ -33,8 +33,11 @@
      <div class="leaderboard">
          <h4 class="pt-2">Rankings</h4>
           <hr class="line">
+          <table class="w-100">
             <% @leaders.each_with_index do |leader, i| %>
-              <div class="leaderboard-leader">
+              <tr class="leaderboard-lead">
+                <td>
+                <p class="ml-2 mb-1">
                   <% if i == 0 %>
                     <i class="fa-solid fa-medal gold"></i>
                   <% elsif i == 1 %>
@@ -42,13 +45,22 @@
                   <% elsif i == 2 %>
                     <i class="fa-solid fa-medal bronze"></i>
                   <% else %>
-                    <p><%= i + 1 %></p>
-                <% end %>
-                <%= image_tag leader.avatar, class: "image-small" %>
-                <p><%= leader.first_name %></p>
-                <p><%= leader.overall_score.truncate() %> pts</p>
-              </div>
+                    <%= i + 1 %>
+                  <% end %>
+                  </p>
+                </td>
+                <td>
+                  <p class="ml-2 mb-1"><%= image_tag leader.avatar, class: "image-small" %></p>
+                </td>
+                <td>
+                 <p class="text-center mb-1 ranking-text" ><%= leader.first_name %></p>
+                </td>
+                <td>
+                  <p class="text-center mb-1 ranking-text"><%= leader.overall_score.truncate() %> pts</p>
+                </td>
+              </tr>
             <% end %>
+          </table>
         </div>
      </div>
 			<div class="my-challenges">
@@ -104,7 +116,7 @@
                 <button data-action="click->daily-log#showSection2" style="background-color: #BBACEC; color: white;" id="purplebutton">Next</button>
               </div>
 
-              <div data-daily-log-target="section" class="d-none"><h4>Meals</h4>
+              <div data-daily-log-target="section" class="d-none"><h4>Food</h4>
               <h5>How many of your today's meals contained:</h5>
                 <div class="d-flex justify-content-end" style="gap: 0rem; widht: 100%" data-bs-toggle="tooltip" data-bs-placement="top" title="Beef">
                 <%= f.input :beef, as: :range, prompt: "my data", collection: 0..3,
@@ -155,7 +167,7 @@
                 <%= f.input :long_shower, as: :select, collection: ["Yes", "No"],label: "Today, I took a long shower (more than 10mins)?"%>
                 <%= f.input :short_shower, as: :select, collection: ["Yes", "No"],label: "Today, I took a quick shower (less than 10mins)?"%>
                 <button data-action="click->daily-log#backToSection2" style="background-color: #FACDA4; color: white;" id="yellowbutton">Back</button>
-                <%= f.submit class: "submit-button" %>
+                <%= f.submit "Log it", class: "submit-button" %>
               </div>
             <%end %>
           </div>
