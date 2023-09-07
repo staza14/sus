@@ -253,6 +253,27 @@
 }
 
 
+#join-challenge {
+  background-color: #0B2B2B;
+  color: #FFB4C6;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  font-weight: bold;
+  transition: .2s ease-in-out;
+  text-decoration: none;
+}
+#join-challenge:hover {
+  color: #0B2B2B;
+  background-color: #FFB4C6;
+}
+
 .save-button{
   background-color: #0B2B2B;
   color: #FFB4C6;
