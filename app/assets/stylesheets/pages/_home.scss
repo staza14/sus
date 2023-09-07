@@ -374,3 +374,26 @@ body {
     color: white;
   }
 }
+
+.arrow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+}
+
+.arrow-right {
+  right: 113%;
+  top: 20%;
+}
+.arrow-right-bottom {
+  right: 120%;
+  top: -50%;
+}
+.arrow-left {
+  right: -70%;
+  top: 40%;
+}
+.arrow-left-bottom {
+  right: -65%;
+  top: -80%;
+}
