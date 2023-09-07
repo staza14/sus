@@ -33,65 +33,66 @@ class User < ApplicationRecord
                 :lights, :clothing, :temperature,
                 :food, :waste, :source
 
+
+# Transportation (20% of the overall score):
+      # Car Hours: 0.04
+      # Bus Hours: 0.04
+      # Cycle Hours: 0.04
+      # Foot Hours: 0.04
+      # Flight Long Hours: 0.04
+      # Flight Short Hours: 0.04
+
+# Home (30% of the overall score):
+      # Lights: 0.1
+      # Clothing: 0.1
+      # Temperature: 0.1
+
+# Food ( 50% of the overall score):
+      # Food: 0.2
+      # Waste: 0.15
+      # Source: 0.15
+
+
   TRANSPORT_WEIGHTS = {
-    car_hours: 0.16,
-    bus_hours: 0.1,
-    train_hours: 0.18,
-    cycle_hours: 0.03,
-    foot_hours: 0.03,
-    flight_long_hours: 0.4,
-    flight_short_hours: 0.6
+    car_hours: 0.2,            # Less sustainable option
+    bus_hours: 0.2,            # Less sustainable option
+    cycle_hours: 0.06,         # Moderately sustainable option
+    foot_hours: 0.04,          # More sustainable option
+    flight_long_hours: 0.03,   # Moderately sustainable option
+    flight_short_hours: 0.03   # Moderately sustainable option
   }
 
-  HOME_WEIGHTS = {
-    lights: 20,
-    # lights_yes: 0.18,
-    # lights_no: 0,
 
-    clothing: 30,
+HOME_WEIGHTS = {
+  lights: 0.1,
+  # clothing: 0.1,
+  temperature: 0.1
+}
 
-    temperature: 20,
-    bath: 0.4,
-    long_shower: 0.04,
-    short_shower: 0.01
-  }
+FOOD_WEIGHTS = {
+  food: 0.2,
+  waste: 0.15,
+  source: 0.15
+}
 
-  FOOD_WEIGHTS = {
-    food: 10,
 
-    waste: 10,
-    # throw_none: 0.1,
-    # throw_ten: 0.07,
-    # throw_thirty: 0.03,
-    # throw_abovethirty: 0,
-
-    source: 10,
-    # food_supermarket: 0.03,
-    # food_locally: 0.1,
-    # food_own: 0.15,
-    # food_dunno: 0,
-  }
 
   def calculate_travel_score
     car_hours_weight = TRANSPORT_WEIGHTS[:car_hours] * self.car_hours.to_i
     bus_hours_weight = TRANSPORT_WEIGHTS[:bus_hours] * self.bus_hours.to_i
-    train_hours_weight = TRANSPORT_WEIGHTS[:train_hours] * self.train_hours.to_i
     cycle_hours_weight = TRANSPORT_WEIGHTS[:cycle_hours] * self.cycle_hours.to_i
     foot_hours_weight = TRANSPORT_WEIGHTS[:foot_hours] * self.foot_hours.to_i
     flight_long_hours_weight = TRANSPORT_WEIGHTS[:flight_long_hours] * self.flight_long_hours.to_i
     flight_short_hours_weight = TRANSPORT_WEIGHTS[:flight_short_hours] * self.flight_short_hours.to_i
 
-    travel_score = car_hours_weight + bus_hours_weight + train_hours_weight + cycle_hours_weight + foot_hours_weight + flight_long_hours_weight + flight_short_hours_weight
+    travel_score = car_hours_weight + bus_hours_weight + cycle_hours_weight + foot_hours_weight + flight_long_hours_weight + flight_short_hours_weight
   end
 
   def calculate_home_score
-    bath_weight = HOME_WEIGHTS[:bath] * self.bath.to_i
-    long_shower_weight = HOME_WEIGHTS[:long_shower] * self.long_shower.to_i
-    short_shower_weight = HOME_WEIGHTS[:short_shower] * self.short_shower.to_i
     lights_weight = HOME_WEIGHTS[:lights] * self.lights.to_f
-    clothing_weight = HOME_WEIGHTS[:clothing] * self.clothing.to_f
+    # clothing_weight = HOME_WEIGHTS[:clothing] * self.clothing.to_f
     temperature_weight = HOME_WEIGHTS[:temperature] * self.temperature.to_f
-    home_score = bath_weight + long_shower_weight + short_shower_weight + lights_weight + clothing_weight + temperature_weight
+    home_score = lights_weight + temperature_weight
   end
 
   def calculate_food_score

@@ -30,7 +30,7 @@
                 <%= f.input :foot_hours, label: "How many hours did you walk today?", input_html: {value: 0} %>
                 <button data-action="click->daily-log#showSection2" style="background-color: #BBACEC; color: white;" id="purplebutton">Next</button>
               </div>
-              <div data-daily-log-target="section" class="d-none"><h4>Meals</h4>
+              <div data-daily-log-target="section" class="d-none"><h4>Food</h4>
                 <%= f.input :beef, as: :range, prompt: "my data", collection: 0..3,
                   label: "How many of your meals contained beef today?",
                   input_html: { class: "form-range", value: 0, min:"0", max:"3", step:"1", oninput:"updateTextInput1(this.value)" }
