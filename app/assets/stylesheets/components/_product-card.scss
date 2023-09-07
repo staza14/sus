@@ -1,3 +1,13 @@
+.bg-green{
+ background-color: $light-green;
+}
+.bg-purple{
+  background-color: $purple;
+ }
+ .bg-orange{
+  background-color: $orange;
+ }
+
 .challenge-card-big-div {
   background-color: #ffffff;
   height: 265px;
@@ -14,7 +24,6 @@
 /* a Big div */
 .challenge-card-quick-info {
     border: solid 0.7px #807d7d;
-    background-color: #dbf5eda6;
     height: 75%;
     width: 100%;
     display: flex;
@@ -141,7 +150,6 @@
 /* Left big div */
 .challenge-page-left-div {
   border: solid 1px black;
-  background-color: #dbf5eda6;
   height: 100%;
   width: 70%;
   display: flex;
