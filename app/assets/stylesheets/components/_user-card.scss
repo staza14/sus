@@ -16,9 +16,10 @@
   margin:10%;
 }
 .user-card{
+  border: solid 1px black;
+  background-color: #c7e3cc;
   width:350px;
   height: fit-content;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,10 +32,10 @@
   height:95px;
   width:95px;
   border-radius: 5px;
-  background-color: #f7e3f2b3;
   margin: 10px;
   justify-content: center;
   border: solid 0.9px $green;
+  background-color: #f1d2e3;
   .number{
   font-size:30px ;
   color: $green;
@@ -48,7 +49,7 @@
 }
 
 .ranking{
-  background-color: white;
+  background-color: #c7e3cc00;
   border-radius: 5px;
   text-align: center;
 }
