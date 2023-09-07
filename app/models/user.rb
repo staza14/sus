@@ -115,4 +115,8 @@ FOOD_WEIGHTS = {
 
     (receivers + askers).uniq
   end
+
+  def add_challenge_points
+    self.update(overall_score: self.overall_score + 20)
+  end
 end
