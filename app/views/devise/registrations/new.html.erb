@@ -58,7 +58,7 @@
                           label: "How often do you include animal-based products in your meals?"%>
             <%= f.input :source, as: :select, collection: [["Supermarket", 4], ["Locally", 2], ["I grow my own", 1], ["I don't think about it", 2]],
                           label: "Where do you usually source your food from?"%>
-            <%= f.input :waste, as: :select, collection: [["None", 1], ["0-10%", 2], ["10-30%", 3], [">30%", 4]],
+            <%= f.input :waste, as: :select, collection: [["None", 4], ["0-10%", 2], ["10-30%", 3], [">30%", 1]],
                           label:"How much food do you typically throw away in a week?"%>
             <button data-action="click->sign-up#backToSection2" class= "postbutton">Back</button>
             <button data-action="click->sign-up#nextToSection4" class= "postbutton">Next</button>
