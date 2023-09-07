@@ -9,6 +9,7 @@
 }
 
 .leaderboard {
+  color: $green;
   border: solid 1px black;
   width: 100%;
   padding: 10px;
@@ -40,6 +41,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: $green;
 
   p {
     margin-bottom: 0;
@@ -58,6 +60,7 @@
 
 .ranking-text{
   font-size: 20px;
+  color: $green;
 }
 
 .image-small {
