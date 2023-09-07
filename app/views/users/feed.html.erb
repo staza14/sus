@@ -48,8 +48,11 @@
      <div class="leaderboard rounded-4">
          <h4 class="pt-2">Rankings</h4>
           <hr class="line">
+            <table class="w-100">
             <% @leaders.each_with_index do |leader, i| %>
-              <div class="leaderboard-leader">
+              <tr class="leaderboard-lead">
+                <td>
+                <p class="ml-2 mb-1">
                   <% if i == 0 %>
                     <i class="fa-solid fa-medal gold"></i>
                   <% elsif i == 1 %>
@@ -57,13 +60,22 @@
                   <% elsif i == 2 %>
                     <i class="fa-solid fa-medal bronze"></i>
                   <% else %>
-                    <p><%= i + 1 %></p>
-                <% end %>
-                <%= image_tag leader.avatar, class: "image-small" %>
-                <p><%= leader.first_name %></p>
-                <p><%= leader.overall_score.truncate() %> pts</p>
-              </div>
+                    <%= i + 1 %>
+                  <% end %>
+                  </p>
+                </td>
+                <td>
+                  <p class="ml-2 mb-1"><%= image_tag leader.avatar, class: "image-small" %></p>
+                </td>
+                <td>
+                 <p class="text-center mb-1 ranking-text" ><%= leader.first_name %></p>
+                </td>
+                <td>
+                  <p class="text-center mb-1 ranking-text"><%= leader.overall_score.truncate() %> pts</p>
+                </td>
+              </tr>
             <% end %>
+          </table>
         </div>
      </div>
 
