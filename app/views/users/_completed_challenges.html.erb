@@ -15,7 +15,6 @@
         <% else %>
           <div class="challenge-card-quick-info bg-orange"  id="completed-challenges-info">
         <% end %>
-          <div class="challenge-card-quick-info">
             <div class="challenge-duration">
               <h6 class="challenge-card-days"><%= challenge.challenge.duration %> Days</h6>
             </div>
@@ -27,7 +26,6 @@
             <%# Need to iterate for each category %>
               <div class="challenge-card-category"><p class="challenge-category-text"><%= challenge.challenge.category %></p></div>
             </div>
-          </div>
         </div>
       <%end %>
     </div>
