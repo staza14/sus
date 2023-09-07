@@ -9,4 +9,8 @@ class ActiveChallenge < ApplicationRecord
     days_completed = self.active_challenge_days.where(status: true).count
     completion = (days_completed.to_f / days_overall * 100).round
   end
+
+  def mark_as_completed
+    self.update(completed: true)
+  end
 end
