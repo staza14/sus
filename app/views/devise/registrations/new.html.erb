@@ -58,7 +58,7 @@
                           label: "How often do you include animal-based products in your meals?"%>
             <%= f.input :source, as: :select, collection: [["Supermarket", 4], ["Locally", 2], ["I grow my own", 1], ["I don't think about it", 2]],
                           label: "Where do you usually source your food from?"%>
-            <%= f.input :waste, as: :select, collection: [["None", 1], ["0-10%", 2], ["10-30%", 3], [">30%", 4]],
+            <%= f.input :waste, as: :select, collection: [["None", 4], ["0-10%", 2], ["10-30%", 3], [">30%", 1]],
                           label:"How much food do you typically throw away in a week?"%>
             <button data-action="click->sign-up#backToSection2" class= "postbutton">Back</button>
             <button data-action="click->sign-up#nextToSection4" class= "postbutton">Next</button>
@@ -66,7 +66,7 @@
 
           <div class="form-question d-none" data-sign-up-target="section">
             <h4>Home</h4>
-            <%= f.input :lights, as: :select, collection: [["Yes", 4], ["No", 1]],
+            <%= f.input :lights, as: :select, collection: [["Yes", 1], ["No", 4]],
                           label: "Do you usually switch off lights when you're not using them?"
                           %>
             <%# <%= f.input :clothing, as: :select, collection: [["0", 1], ["£1-£60", 2], ["£60-£100", 3], ["£100-£180", 4], ["£180+", 4]],

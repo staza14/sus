@@ -19,6 +19,7 @@ h3{
   font-size: 500px;
   text-shadow:  10px 8px #733737;
   text-align: center;
+  line-height: 1.1;
 }
 .contents{
   justify-content: center;
@@ -140,8 +141,8 @@ body {
   width: 70px;
   color: $orange;
   position: absolute;
-  top:700px;
-  right:30px;
+  top:600px;
+  right:60px;
   transition: transform .7s ease-in-out;
 }
 .flower-6:hover {

@@ -10,9 +10,9 @@ puts "cleaning database"
 puts "Finished Cleaning"
 puts "creating users..."
   user1 = User.create!(
-    first_name: "Jane",
-    last_name: "Smith",
-    email: "test@hotmail.com",
+    first_name: "Heloise",
+    last_name: "Leblant",
+    email: "heloise@gmail.com",
     password: "123456",
     car_hours: 12,
     waste: 4,
@@ -579,71 +579,71 @@ puts "Creating Friendships"
 puts "Friendships Created"
 puts "creating entries"
   Entry.create!(
-    food_score: 7.0,
+    food_score: 5.0,
     travel_score: 2.0,
-    home_score: 9,
+    home_score: 7,
     created_at: "Wed, 23 Aug 2023 09:20:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 5.0,
+    food_score: 6.0,
     travel_score: 2.0,
-    home_score: 10,
+    home_score: 7,
     created_at: "Thu, 24 Aug 2023 09:27:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 12.0,
+    food_score: 8.0,
     travel_score: 6.5,
     home_score: 9,
     created_at: "Fri, 25 Aug 2023 09:29:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 5.0,
-    travel_score: 0,
-    home_score: 5,
+    food_score: 8.0,
+    travel_score: 7.5,
+    home_score: 9,
     created_at: "Sat, 26 Aug 2023 08:58:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 7.0,
-    travel_score: 1.1,
+    food_score: 6.0,
+    travel_score: 8,
     home_score: 8,
     created_at: "Sun, 27 Aug 2023 09:02:72.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
     food_score: 5.0,
-    travel_score: 0,
+    travel_score: 8,
     home_score: 4,
     created_at: "Mon, 28 Aug 2023 09:31:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
-    food_score: 5.5,
-    travel_score: 1.1,
+    food_score: 8.0,
+    travel_score: 8.0,
     home_score: 8,
     created_at: "Tue, 29 Aug 2023 09:45:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
     food_score: 11.0,
-    travel_score: 2.6,
+    travel_score: 10.0,
     home_score: 8,
     created_at: "Wed, 30 Aug 2023 09:45:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
     food_score: 10.5,
-    travel_score: 2.0,
+    travel_score: 8.0,
     home_score: 7,
     created_at: "Thu, 31 Aug 2023 09:00:04.000000000 UTC +00:00",
     user_id: user1.id
   )
   Entry.create!(
     food_score: 14.4,
-    travel_score: 3.0,
+    travel_score: 10.0,
     home_score: 8,
     created_at: "Fri, 01 Sep 2023 09:05:04.000000000 UTC +00:00",
     user_id: user1.id

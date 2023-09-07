@@ -1,6 +1,6 @@
 <div class="row">
 <div class="challenge-page-challenge-card col-4" id="feature-challenge-card">
-  <a class="challenge-page-left-div" style="cursor: default;"> <%# <%= challenge.id %>
+  <a class="challenge-page-left-div bg-orange" style="cursor: default;"> <%# <%= challenge.id %>
       <div class="challenge-page-name-summary">
         <div class="name-category">
           <h6 class="challenge-page-card-name"><%=@feature.name %></h6>
@@ -23,7 +23,7 @@
   <div class="challenge-page-right-div" >
     <div class="feature-card-days-and-category" id="feature-card-days-category">
       <div class="challenge-total-days">
-        <h1 class="day-number"><%= @feature.duration %></h1>
+        <h1 class="day-number" style="margin-bottom: 0.5rem;"><%= @feature.duration %></h1>
         <h3>Days</h3>
       </div>
       <div class="challenge-page-category" id="featured-category">
@@ -51,7 +51,7 @@
   </div>
   <div class="safe-travels-friend">
     <h5 class="good">Days Until Earth Day</h5>
-    <h3 style="font-size: 28px;">228 Days</h3>
+    <h3 style="font-size: 28px;">227 Days</h3>
     <h3 style="font-size: 15px;">or everyday</h3>
   </div>
 </div>
@@ -72,33 +72,28 @@
     <%# Home Tab %>
 
     <div class="tab-pane fade show active fact-div" id="home" role="tabpanel" aria-labelledby="home-tab">
-      <h4 style="text-align: center;">Home Quick-Tips</h4>
+      <h4 style="text-align: center; margin: 12px 0px;">Home Quick-Tips</h4>
       <ul class="quick-tip">
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
+        <li class="tips">The average piece of clothing is only worn 7 times and 85% of it ends up in landfills</li>
+        <li class="tips">Food waste in the UK produces 9.5 million tonnes of CO2e annually</li>
+        <%# <li class="tips">qwerty peterty letherty iamthirsty</li> %>
        </ul>
     </div>
 
     <%# Food Tab %>
     <div class="tab-pane fade fact-div" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <h4 style="text-align: center;">Food Quick-Tips</h4>
+      <h4 style="text-align: center; margin: 12px 0px;">Food Quick-Tips</h4>
        <ul class="quick-tip">
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
+        <li class="tips">Beef emits 25x more greenhouse gases than beans, has</li>
+        <li class="tips">Eat low on the food chain, fruits, veg, grains and beans tend to have a lower footprint</li>
        </ul>
     </div>
     <%# Transport Tab %>
     <div class="tab-pane fade fact-div" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-      <h4 style="text-align: center;">Transport Quick-Tips</h4>
+      <h4 style="text-align: center; margin: 12px 0px;">Transport Quick-Tips</h4>
       <ul class="quick-tip">
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
-        <li class="tips">qwerty peterty letherty iamthirsty</li>
+        <li class="tips">The transport sector accounts for roughly 15 per cent of total greenhouse gas emissions</li>
+        <li class="tips">Road transport is the largest source of emissions from transport</li>
        </ul>
     </div>
   </div>

@@ -8,7 +8,13 @@
   <div class="challenge-iteration" id="active-challenge">
     <%@active_challenges.each do |challenge| %>
       <div class="challenge-card-big-div">
-        <div class="challenge-card-quick-info">
+        <% if challenge.challenge.category == "Food" %>
+          <div class="challenge-card-quick-info bg-green">
+        <% elsif challenge.challenge.category == "Transport"%>
+          <div class="challenge-card-quick-info bg-purple">
+        <% else %>
+          <div class="challenge-card-quick-info bg-orange">
+        <% end %>
           <div class="challenge-duration">
             <h6 class="challenge-card-days"><%= challenge.challenge.duration %> Days</h6>
           </div>
@@ -41,7 +47,7 @@
       <div class="modal fade" id="exampleModal<%= challenge.challenge.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" id="post-header">
               <h5 class="modal-title" id="exampleModalLabel"><%= challenge.challenge.name %></h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
