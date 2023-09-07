@@ -1,10 +1,10 @@
-<div class="home-page">
-  <div class="container contents" data-controller="apparition-button">
+<div class="home-page" data-controller="apparition-button">
+  <div class="container contents">
     <div class="top">
       <h1 id="home-page-header">SUS</h1>
       <h3>Are you the most sustainable in your circle? <em class="underline">Lets make you.</em></h3>
       <div class="d-flex justify-content-center pt-3">
-        <button class="learn-more" data-action="click->apparition-button#loginbutton">
+        <button class="learn-more pink-btn" data-action="click->apparition-button#loginbutton">
         intrigued?
         </button>
         <%=  image_tag "flower.png", class:"flower-1"%>
@@ -21,14 +21,9 @@
     </div>
     <div class="landing-info">
 
-      <%=  image_tag "landing-page-background.png", class:"info-image"%>
       <br>
 
-      <% if current_user %>
-        <%= link_to "Let's go in", dashboard_path, class:"learn-more d-none", id:"login-button", data: {"apparition-button-target": "button"} %>
-      <% else %>
-        <%= link_to "Login", new_user_session_path, class:"learn-more d-none", id:"login-button", data: {"apparition-button-target": "button"} %>
-      <% end %>
     </div>
   </div>
+  <%= render "steps-signup" %>
 </div>
