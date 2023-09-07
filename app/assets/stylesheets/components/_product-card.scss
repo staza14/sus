@@ -153,14 +153,14 @@
 }
 .name-category {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
 }
 .challenge-page-card-name {
   font-size: 30px;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 6px;
 }
 .challenge-page-card-summary {
     font-size: 15px;
@@ -184,7 +184,16 @@
     margin: 0;
   }
 }
-
+#featured-category {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+}
+#feature-challenge-category-text {
+  font-size: 22px;
+}
 /* Right Big Div */
 .challenge-page-right-div {
     /* border: solid 1px black; */
@@ -201,13 +210,20 @@
 .challenge-total-days {
   background-color: white;
   border: solid 1px black;
-  height: 45%;
+  height: 60%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
+  margin-bottom: 10px;
+}
+.feature-card-days-and-category {
+  display: flex;
+  flex-direction: column;
+  height: 65%;
+  width: 100%;
 }
 .join-button {
   background-color: #0B2B2B;
@@ -215,7 +231,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -228,11 +244,17 @@
   color: #0B2B2B;
   background-color: #FFB4C6;
 }
+#feature-join-button {
+  padding: 12px 15px;
+  font-size: 22px;
+}
 .challenge-friends{
-  height:40px;
-  width:40px;
-  border-radius:50%;
-  padding: 5px;
+  border: solid 2px #006e49;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  padding: 0px;
+  margin-bottom: 3px;
 }
 .button_to {
   width: 100%;

@@ -293,7 +293,7 @@ puts "creating challenges"
     category: "Home",
     duration: 14,
     challenge_score: 7,
-    badge:"stickers/Plant2.png",
+    badge: "stickers/Plant2.png",
     prompt: "Did you try at least one healthy habit?"
   )
 puts "Challenges Created"

@@ -4,9 +4,6 @@
       <div class="challenge-page-name-summary">
         <div class="name-category">
           <h6 class="challenge-page-card-name"><%=@feature.name %></h6>
-          <div class="challenge-page-category">
-            <p class="category"><%= @feature.category %></p>
-        </div>
         </div>
         <p class="challenge-page-card-summary"><%= @feature.description %></p>
       </div>
@@ -20,14 +17,24 @@
         <%end %>
       </div>
     </a>
+
+
+
   <div class="challenge-page-right-div">
-    <div class="challenge-total-days">
-      <h1 class="day-number"><%= @feature.duration %></h1>
-      <h3>Days</h3>
+    <div class="feature-card-days-and-category">
+      <div class="challenge-total-days">
+        <h1 class="day-number"><%= @feature.duration %></h1>
+        <h3>Days</h3>
+      </div>
+      <div class="challenge-page-category" id="featured-category">
+        <p class="category" id="feature-challenge-category-text"><%= @feature.category %></p>
+      </div>
     </div>
-    <%= button_to "join", challenge_active_challenges_path(@feature), class:"join-button" %>
+    <%= button_to "join", challenge_active_challenges_path(@feature), class:"join-button", id:"feature-join-button" %>
   </div>
 </div>
+
+
 
 <%# how to card %>
 <div class="how-to-container">
