@@ -111,90 +111,6 @@
 
 
 
-
-// *****BUTTON 3*****
-.call-to-action3 {
-  background-color: #4f772d;
-  border: 0;
-  border-radius: 56px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  outline: 0;
-  padding: 16px 21px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: all .3s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.call-to-action3:before {
-  background-color: initial;
-  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
-  border-radius: 125px;
-  content: "";
-  height: 50%;
-  left: 4%;
-  opacity: .5;
-  position: absolute;
-  top: 0;
-  transition: all .3s;
-  width: 92%;
-}
-
-.call-to-action3:hover {
-  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
-  transform: scale(1.05);
-}
-
-@media (min-width: 768px) {
-  .call-to-action3 {
-    padding: 16px 48px;
-  }
-}
-
-
-
-
-// *****BUTTON 4*****
-.call-to-action4 {
-  margin: 10px;
-  padding: 15px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  display: block;
-  border: 0px;
-  font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #245501;
-  background-image: linear-gradient(45deg, #73a942 0%, #F09819  51%, #aad576  100%);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.call-to-action4:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
-
-.call-to-action4:active {
-  transform: scale(0.95);
-}
-
-
 /* CSS */
 .call-to-action5 {
   align-self: center;
@@ -296,4 +212,99 @@
 
 .results-button:active {
   transform: scale(0.95);
+}
+
+
+
+
+
+
+.call-to-action7{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: $black;
+  color: $pink;
+  text-decoration: none;
+}
+
+.call-to-action7{
+  height:40px;
+  width: 90px;
+  border-radius: 10px;
+  justify-content: center;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+
+.add-friend {
+  background-color: #0B2B2B;
+  color: #FFB4C6;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  font-weight: bold;
+  transition: .2s ease-in-out;
+  text-decoration: none;
+}
+.add-friend:hover {
+  color: #0B2B2B;
+  background-color: #FFB4C6;
+}
+
+
+.save-button{
+  background-color: #0B2B2B;
+  color: #FFB4C6;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  font-weight: bold;
+  transition: .2s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+}
+.save-button:hover {
+  color: #0B2B2B;
+  background-color: #FFB4C6;
+}
+
+.post-button{
+  background-color: #0B2B2B;
+  color: #FFB4C6;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  font-weight: bold;
+  transition: .2s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+}
+.post-button:hover {
+  color: #0B2B2B;
+  background-color: #FFB4C6;
 }

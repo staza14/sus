@@ -4,7 +4,7 @@
   <div class="search-result d-flex">
     <div class="p-2"><%= image_tag user.avatar, class:"feed-avatar"%></div>
     <div class="p-2"><%= user.first_name %> <%= user.last_name %></div>
-    <div class="ml-auto p-2 button-container"><%= link_to "Add friend", user_friendships_path(user), data: {turbo_method: :post}, class:"call-to-action" %></div>
+    <div class="ml-auto p-2 button-container"><%= link_to "Add friend", user_friendships_path(user), data: {turbo_method: :post}, class:"add-friend" %></div>
 
     <% else %>
         <div class="col-sm-8 text-center">
