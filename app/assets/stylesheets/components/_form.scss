@@ -222,13 +222,13 @@
 }
 
 #post-header{
-  background-color: #e8c5ce;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-
+  justify-content: flex-start;
+  width: 100%;
+  color: #006e49;
+  height: 50px;
+  padding: 5px 15px 5px 5px;
+  margin: 10px 0px 10px 0px;
 }
 
 .modal-content {
