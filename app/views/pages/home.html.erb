@@ -21,7 +21,8 @@
     </div>
     <div class="landing-info">
 
-      <p id="demo"></p>
+      <%=  image_tag "landing-page-background.png", class:"info-image"%>
+      <br>
 
       <% if current_user %>
         <%= link_to "Let's go in", dashboard_path, class:"learn-more d-none", id:"login-button", data: {"apparition-button-target": "button"} %>

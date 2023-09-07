@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 .home-page{
 background-color: $green;
-height: 2000px;
+height: 2200px;
 color: #e2acbb;
 position: relative;
 justify-content: center;
@@ -185,15 +185,19 @@ body {
   transform: scale(1.9);
 }
 .landing-info{
-  background-image: url("landing-page-background.png") ;
-  width: 80%;
-  height: 600px;
   object-fit: cover;
   object-fit: center;
   margin-top: 400px;
-  border-radius: 15px;
   margin: auto;
   justify-content: center;
+}
+
+.info-image{
+  width: 80%;
+  height: 600px;
+  border-radius: 15px;
+  margin:auto;
+  padding-bottom: 20px;
 }
 
 .top{
