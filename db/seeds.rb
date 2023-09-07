@@ -772,15 +772,18 @@ puts "Creating Active Challenges"
 
   ActiveChallengeDay.create(
    day: 1,
-   active_challenge_id: active1.id
+   active_challenge_id: active1.id,
+   status: true
   )
   ActiveChallengeDay.create(
     day: 2,
-    active_challenge_id: active1.id
+    active_challenge_id: active1.id,
+    status: true
    )
    ActiveChallengeDay.create(
     day: 3,
-    active_challenge_id: active1.id
+    active_challenge_id: active1.id,
+    status: true
    )
    ActiveChallengeDay.create(
     day: 4,
@@ -1175,23 +1178,28 @@ puts "Creating Active Challenges"
   )
   ActiveChallengeDay.create(
     day: 1,
-    active_challenge_id: active11.id
+    active_challenge_id: active11.id,
+    status: true
    )
    ActiveChallengeDay.create(
      day: 2,
-     active_challenge_id: active11.id
+     active_challenge_id: active11.id,
+     status: true
     )
     ActiveChallengeDay.create(
      day: 3,
-     active_challenge_id: active11.id
+     active_challenge_id: active11.id,
+     status: true
     )
     ActiveChallengeDay.create(
      day: 4,
-     active_challenge_id: active11.id
+     active_challenge_id: active11.id,
+     status: true
     )
     ActiveChallengeDay.create(
      day: 5,
-     active_challenge_id: active11.id
+     active_challenge_id: active11.id,
+     status: true
     )
     ActiveChallengeDay.create(
      day: 6,
